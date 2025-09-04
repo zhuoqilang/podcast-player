@@ -1,0 +1,1206 @@
+[
+  {
+    "source": "@",
+    "target": "EN"
+  },
+  {
+    "source": "@",
+    "target": "KU"
+  },
+  {
+    "source": "@",
+    "target": "郑文"
+  },
+  {
+    "source": "AI",
+    "target": "AI辅助学习"
+  },
+  {
+    "source": "AI",
+    "target": "LLM"
+  },
+  {
+    "source": "AI",
+    "target": "chatGPT"
+  },
+  {
+    "source": "AI",
+    "target": "claude"
+  },
+  {
+    "source": "AI",
+    "target": "豆包"
+  },
+  {
+    "source": "AI辅助学习",
+    "target": "英语学习"
+  },
+  {
+    "source": "BT",
+    "target": "BT模式"
+  },
+  {
+    "source": "BT发布",
+    "target": "BT发布工具"
+  },
+  {
+    "source": "HST",
+    "target": "养鱼日记"
+  },
+  {
+    "source": "IPFS",
+    "target": "pubsub"
+  },
+  {
+    "source": "LLM",
+    "target": "KIMI"
+  },
+  {
+    "source": "LLM",
+    "target": "chatGPT"
+  },
+  {
+    "source": "LLM",
+    "target": "claude"
+  },
+  {
+    "source": "LLM",
+    "target": "deepseek"
+  },
+  {
+    "source": "LLM",
+    "target": "智谱清言"
+  },
+  {
+    "source": "LLM",
+    "target": "本地LLM"
+  },
+  {
+    "source": "LLM",
+    "target": "豆包"
+  },
+  {
+    "source": "my_graph",
+    "target": "my_graph工作程序"
+  },
+  {
+    "source": "my哲学",
+    "target": "人生学"
+  },
+  {
+    "source": "my工具",
+    "target": "REC程序"
+  },
+  {
+    "source": "my工具",
+    "target": "VTTprocess"
+  },
+  {
+    "source": "my工具",
+    "target": "doc功能"
+  },
+  {
+    "source": "my工具",
+    "target": "myAI"
+  },
+  {
+    "source": "my工具",
+    "target": "爬虫"
+  },
+  {
+    "source": "my工具",
+    "target": "程序介绍"
+  },
+  {
+    "source": "my工具",
+    "target": "管理回听"
+  },
+  {
+    "source": "zql1979",
+    "target": "三观"
+  },
+  {
+    "source": "zql1979",
+    "target": "人生之书"
+  },
+  {
+    "source": "zql1979",
+    "target": "学科"
+  },
+  {
+    "source": "zql1979",
+    "target": "工具"
+  },
+  {
+    "source": "zql1979",
+    "target": "故事"
+  },
+  {
+    "source": "三观",
+    "target": "企业观"
+  },
+  {
+    "source": "三观",
+    "target": "天下"
+  },
+  {
+    "source": "三观",
+    "target": "忠告"
+  },
+  {
+    "source": "三观",
+    "target": "感悟"
+  },
+  {
+    "source": "业务模型",
+    "target": "触达"
+  },
+  {
+    "source": "业务模型",
+    "target": "认同"
+  },
+  {
+    "source": "个人网站",
+    "target": "知乎书"
+  },
+  {
+    "source": "产品沉思录",
+    "target": "my工具"
+  },
+  {
+    "source": "产品沉思录",
+    "target": "蓝苹果"
+  },
+  {
+    "source": "人生之书",
+    "target": "人生之书意义"
+  },
+  {
+    "source": "人生之书",
+    "target": "健康记录"
+  },
+  {
+    "source": "人生之书",
+    "target": "学习笔记"
+  },
+  {
+    "source": "人生之书",
+    "target": "日记"
+  },
+  {
+    "source": "人生之书",
+    "target": "生活"
+  },
+  {
+    "source": "人生之书",
+    "target": "短板"
+  },
+  {
+    "source": "人生学",
+    "target": "人生意义"
+  },
+  {
+    "source": "人生意义",
+    "target": "苟且vs远方"
+  },
+  {
+    "source": "企业观",
+    "target": "业务模型"
+  },
+  {
+    "source": "信息获取",
+    "target": "AI辅助学习"
+  },
+  {
+    "source": "信息获取",
+    "target": "信息获得系统"
+  },
+  {
+    "source": "信息获取",
+    "target": "内容推荐系统"
+  },
+  {
+    "source": "信息获取",
+    "target": "思想匹配"
+  },
+  {
+    "source": "信息获取",
+    "target": "索引图"
+  },
+  {
+    "source": "信息获得系统",
+    "target": "爬虫"
+  },
+  {
+    "source": "信息获得系统",
+    "target": "记录即搜索"
+  },
+  {
+    "source": "值得记录",
+    "target": "思想火花"
+  },
+  {
+    "source": "健康记录",
+    "target": "跑步"
+  },
+  {
+    "source": "关键词",
+    "target": "人工分词"
+  },
+  {
+    "source": "内容产生",
+    "target": "个人网站"
+  },
+  {
+    "source": "内容产生",
+    "target": "书的新形式"
+  },
+  {
+    "source": "内容产生",
+    "target": "拍照"
+  },
+  {
+    "source": "内容产生",
+    "target": "直播"
+  },
+  {
+    "source": "内容产生",
+    "target": "节目"
+  },
+  {
+    "source": "内容推荐系统",
+    "target": "人工分词"
+  },
+  {
+    "source": "内容推荐系统",
+    "target": "话题唯一码"
+  },
+  {
+    "source": "出海",
+    "target": "出海看看"
+  },
+  {
+    "source": "出海看看",
+    "target": "乌兹别克"
+  },
+  {
+    "source": "区块链",
+    "target": "区块主体"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "BT发布"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "BT模式"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "IPFS"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "MY_DHT"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "信息获得系统"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "区块链"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "文明链"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "甄别标准"
+  },
+  {
+    "source": "去中心化传播",
+    "target": "甄别规则"
+  },
+  {
+    "source": "哲学",
+    "target": "my哲学"
+  },
+  {
+    "source": "商业项目",
+    "target": "出海"
+  },
+  {
+    "source": "商业项目",
+    "target": "油画项目"
+  },
+  {
+    "source": "商业项目",
+    "target": "炒股"
+  },
+  {
+    "source": "商业项目",
+    "target": "跨境电商"
+  },
+  {
+    "source": "国学",
+    "target": "四书"
+  },
+  {
+    "source": "国学",
+    "target": "四书章句集注"
+  },
+  {
+    "source": "国学",
+    "target": "庄子"
+  },
+  {
+    "source": "国学",
+    "target": "朱熹"
+  },
+  {
+    "source": "国学",
+    "target": "王阳明"
+  },
+  {
+    "source": "图数据库",
+    "target": "my_graph"
+  },
+  {
+    "source": "图数据库",
+    "target": "联合检索"
+  },
+  {
+    "source": "坏情绪",
+    "target": "消沉"
+  },
+  {
+    "source": "天下",
+    "target": "GS"
+  },
+  {
+    "source": "天下",
+    "target": "出路"
+  },
+  {
+    "source": "天下",
+    "target": "去中心化传播"
+  },
+  {
+    "source": "天下",
+    "target": "当前经济"
+  },
+  {
+    "source": "天下",
+    "target": "思想经济"
+  },
+  {
+    "source": "天下",
+    "target": "言论自由"
+  },
+  {
+    "source": "学习方法",
+    "target": "AI辅助学习"
+  },
+  {
+    "source": "学习方法",
+    "target": "英语学习"
+  },
+  {
+    "source": "学习笔记",
+    "target": "读书"
+  },
+  {
+    "source": "学科",
+    "target": "国学"
+  },
+  {
+    "source": "学科",
+    "target": "法律"
+  },
+  {
+    "source": "学科",
+    "target": "社会科学"
+  },
+  {
+    "source": "学科",
+    "target": "科学"
+  },
+  {
+    "source": "学科",
+    "target": "经济学"
+  },
+  {
+    "source": "学科",
+    "target": "艺术"
+  },
+  {
+    "source": "家庭气氛",
+    "target": "EN"
+  },
+  {
+    "source": "家庭气氛",
+    "target": "气氛协议"
+  },
+  {
+    "source": "工具",
+    "target": "AI"
+  },
+  {
+    "source": "工具",
+    "target": "ANKI"
+  },
+  {
+    "source": "工具",
+    "target": "BT"
+  },
+  {
+    "source": "工具",
+    "target": "buzz"
+  },
+  {
+    "source": "工具",
+    "target": "everything"
+  },
+  {
+    "source": "工具",
+    "target": "flomo"
+  },
+  {
+    "source": "工具",
+    "target": "foobar"
+  },
+  {
+    "source": "工具",
+    "target": "github"
+  },
+  {
+    "source": "工具",
+    "target": "my工具"
+  },
+  {
+    "source": "工具",
+    "target": "python"
+  },
+  {
+    "source": "工具",
+    "target": "wiki"
+  },
+  {
+    "source": "工具",
+    "target": "区块链"
+  },
+  {
+    "source": "工具",
+    "target": "小号记录法"
+  },
+  {
+    "source": "工具",
+    "target": "比特币"
+  },
+  {
+    "source": "工具",
+    "target": "评测"
+  },
+  {
+    "source": "当前经济",
+    "target": "关税战"
+  },
+  {
+    "source": "录像",
+    "target": "短视频"
+  },
+  {
+    "source": "录音",
+    "target": "不录音"
+  },
+  {
+    "source": "录音场景",
+    "target": "思想火花"
+  },
+  {
+    "source": "待行动",
+    "target": "TODO"
+  },
+  {
+    "source": "待行动",
+    "target": "idea"
+  },
+  {
+    "source": "待行动",
+    "target": "待思考"
+  },
+  {
+    "source": "思与行",
+    "target": "行动"
+  },
+  {
+    "source": "思与行",
+    "target": "行动力"
+  },
+  {
+    "source": "思与行",
+    "target": "调和"
+  },
+  {
+    "source": "思想产生",
+    "target": "学习方法"
+  },
+  {
+    "source": "思想产生",
+    "target": "沉思"
+  },
+  {
+    "source": "思想匹配",
+    "target": "图数据库"
+  },
+  {
+    "source": "思想提升",
+    "target": "修身"
+  },
+  {
+    "source": "思想提升",
+    "target": "内化"
+  },
+  {
+    "source": "思想提升",
+    "target": "思想产生"
+  },
+  {
+    "source": "思想提升",
+    "target": "思想整理"
+  },
+  {
+    "source": "思想提升",
+    "target": "思想获得"
+  },
+  {
+    "source": "思想提升",
+    "target": "思想记录"
+  },
+  {
+    "source": "思想提升",
+    "target": "温故知新"
+  },
+  {
+    "source": "思想整理",
+    "target": "回听"
+  },
+  {
+    "source": "思想整理",
+    "target": "索引图"
+  },
+  {
+    "source": "思想确权",
+    "target": "NFT"
+  },
+  {
+    "source": "思想经济",
+    "target": "thinkDAQ"
+  },
+  {
+    "source": "思想经济",
+    "target": "产品沉思录"
+  },
+  {
+    "source": "思想经济",
+    "target": "思与行"
+  },
+  {
+    "source": "思想经济",
+    "target": "思想产生"
+  },
+  {
+    "source": "思想经济",
+    "target": "思想匹配"
+  },
+  {
+    "source": "思想经济",
+    "target": "思想确权"
+  },
+  {
+    "source": "思想经济",
+    "target": "思想者上市"
+  },
+  {
+    "source": "思想经济",
+    "target": "思想股市"
+  },
+  {
+    "source": "思想者上市",
+    "target": "thinkDAQ"
+  },
+  {
+    "source": "思想股市",
+    "target": "thinkDAQ"
+  },
+  {
+    "source": "思想获得",
+    "target": "去中心化传播"
+  },
+  {
+    "source": "思想记录",
+    "target": "思想火花"
+  },
+  {
+    "source": "思想记录",
+    "target": "思想火花"
+  },
+  {
+    "source": "思考模型",
+    "target": "内化"
+  },
+  {
+    "source": "思考模型",
+    "target": "思想火花"
+  },
+  {
+    "source": "意识模型",
+    "target": "价值"
+  },
+  {
+    "source": "意识模型",
+    "target": "思与行"
+  },
+  {
+    "source": "意识模型",
+    "target": "思考模型"
+  },
+  {
+    "source": "意识模型",
+    "target": "自由"
+  },
+  {
+    "source": "意识模型",
+    "target": "行动"
+  },
+  {
+    "source": "意识模型",
+    "target": "行动力模型"
+  },
+  {
+    "source": "故事",
+    "target": "人类未来"
+  },
+  {
+    "source": "故事",
+    "target": "创作思路"
+  },
+  {
+    "source": "故事",
+    "target": "颜界"
+  },
+  {
+    "source": "教育",
+    "target": "通识教育"
+  },
+  {
+    "source": "文学",
+    "target": "语言"
+  },
+  {
+    "source": "文明链",
+    "target": "话题链"
+  },
+  {
+    "source": "新媒体",
+    "target": "喜马拉雅"
+  },
+  {
+    "source": "新媒体",
+    "target": "快手"
+  },
+  {
+    "source": "新媒体",
+    "target": "抖音"
+  },
+  {
+    "source": "新媒体",
+    "target": "播客"
+  },
+  {
+    "source": "新媒体",
+    "target": "短视频"
+  },
+  {
+    "source": "新媒体",
+    "target": "节目"
+  },
+  {
+    "source": "新媒体",
+    "target": "视频号"
+  },
+  {
+    "source": "日记",
+    "target": "EN"
+  },
+  {
+    "source": "日记",
+    "target": "作息"
+  },
+  {
+    "source": "日记",
+    "target": "健康记录"
+  },
+  {
+    "source": "日记",
+    "target": "坏情绪"
+  },
+  {
+    "source": "日记",
+    "target": "家庭气氛"
+  },
+  {
+    "source": "日记",
+    "target": "忠告"
+  },
+  {
+    "source": "日记",
+    "target": "教育"
+  },
+  {
+    "source": "日记",
+    "target": "流水账"
+  },
+  {
+    "source": "日记",
+    "target": "随口记"
+  },
+  {
+    "source": "本地LLM",
+    "target": "GLM4"
+  },
+  {
+    "source": "标注",
+    "target": "flomo"
+  },
+  {
+    "source": "标注",
+    "target": "关键词"
+  },
+  {
+    "source": "标注",
+    "target": "标注工作程序"
+  },
+  {
+    "source": "标注",
+    "target": "标注规则"
+  },
+  {
+    "source": "标注规则",
+    "target": "简易标注"
+  },
+  {
+    "source": "法律",
+    "target": "法考"
+  },
+  {
+    "source": "法律",
+    "target": "法考笔记"
+  },
+  {
+    "source": "温故知新",
+    "target": "my_graph"
+  },
+  {
+    "source": "温故知新",
+    "target": "回听"
+  },
+  {
+    "source": "游戏",
+    "target": "帝国"
+  },
+  {
+    "source": "游戏",
+    "target": "语言起源游戏"
+  },
+  {
+    "source": "王阳明",
+    "target": "传习录"
+  },
+  {
+    "source": "理性和感性",
+    "target": "感性"
+  },
+  {
+    "source": "理性和感性",
+    "target": "理性"
+  },
+  {
+    "source": "生活",
+    "target": "养鱼日记"
+  },
+  {
+    "source": "生活",
+    "target": "喝酒"
+  },
+  {
+    "source": "电影",
+    "target": "影评"
+  },
+  {
+    "source": "短板",
+    "target": "坏情绪"
+  },
+  {
+    "source": "短板",
+    "target": "家庭气氛"
+  },
+  {
+    "source": "短板",
+    "target": "成瘾性"
+  },
+  {
+    "source": "短板",
+    "target": "状态差"
+  },
+  {
+    "source": "短板",
+    "target": "自制力"
+  },
+  {
+    "source": "短板",
+    "target": "行动力"
+  },
+  {
+    "source": "短视频",
+    "target": "快手"
+  },
+  {
+    "source": "短视频",
+    "target": "播客"
+  },
+  {
+    "source": "社会科学",
+    "target": "去中心化"
+  },
+  {
+    "source": "科学",
+    "target": "数学"
+  },
+  {
+    "source": "索引图",
+    "target": "图数据库"
+  },
+  {
+    "source": "经济学",
+    "target": "当前经济"
+  },
+  {
+    "source": "经济学",
+    "target": "思想经济"
+  },
+  {
+    "source": "经济学",
+    "target": "经济史"
+  },
+  {
+    "source": "经济学",
+    "target": "虚拟经济"
+  },
+  {
+    "source": "经济学",
+    "target": "财富分配"
+  },
+  {
+    "source": "经济学",
+    "target": "货币"
+  },
+  {
+    "source": "缩略",
+    "target": "回顾"
+  },
+  {
+    "source": "职业方向",
+    "target": "商业项目"
+  },
+  {
+    "source": "背单词",
+    "target": "ANKI"
+  },
+  {
+    "source": "背单词",
+    "target": "my_words"
+  },
+  {
+    "source": "自制力",
+    "target": "作息"
+  },
+  {
+    "source": "自制力",
+    "target": "喝酒"
+  },
+  {
+    "source": "自制力",
+    "target": "熬夜"
+  },
+  {
+    "source": "艺术",
+    "target": "游戏"
+  },
+  {
+    "source": "艺术",
+    "target": "画画"
+  },
+  {
+    "source": "英语学习",
+    "target": "my_words"
+  },
+  {
+    "source": "英语学习",
+    "target": "背单词"
+  },
+  {
+    "source": "蓝苹果",
+    "target": "产品沉思录"
+  },
+  {
+    "source": "虚拟经济",
+    "target": "服务业"
+  },
+  {
+    "source": "行动",
+    "target": "行动力"
+  },
+  {
+    "source": "行动",
+    "target": "行动力模型"
+  },
+  {
+    "source": "行动力",
+    "target": "成瘾性"
+  },
+  {
+    "source": "行动力",
+    "target": "知行合一"
+  },
+  {
+    "source": "行动力模型",
+    "target": "行动力"
+  },
+  {
+    "source": "话题链",
+    "target": "话题唯一码"
+  },
+  {
+    "source": "读书",
+    "target": "傅雷家书"
+  },
+  {
+    "source": "读书",
+    "target": "藏书简介"
+  },
+  {
+    "source": "货币",
+    "target": "人类货币史"
+  },
+  {
+    "source": "资源",
+    "target": "GXS"
+  },
+  {
+    "source": "跑步",
+    "target": "超慢跑"
+  },
+  {
+    "source": "转写",
+    "target": "buzz"
+  },
+  {
+    "source": "my工具",
+    "target": "BT发布工具"
+  },
+  {
+    "source": "资源",
+    "target": "小岛"
+  },
+  {
+    "source": "资源",
+    "target": "荷马史诗"
+  },
+  {
+    "source": "智谱清言",
+    "target": "GLM-4.5"
+  },
+  {
+    "source": "文明链",
+    "target": "内容链"
+  },
+  {
+    "source": "工具",
+    "target": "NFT"
+  },
+  {
+    "source": "三观",
+    "target": "my哲学"
+  },
+  {
+    "source": "工具",
+    "target": "IPFS"
+  },
+  {
+    "source": "本地LLM",
+    "target": "VTTprocess"
+  },
+  {
+    "source": "标注",
+    "target": "图数据库"
+  },
+  {
+    "source": "图数据库",
+    "target": "关键词"
+  },
+  {
+    "source": "甄别规则",
+    "target": "文明链"
+  },
+  {
+    "source": "意识模型",
+    "target": "意识单元"
+  },
+  {
+    "source": "意识单元",
+    "target": "关键词"
+  },
+  {
+    "source": "思想记录",
+    "target": "值得记录"
+  },
+  {
+    "source": "生活",
+    "target": "游戏"
+  },
+  {
+    "source": "游戏",
+    "target": "小游戏"
+  },
+  {
+    "source": "艺术",
+    "target": "音乐"
+  },
+  {
+    "source": "艺术",
+    "target": "电影"
+  },
+  {
+    "source": "经济学",
+    "target": "企业观"
+  },
+  {
+    "source": "关键词",
+    "target": "关键词设立"
+  },
+  {
+    "source": "生活",
+    "target": "画画"
+  },
+  {
+    "source": "生活",
+    "target": "音乐"
+  },
+  {
+    "source": "生活",
+    "target": "电影"
+  },
+  {
+    "source": "文学",
+    "target": "故事"
+  },
+  {
+    "source": "生活",
+    "target": "故事"
+  },
+  {
+    "source": "感悟",
+    "target": "感想"
+  },
+  {
+    "source": "感悟",
+    "target": "感慨"
+  },
+  {
+    "source": "感悟",
+    "target": "感触"
+  },
+  {
+    "source": "感悟",
+    "target": "有感"
+  },
+  {
+    "source": "感悟",
+    "target": "纪念"
+  },
+  {
+    "source": "内容产生",
+    "target": "新媒体"
+  },
+  {
+    "source": "经济学",
+    "target": "人类货币史"
+  },
+  {
+    "source": "人生之书",
+    "target": "思想经济"
+  },
+  {
+    "source": "人生之书",
+    "target": "HST"
+  },
+  {
+    "source": "思想整理",
+    "target": "图数据库"
+  },
+  {
+    "source": "思想者上市",
+    "target": "思想股市"
+  },
+  {
+    "source": "修身",
+    "target": "人生意义"
+  },
+  {
+    "source": "修身",
+    "target": "短板"
+  },
+  {
+    "source": "LLM",
+    "target": "GLM-4.5"
+  },
+  {
+    "source": "AI",
+    "target": "知识库"
+  },
+  {
+    "source": "知识库",
+    "target": "腾讯ima"
+  },
+  {
+    "source": "行动力",
+    "target": "多巴胺"
+  },
+  {
+    "source": "多巴胺",
+    "target": "强化学习"
+  },
+  {
+    "source": "管理回听",
+    "target": "my_graph"
+  },
+  {
+    "source": "管理回听",
+    "target": "搜索推荐播放器"
+  },
+  {
+    "source": "回听",
+    "target": "管理回听"
+  },
+  {
+    "source": "管理回听",
+    "target": "刷音频"
+  },
+  {
+    "source": "刷音频",
+    "target": "你刷我啊"
+  }
+]
