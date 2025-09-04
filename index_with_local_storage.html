@@ -143,23 +143,27 @@
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-gray-600/70 text-center">
                 <div class="flex justify-center space-x-8 mb-6">
-                    <div>
+                    <div id="prev-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
                         <i class="fa fa-arrow-left text-xl mb-1"></i>
                         <div class="text-xs">上一条</div>
                     </div>
-                    <div>
+                    <div id="play-pause-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
                         <i class="fa fa-play text-xl mb-1"></i>
                         <div class="text-xs">播放/暂停</div>
                     </div>
-                    <div>
+                    <div id="next-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
                         <i class="fa fa-arrow-right text-xl mb-1"></i>
                         <div class="text-xs">下一条</div>
                     </div>
                 </div>
                 <div class="text-sm">
-                    <i class="fa fa-arrow-up mr-1"></i>随机播放
+                    <div id="random-mode-button" class="touch-button inline-flex items-center p-2 rounded-md hover:bg-gray-300/50 transition-colors">
+                        <i class="fa fa-arrow-up mr-1"></i>随机播放
+                    </div>
                     <span class="mx-3">|</span>
-                    <i class="fa fa-arrow-down mr-1"></i>推荐模式
+                    <div id="recommend-mode-button" class="touch-button inline-flex items-center p-2 rounded-md hover:bg-gray-300/50 transition-colors">
+                        <i class="fa fa-arrow-down mr-1"></i>推荐模式
+                    </div>
                 </div>
             </div>
         </div>
@@ -441,6 +445,12 @@
             // 增加点击播放/暂停支持
             setupPlayPauseSupport();
             
+            // 设置按钮点击支持
+            setupButtonClickSupport();
+            
+            // 设置键盘事件支持
+            setupKeyboardSupport();
+            
             // 添加清除存储按钮
             addClearStorageButton();
             
@@ -538,6 +548,90 @@
                 // 如果点击位置在中心区域（100px范围内）
                 if (distance < 100) {
                     togglePlayPause();
+                }
+            });
+        }
+        
+        // 设置按钮点击支持
+        function setupButtonClickSupport() {
+            // 上一条按钮
+            document.getElementById('prev-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    playPreviousEpisode();
+                }
+            });
+            
+            // 播放/暂停按钮
+            document.getElementById('play-pause-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    togglePlayPause();
+                }
+            });
+            
+            // 下一条按钮
+            document.getElementById('next-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    playNextEpisode();
+                }
+            });
+            
+            // 随机模式按钮
+            document.getElementById('random-mode-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    switchToRandomMode();
+                    playRandomEpisode();
+                }
+            });
+            
+            // 推荐模式按钮
+            document.getElementById('recommend-mode-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    switchToRecommendationMode();
+                    // 基于当前音频生成推荐列表
+                    if (currentIndex >= 0) {
+                        generateRecommendations(currentIndex);
+                    }
+                }
+            });
+        }
+        
+        // 设置键盘事件支持
+        function setupKeyboardSupport() {
+            document.addEventListener('keydown', (e) => {
+                // 防止在输入框中按下按键时触发操作
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+                
+                if (validEpisodes.length === 0) return; // 没有数据不响应键盘
+                
+                switch(e.key) {
+                    case 'ArrowLeft': // 左箭头 - 上一条
+                        e.preventDefault();
+                        playPreviousEpisode();
+                        break;
+                    case 'ArrowRight': // 右箭头 - 下一条
+                        e.preventDefault();
+                        playNextEpisode();
+                        break;
+                    case 'ArrowUp': // 上箭头 - 随机模式
+                        e.preventDefault();
+                        switchToRandomMode();
+                        playRandomEpisode();
+                        break;
+                    case 'ArrowDown': // 下箭头 - 推荐模式
+                        e.preventDefault();
+                        switchToRecommendationMode();
+                        // 基于当前音频生成推荐列表
+                        if (currentIndex >= 0) {
+                            generateRecommendations(currentIndex);
+                        }
+                        break;
+                    case ' ': // 空格键 - 播放/暂停
+                    case 'Enter': // 回车键 - 播放/暂停
+                        e.preventDefault();
+                        togglePlayPause();
+                        break;
                 }
             });
         }
