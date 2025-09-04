@@ -142,7 +142,7 @@
     <div id="touch-area" class="touch-area bg-gradient-to-b from-gray-100 to-gray-200 relative">
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-gray-600/70 text-center">
-                <div class="flex justify-center space-x-8 mb-6">
+                <div class="flex justify-center space-x-8 mb-4">
                     <div id="prev-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
                         <i class="fa fa-arrow-left text-xl mb-1"></i>
                         <div class="text-xs">上一条</div>
@@ -156,7 +156,7 @@
                         <div class="text-xs">下一条</div>
                     </div>
                 </div>
-                <div class="text-sm">
+                <div class="text-sm mt-2">
                     <div id="random-mode-button" class="touch-button inline-flex items-center p-2 rounded-md hover:bg-gray-300/50 transition-colors">
                         <i class="fa fa-arrow-up mr-1"></i>随机播放
                     </div>
@@ -933,7 +933,7 @@
             if (currentIndex < 0 || currentIndex >= validEpisodes.length) return;
             
             const episode = validEpisodes[currentIndex];
-            addUserAction(`正在播放: ${episode.title}`, 'info');
+            addUserAction(`正在尝试播放: ${episode.title}`, 'info');
             
             // 显示当前节目标注
             elements.annotationContent.textContent = episode.annotation;
@@ -956,46 +956,84 @@
             // 设置音频源并播放
             audioElement.src = episode.audioUrl;
             
-            try {
-                audioElement.load();
+            // 自动重试播放的函数
+            function attemptPlay(retries = 0, maxRetries = 3, retryDelay = 1000) {
+                if (retries > 0) {
+                    addUserAction(`正在重试播放... (第${retries}次尝试)`, 'info');
+                }
                 
-                // 短暂延迟后尝试播放
-                setTimeout(() => {
-                    audioElement.play()
-                        .then(() => {
-                            isPlaying = true;
-                            addUserAction('播放开始', 'success');
-                            startProgressInterval();
-                            
-                            // 如果在推荐模式但没有推荐列表，生成推荐列表
-                            if (!isRandomMode && recommendationList.length === 0) {
-                                generateRecommendations(currentIndex);
-                            }
-                        })
-                        .catch(error => {
-                            addUserAction(`播放失败: ${error.message}`, 'error');
-                            addRetryOption();
-                        });
-                }, 500);
-            } catch (error) {
-                addUserAction(`播放错误: ${error.message}`, 'error');
-                addRetryOption();
+                try {
+                    audioElement.load();
+                    
+                    // 短暂延迟后尝试播放
+                    setTimeout(() => {
+                        audioElement.play()
+                            .then(() => {
+                                isPlaying = true;
+                                addUserAction('播放开始', 'success');
+                                startProgressInterval();
+                                
+                                // 如果在推荐模式但没有推荐列表，生成推荐列表
+                                if (!isRandomMode && recommendationList.length === 0) {
+                                    generateRecommendations(currentIndex);
+                                }
+                            })
+                            .catch(error => {
+                                // 如果还没达到最大重试次数，继续尝试
+                                if (retries < maxRetries) {
+                                    setTimeout(() => {
+                                        attemptPlay(retries + 1, maxRetries, retryDelay);
+                                    }, retryDelay);
+                                } else {
+                                    addUserAction(`多次尝试播放失败，建议检查网络连接或稍后重试`, 'warning');
+                                    addRetryOption();
+                                }
+                            });
+                    }, 500);
+                } catch (error) {
+                    if (retries < maxRetries) {
+                        setTimeout(() => {
+                            attemptPlay(retries + 1, maxRetries, retryDelay);
+                        }, retryDelay);
+                    } else {
+                        addUserAction(`多次尝试播放失败，建议检查网络连接或稍后重试`, 'warning');
+                        addRetryOption();
+                    }
+                }
             }
+            
+            // 开始尝试播放
+            attemptPlay();
         }
         
         // 处理音频错误
         function handleAudioError(event) {
-            let errorMsg = "音频播放错误: ";
+            // 不立即显示错误，让重试机制处理
+            if (isPlaying || !audioElement.paused) {
+                isPlaying = false;
+                stopProgressInterval();
+                
+                // 静默地尝试重新播放，而不是直接显示错误
+                setTimeout(() => {
+                    if (currentIndex >= 0 && currentIndex < validEpisodes.length) {
+                        addUserAction(`尝试恢复播放...`, 'info');
+                        playCurrentEpisode();
+                    }
+                }, 1000);
+            }
+            
+            // 保留原始错误处理逻辑，但降低错误提示的严重性
+            let errorMsg = "音频播放中断: ";
             
             switch(audioElement.error.code) {
                 case MediaError.MEDIA_ERR_ABORTED:
                     errorMsg += "播放被中止";
                     break;
                 case MediaError.MEDIA_ERR_NETWORK:
-                    errorMsg += "网络错误";
+                    errorMsg += "网络连接问题";
                     break;
                 case MediaError.MEDIA_ERR_DECODE:
-                    errorMsg += "无法解码媒体文件";
+                    errorMsg += "媒体解码问题";
                     break;
                 case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
                     errorMsg += "不支持的音频格式";

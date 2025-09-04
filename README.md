@@ -1,5 +1,11 @@
 # 播客播放器使用说明 / Podcast Player Instructions
 
+## 播放器核心理念 / Player Core Concept
+- 本播放器的主要特点是首先随机播放音频内容，当您对一条音频感兴趣（例如完播或选择根据此条推荐），系统会自动生成与之最相关的播放列表。
+- 我们认为这是语言类播客的最佳使用方式。
+- The main feature of this player is that it first plays audio content randomly. When you are interested in an audio (such as finishing playback or choosing to recommend based on this one), the system will automatically generate a playlist most relevant to it.
+- We believe this is the best way to use language podcasts.
+
 ## 功能概述 / Features
 - 支持随机播放和推荐模式 / Support random play and recommendation mode
 - 触摸区域支持划屏操作 / Touch area supports swipe gestures
