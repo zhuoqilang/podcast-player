@@ -152,9 +152,13 @@
             <i class="fa fa-arrow-right text-gray-700"></i>
             <span class="text-xs text-gray-700">Next</span>
         </div>
-        <div id="mode-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+        <div id="random-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
             <i class="fa fa-random text-gray-700"></i>
-            <span class="text-xs text-gray-700">Mode</span>
+            <span class="text-xs text-gray-700">Random</span>
+        </div>
+        <div id="recommend-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-thumbs-up text-gray-700"></i>
+            <span class="text-xs text-gray-700">Recommend</span>
         </div>
     </div>
     
@@ -585,49 +589,29 @@
                 }
             });
             
-            // 模式切换按钮
-            const modeButton = document.getElementById('mode-button');
-            let currentMode = 'random'; // 默认为随机模式
-            
-            // 更新模式按钮显示状态
-            function updateModeButtonDisplay() {
-                const iconElement = modeButton.querySelector('i');
-                const textElement = modeButton.querySelector('span');
-                
-                if (currentMode === 'random') {
-                    iconElement.className = 'fa fa-random text-gray-700';
-                    textElement.textContent = 'Random';
-                    modeButton.title = '当前: 随机模式，点击切换到推荐模式';
-                } else {
-                    iconElement.className = 'fa fa-thumbs-up text-gray-700';
-                    textElement.textContent = 'Recommend';
-                    modeButton.title = '当前: 推荐模式，点击切换到随机模式';
-                }
-            }
-            
-            // 初始更新显示
-            updateModeButtonDisplay();
-            
-            // 添加点击事件
-            modeButton.addEventListener('click', () => {
+            // 随机模式按钮
+            document.getElementById('random-button').addEventListener('click', () => {
                 if (validEpisodes.length > 0 && !isSwiping) {
-                    if (currentMode === 'random') {
-                        // 切换到推荐模式
-                        switchToRecommendationMode();
-                        currentMode = 'recommendation';
-                        // 基于当前音频生成推荐列表
-                        if (currentIndex >= 0) {
-                            generateRecommendations(currentIndex);
-                        }
+                    // 切换到随机模式
+                    switchToRandomMode();
+                    playRandomEpisode();
+                    addUserAction('已切换到随机播放模式', 'info');
+                }
+            });
+            
+            // 推荐模式按钮
+            document.getElementById('recommend-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    // 切换到推荐模式
+                    switchToRecommendationMode();
+                    // 基于当前音频生成推荐列表
+                    if (currentIndex >= 0) {
+                        generateRecommendations(currentIndex);
                     } else {
-                        // 切换到随机模式
-                        switchToRandomMode();
-                        currentMode = 'random';
+                        // 如果没有当前播放的音频，随机选择一个开始
                         playRandomEpisode();
                     }
-                    
-                    // 更新按钮显示
-                    updateModeButtonDisplay();
+                    addUserAction('已切换到推荐播放模式', 'info');
                 }
             });
         }
