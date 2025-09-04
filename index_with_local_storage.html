@@ -32,12 +32,12 @@
             .content-auto {
                 content-visibility: auto;
             }
-            .touch-area {
-                height: 33.333vh; /* 触摸区占1/3 */
-            }
             .info-area {
-                height: 66.666vh; /* 信息区占2/3 */
+                height: 60vh; /* 信息区占3/5 */
                 overflow-y: auto;
+            }
+            .touch-area {
+                height: calc(40vh - 3rem); /* 触摸区占2/5减去控制按钮区高度 */
             }
             .entry {
                 animation: fadeIn 0.3s ease;
@@ -327,17 +327,33 @@
         function tryLoadLocalFiles() {
             if (selectedFilesCount >= 3) return; // 已经加载了文件，不再尝试
             
+            // 检查是否有本地存储的文件数据
+            const hasEpisodesData = localStorage.getItem('episodes');
+            const hasNodesData = localStorage.getItem('nodes');
+            const hasEdgesData = localStorage.getItem('edges');
+            
+            if (hasEpisodesData && hasNodesData && hasEdgesData) {
+                addUserAction('检测到本地存储已有文件数据，正在加载...', 'info');
+                loadFromLocalStorage();
+                return;
+            }
+            
             // 检查当前URL协议
             const isFileProtocol = window.location.protocol === 'file:';
             
             if (isFileProtocol) {
                 // 在file://协议下，浏览器出于安全考虑会限制fetch访问本地文件
-                addUserAction('检测到file://协议，出于安全考虑请手动选择文件', 'info');
+                addUserAction('检测到file://协议，尝试从本地存储加载...', 'info');
                 
-                // 显示文件选择区域
-                const fileInputContainer = document.querySelector('.file-input-container');
-                if (fileInputContainer) {
-                    fileInputContainer.classList.remove('hidden-files');
+                // 尝试从本地存储加载，如果本地存储也没有，再提示手动选择
+                if (!loadFromLocalStorage()) {
+                    addUserAction('本地存储也没有找到数据，请手动选择三个文件', 'warning');
+                    
+                    // 显示文件选择区域
+                    const fileInputContainer = document.querySelector('.file-input-container');
+                    if (fileInputContainer) {
+                        fileInputContainer.classList.remove('hidden-files');
+                    }
                 }
                 
                 return;
