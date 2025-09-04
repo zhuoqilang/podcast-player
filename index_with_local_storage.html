@@ -138,35 +138,29 @@
         </div>
     </div>
     
-    <!-- 触摸操作区域 (下半部分，占1/3屏幕) -->
-    <div id="touch-area" class="touch-area bg-gradient-to-b from-gray-100 to-gray-200 relative">
-        <div class="absolute inset-0 flex justify-center pt-16">
-            <div class="text-gray-600/70 text-center">
-                <div class="flex justify-center space-x-8 mb-4">
-                    <div id="prev-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
-                        <i class="fa fa-arrow-left text-xl mb-1"></i>
-                        <div class="text-xs">上一条</div>
-                    </div>
-                    <div id="play-pause-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
-                        <i class="fa fa-play text-xl mb-1"></i>
-                        <div class="text-xs">播放/暂停</div>
-                    </div>
-                    <div id="next-button" class="touch-button p-3 rounded-full hover:bg-gray-300/50 transition-colors">
-                        <i class="fa fa-arrow-right text-xl mb-1"></i>
-                        <div class="text-xs">下一条</div>
-                    </div>
-                </div>
-                <div class="text-sm mt-2">
-                    <div id="random-mode-button" class="touch-button inline-flex items-center p-2 rounded-md hover:bg-gray-300/50 transition-colors">
-                        <i class="fa fa-arrow-up mr-1"></i>随机播放
-                    </div>
-                    <span class="mx-3">|</span>
-                    <div id="recommend-mode-button" class="touch-button inline-flex items-center p-2 rounded-md hover:bg-gray-300/50 transition-colors">
-                        <i class="fa fa-arrow-down mr-1"></i>推荐模式
-                    </div>
-                </div>
-            </div>
+    <!-- 控制按钮区域 (信息区和触摸区之间) -->
+    <div id="control-buttons-area" class="bg-gray-200 py-2 px-4 flex justify-around items-center border-y border-gray-300">
+        <div id="prev-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-arrow-left text-gray-700"></i>
+            <span class="text-xs text-gray-700">Previous</span>
         </div>
+        <div id="play-pause-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-play text-gray-700"></i>
+            <span class="text-xs text-gray-700">Play/Pause</span>
+        </div>
+        <div id="next-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-arrow-right text-gray-700"></i>
+            <span class="text-xs text-gray-700">Next</span>
+        </div>
+        <div id="mode-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-random text-gray-700"></i>
+            <span class="text-xs text-gray-700">Mode</span>
+        </div>
+    </div>
+    
+    <!-- 触摸操作区域 (下半部分) -->
+    <div id="touch-area" class="touch-area bg-gradient-to-b from-gray-100 to-gray-200 relative">
+        <!-- 保留原有的播放状态指示器和滑动轨迹指示器 -->
         
         <!-- 播放状态指示器 -->
         <div id="playback-status" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-sm px-3 py-2 rounded-lg text-white text-sm hidden">
@@ -575,22 +569,49 @@
                 }
             });
             
-            // 随机模式按钮
-            document.getElementById('random-mode-button').addEventListener('click', () => {
-                if (validEpisodes.length > 0 && !isSwiping) {
-                    switchToRandomMode();
-                    playRandomEpisode();
-                }
-            });
+            // 模式切换按钮
+            const modeButton = document.getElementById('mode-button');
+            let currentMode = 'random'; // 默认为随机模式
             
-            // 推荐模式按钮
-            document.getElementById('recommend-mode-button').addEventListener('click', () => {
+            // 更新模式按钮显示状态
+            function updateModeButtonDisplay() {
+                const iconElement = modeButton.querySelector('i');
+                const textElement = modeButton.querySelector('span');
+                
+                if (currentMode === 'random') {
+                    iconElement.className = 'fa fa-random text-gray-700';
+                    textElement.textContent = 'Random';
+                    modeButton.title = '当前: 随机模式，点击切换到推荐模式';
+                } else {
+                    iconElement.className = 'fa fa-thumbs-up text-gray-700';
+                    textElement.textContent = 'Recommend';
+                    modeButton.title = '当前: 推荐模式，点击切换到随机模式';
+                }
+            }
+            
+            // 初始更新显示
+            updateModeButtonDisplay();
+            
+            // 添加点击事件
+            modeButton.addEventListener('click', () => {
                 if (validEpisodes.length > 0 && !isSwiping) {
-                    switchToRecommendationMode();
-                    // 基于当前音频生成推荐列表
-                    if (currentIndex >= 0) {
-                        generateRecommendations(currentIndex);
+                    if (currentMode === 'random') {
+                        // 切换到推荐模式
+                        switchToRecommendationMode();
+                        currentMode = 'recommendation';
+                        // 基于当前音频生成推荐列表
+                        if (currentIndex >= 0) {
+                            generateRecommendations(currentIndex);
+                        }
+                    } else {
+                        // 切换到随机模式
+                        switchToRandomMode();
+                        currentMode = 'random';
+                        playRandomEpisode();
                     }
+                    
+                    // 更新按钮显示
+                    updateModeButtonDisplay();
                 }
             });
         }
