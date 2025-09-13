@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Podcast Player Lite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#8B5CF6',
+                        accent: '#EC4899',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                @apply transition-all duration-200 hover:-translate-y-1;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .backdrop-blur-sm {
+                backdrop-filter: blur(4px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-dark min-h-screen flex flex-col">
+    <!-- 顶部导航栏 -->
+    <header class="bg-dark text-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center">
+            <div id="logo-container" class="flex items-center space-x-2 cursor-pointer">
+                <i class="fa fa-home text-primary text-xl mr-1"></i>
+                <i class="fa fa-microphone text-primary text-xl"></i>
+                <h1 class="text-xl font-bold text-dark">Podcast Player Lite</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="flex-1 container mx-auto px-4 py-6">
+        <!-- 专辑列表区域 -->
+        <section id="album-list-section" class="mb-8">
+            <!-- 添加专辑表单 -->
+            <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+                <div class="flex flex-col space-y-3">
+                    <div class="relative">
+                        <input
+                            type="text"
+                            id="album-id"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                            placeholder="输入专辑ID添加"
+                        >
+                    </div>
+                    <button
+                        id="add-album-button"
+                        class="w-full bg-primary text-white font-medium py-2 px-4 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    >
+                        <i class="fa fa-plus mr-1"></i> 添加专辑
+                    </button>
+                    <div class="text-right">
+                        <button id="help-button" class="text-sm text-gray-500 hover:text-primary transition-colors">
+                            <i class="fa fa-question-circle mr-1"></i> 如何获取专辑ID？
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 帮助文本 -->
+            <div id="help-text" class="bg-white rounded-lg shadow-md p-4 mb-6 hidden">
+                <h3 class="font-semibold mb-3">如何获取喜马拉雅专辑ID？</h3>
+                <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+                    <li>打开喜马拉雅APP或网站</li>
+                    <li>找到您喜欢的专辑</li>
+                    <li>专辑页面的URL中"/album/"后面的数字就是专辑ID</li>
+                    <li>专辑id未必都可以使用，除非已经托管为播客</li>
+                </ol>
+                
+                <!-- 可点击的专辑ID列表 -->
+                <div class="mt-4 border border-gray-200 rounded-lg p-4 bg-gray-50">
+                    <h4 class="font-medium text-sm mb-2 text-gray-700">推荐专辑ID：</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-60 overflow-y-auto pr-2">
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="14641355">14641355 - 跑题大会</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="21469108">21469108 - 科学星球</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="24425934">24425934 - 樊登：我有一个脱口秀</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="31769739">31769739 - 一派·Podcast 中国版</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="33244571">33244571 - 硅谷101|中国版</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="33398646">33398646 - 听见知乎：5分钟涨姿势</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="3785430">3785430 - 津津乐道中国版</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="40320716">40320716 - TIANYU2FM — 对谈未知领域</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="42715423">42715423 - 贝望录</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="44299765">44299765 - 二维吾码</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="46587439">46587439 - 商业就是这样</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="46604249">46604249 - 消费新知</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="46898583">46898583 - 泛娱乐</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="49364527">49364527 - 出海进行时</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="54649472">54649472 - 人文清华播客：对话清华学者</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="55951710">55951710 - 大小马聊科技</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="6728695">6728695 - 老司机三人行</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="74194808">74194808 - AI炼金术</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="8125936">8125936 - 36氪·8点1氪</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="2823309">2823309 - 虎嗅·商业有味道</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="4885761">4885761 - 中科院格致论道讲坛</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="6310606">6310606 - 大老李聊数学（全集）</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="270535">270535 - 妙宇连朱</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="5112065">5112065 - 张法中讲美术史</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="4792795">4792795 - 古哥古点（全集）</div>
+                        <div class="album-id-item px-3 py-2 bg-white rounded hover:bg-primary/10 cursor-pointer transition-colors text-sm" data-id="44808999">44808999 - 股票投资入门基础知识</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 专辑列表标题 -->
+            <h2 class="text-xl font-bold mb-4 text-dark">已添加的专辑</h2>
+
+            <!-- 专辑卡片列表 -->
+            <div id="albums-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 专辑卡片将在这里动态生成 -->
+            </div>
+        </section>
+
+        <!-- 专辑详情区域 -->
+        <section id="album-detail-section" class="hidden mb-8">
+            <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+                <h2 id="album-title" class="text-xl font-bold mb-2 text-dark"></h2>
+                <p id="album-id-display" class="text-sm text-gray-500 mb-4"></p>
+            </div>
+
+            <!-- 音频列表 -->
+            <div id="episodes-container" class="bg-white rounded-lg shadow-md">
+                <!-- 音频列表将在这里动态生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 音频播放器控制栏 -->
+    <footer id="audio-player-container" class="fixed bottom-0 left-0 right-0 bg-gray-700 text-white shadow-md hidden">
+        <div class="container mx-auto px-4 py-3">
+            <!-- 移动端布局 - 文字在上 -->
+            <div class="block md:flex md:items-center md:justify-between">
+                <!-- 播放信息 -->
+                <div class="flex-1 min-w-0 mb-3 md:mb-0 md:mr-4">
+                    <div id="now-playing-title" class="text-sm font-medium truncate"></div>
+                    <div id="now-playing-album" class="text-xs text-gray-300 truncate"></div>
+                </div>
+                
+                <!-- 进度条 - 在移动端显示在按钮和信息下方 -->
+                <div class="w-full md:w-auto mb-3 md:mb-0 flex items-center space-x-2">
+                    <span id="audio-current-time" class="text-xs text-gray-300 whitespace-nowrap">00:00</span>
+                        <div id="audio-progress-container" class="flex-1 h-2 bg-gray-600 rounded-full overflow-hidden cursor-pointer">
+                            <div id="audio-progress" class="h-full bg-primary" style="width: 0%"></div>
+                        </div>
+                        <span id="audio-total-time" class="text-xs text-gray-300 whitespace-nowrap">00:00</span>
+                </div>
+                
+                <!-- 控制按钮 -->
+                <div class="flex items-center space-x-4 mx-4">
+                    <button id="audio-prev" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-step-backward"></i>
+                    </button>
+                    <button id="audio-play-pause" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <button id="audio-next" class="text-gray-300 hover:text-white transition-colors">
+                        <i class="fa fa-step-forward"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 音频播放器元素 -->
+    <audio id="audio-player" class="hidden"></audio>
+
+    <script>
+        // 全局状态
+        let localAlbums = [];             // 用户添加的专辑
+        let albumsData = {};              // 存储所有专辑的详细数据和音频列表
+        let currentAlbum = null;          // 当前查看的专辑
+        let currentEpisodes = [];         // 当前专辑的音频列表
+        let currentEpisodeIndex = -1;     // 当前播放的音频索引
+        let isPlaying = false;            // 是否正在播放
+        let audioElement = null;          // 音频元素引用
+        let progressInterval = null;      // 进度条更新定时器
+
+        // HTML元素引用
+        const elements = {
+            albumListSection: document.getElementById('album-list-section'),
+            albumDetailSection: document.getElementById('album-detail-section'),
+            albumsContainer: document.getElementById('albums-container'),
+            episodesContainer: document.getElementById('episodes-container'),
+            albumIdInput: document.getElementById('album-id'),
+            addAlbumButton: document.getElementById('add-album-button'),
+            helpButton: document.getElementById('help-button'),
+            helpText: document.getElementById('help-text'),
+            logoContainer: document.getElementById('logo-container'),
+            albumTitle: document.getElementById('album-title'),
+            albumIdDisplay: document.getElementById('album-id-display'),
+            audioPlayerContainer: document.getElementById('audio-player-container'),
+            audioPlayer: document.getElementById('audio-player'),
+            audioPlayPause: document.getElementById('audio-play-pause'),
+            audioPrev: document.getElementById('audio-prev'),
+            audioNext: document.getElementById('audio-next'),
+            audioProgress: document.getElementById('audio-progress'),
+            audioCurrentTime: document.getElementById('audio-current-time'),
+            audioTotalTime: document.getElementById('audio-total-time'),
+            nowPlayingTitle: document.getElementById('now-playing-title'),
+            nowPlayingAlbum: document.getElementById('now-playing-album')
+        };
+
+        // 格式化时间
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // 从本地存储加载数据
+        function loadFromLocalStorage() {
+            const savedAlbums = localStorage.getItem('PodcastPlayer_albums');
+            if (savedAlbums) {
+                localAlbums = JSON.parse(savedAlbums);
+            }
+            
+            const savedAlbumsData = localStorage.getItem('PodcastPlayer_albums_data');
+            if (savedAlbumsData) {
+                albumsData = JSON.parse(savedAlbumsData);
+            }
+        }
+
+        // 保存数据到本地存储
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('PodcastPlayer_albums', JSON.stringify(localAlbums));
+                localStorage.setItem('PodcastPlayer_albums_data', JSON.stringify(albumsData));
+                return true;
+            } catch (error) {
+                console.error('保存数据到本地存储失败:', error);
+                // 检查是否是存储配额超限
+                if (error instanceof DOMException && 
+                    (error.name === 'QuotaExceededError' || 
+                     error.name === 'NS_ERROR_DOM_QUOTA_REACHED')) {
+                    return 'quota_exceeded';
+                }
+                return false;
+            }
+        }
+
+        // 解析XML数据
+        function parseXML(xmlString) {
+            const parser = new DOMParser();
+            return parser.parseFromString(xmlString, 'text/xml');
+        }
+
+        // 获取带命名空间的元素
+        function getElementWithNamespace(doc, elementName) {
+            if (elementName.includes(':')) {
+                const [prefix, localName] = elementName.split(':');
+                const elements = doc.querySelectorAll('*');
+                for (const element of elements) {
+                    if (element.tagName.toLowerCase() === elementName.toLowerCase()) {
+                        return element;
+                    }
+                }
+                return null;
+            }
+            return doc.querySelector(elementName);
+        }
+
+        // 从XML中提取文本内容，处理CDATA
+        function extractTextContent(element) {
+            if (!element) return '';
+            return element.textContent.trim();
+        }
+
+        // 从XML中提取专辑信息
+        function extractAlbumInfo(xmlDoc) {
+            const channel = xmlDoc.querySelector('channel');
+            if (!channel) return null;
+            
+            return {
+                title: extractTextContent(channel.querySelector('title')) || '',
+                description: extractTextContent(channel.querySelector('description')) || '',
+                update_time: new Date().toLocaleString('zh-CN')
+            };
+        }
+
+        // 从XML中提取音频列表
+        function extractEpisodes(xmlDoc, albumId) {
+            const items = xmlDoc.querySelectorAll('item');
+            const episodes = [];
+            
+            items.forEach((item, index) => {
+                // 提取时长
+                let duration = 0;
+                const durationText = extractDuration(item);
+                if (durationText) {
+                    duration = parseDuration(durationText);
+                }
+                
+                // 提取音频URL
+                let enclosureUrl = extractEnclosureUrl(item);
+                
+                episodes.push({
+                    id: `${albumId}_${index + 1}`,
+                    title: extractTextContent(item.querySelector('title')) || `第${index + 1}集`,
+                    description: extractTextContent(item.querySelector('description')) || '',
+                    duration: duration,
+                    enclosure_url: enclosureUrl,
+                    pub_date: extractTextContent(item.querySelector('pubDate')) || ''
+                });
+            });
+            
+            return episodes;
+        }
+
+        // 提取时长（多来源）
+        function extractDuration(item) {
+            let duration = extractTextContent(item.querySelector('duration'));
+            if (duration) {
+                return duration;
+            }
+
+            duration = extractTextContent(getElementWithNamespace(item, 'itunes:duration'));
+            if (duration) {
+                return duration;
+            }
+
+            const description = extractTextContent(item.querySelector('description'));
+            if (description) {
+                const match = description.match(/时长[:：]\s*(\d+[:：]\d+(:\d+)?|\d+)/);
+                if (match) {
+                    return match[1].replace(/[:：]/g, ':');
+                }
+            }
+
+            const title = extractTextContent(item.querySelector('title'));
+            if (title) {
+                const match = title.match(/\[(\d+[:：]\d+(:\d+)?|\d+)\]/);
+                if (match) {
+                    return match[1].replace(/[:：]/g, ':');
+                }
+            }
+
+            return '';
+        }
+
+        // 解析时长字符串为秒数
+        function parseDuration(durationStr) {
+            if (!durationStr || durationStr.trim() === '') {
+                return 0;
+            }
+
+            durationStr = durationStr.trim();
+
+            if (/^\d+$/.test(durationStr)) {
+                return parseInt(durationStr);
+            }
+            
+            const parts = durationStr.split(':').map(part => parseInt(part));
+            if (parts.length === 2) {
+                return parts[0] * 60 + parts[1];
+            } else if (parts.length === 3) {
+                return parts[0] * 3600 + parts[1] * 60 + parts[2];
+            }
+            
+            return 0;
+        }
+
+        // 提取enclosure标签中的URL
+        function extractEnclosureUrl(item) {
+            const enclosures = item.querySelectorAll('enclosure');
+            for (const enclosure of enclosures) {
+                if ('url' in enclosure.attributes && 
+                    'type' in enclosure.attributes && 
+                    enclosure.attributes.type.value.startsWith('audio/')) {
+                    
+                    let url = enclosure.attributes.url.value;
+                    
+                    if (url.startsWith('//') && !url.startsWith('http')) {
+                        url = `https:${url}`;
+                    }
+                    
+                    return url;
+                }
+            }
+            
+            const linkElement = item.querySelector('link');
+            if (linkElement) {
+                return extractTextContent(linkElement);
+            }
+            
+            return '';
+        }
+
+        // 获取喜马拉雅专辑数据
+        async function fetchAlbumData(albumId) {
+            try {
+                // 显示加载状态
+                elements.albumsContainer.innerHTML = `
+                    <div class="col-span-full p-8 text-center">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary mb-3"></div>
+                        <p class="text-gray-500">正在获取专辑数据，请稍候...</p>
+                    </div>
+                `;
+                
+                // 构建RSS URL
+                const url = `https://www.ximalaya.com/album/${albumId}.xml`;
+                
+                // 设置请求头
+                const headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                };
+                
+                // 发送请求获取XML数据
+                const response = await fetch(url, { headers });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const xmlString = await response.text();
+                
+                if (!xmlString.trim()) {
+                    throw new Error('服务器返回空内容');
+                }
+                
+                const xmlDoc = parseXML(xmlString);
+                
+                const parserError = xmlDoc.querySelector('parsererror');
+                if (parserError) {
+                    throw new Error('XML解析错误');
+                }
+                
+                const albumInfo = extractAlbumInfo(xmlDoc);
+                if (!albumInfo) {
+                    throw new Error('无法提取专辑信息');
+                }
+                
+                // 传递专辑ID给extractEpisodes函数
+                const episodes = extractEpisodes(xmlDoc, albumId);
+                
+                if (episodes.length === 0) {
+                    throw new Error('未找到专辑中的单集信息');
+                }
+                
+                return { albumInfo, episodes };
+            } catch (error) {
+                console.error('获取专辑数据失败:', error);
+                throw error;
+            }
+        }
+
+        // 渲染专辑列表
+        function renderAlbumList() {
+            // 清空容器
+            elements.albumsContainer.innerHTML = '';
+
+            // 如果没有专辑，显示提示信息
+            if (localAlbums.length === 0) {
+                elements.albumsContainer.innerHTML = `
+                    <div class="col-span-full p-8 text-center">
+                        <div class="text-4xl text-gray-300 mb-3"><i class="fa fa-microphone-slash"></i></div>
+                        <p class="text-gray-500 mb-4">暂无已添加的专辑</p>
+                        <p class="text-gray-400 text-sm">请在上方输入专辑ID添加播客</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // 只显示当前专辑（数组中的第一个专辑）
+            const album = localAlbums[0];
+            const albumCard = document.createElement('div');
+            albumCard.className = 'bg-white rounded-lg shadow-md p-6 card-hover transition-all relative mx-auto max-w-md';
+            albumCard.innerHTML = `
+                <div class="flex flex-col items-center text-center space-y-4">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">${album.title}</h3>
+                    <p class="text-sm text-gray-500">专辑ID: ${album.id}</p>
+                    <p class="text-xs text-gray-400">添加时间: ${new Date(album.add_time).toLocaleString('zh-CN')}</p>
+                </div>
+            `;
+
+            // 添加点击事件
+            albumCard.addEventListener('click', () => {
+                viewAlbumDetails(album.id);
+            });
+
+            elements.albumsContainer.appendChild(albumCard);
+        }
+
+        // 查看专辑详情
+        function viewAlbumDetails(albumId) {
+            // 找到对应的专辑
+            const album = localAlbums.find(a => a.id === albumId);
+            
+            if (!album) {
+                alert('专辑不存在');
+                return;
+            }
+
+            // 更新当前专辑
+            currentAlbum = album;
+
+            // 更新页面信息
+            elements.albumTitle.textContent = album.title;
+            elements.albumIdDisplay.textContent = `专辑ID: ${album.id}`;
+
+            // 切换显示的部分
+            elements.albumListSection.classList.add('hidden');
+            elements.albumDetailSection.classList.remove('hidden');
+
+            // 加载音频列表
+            loadAlbumEpisodes(albumId);
+        }
+
+        // 返回专辑列表
+        function backToAlbumList() {
+            // 停止播放并隐藏播放界面
+            if (isPlaying) {
+                pauseAudio();
+            }
+            elements.audioPlayerContainer.classList.add('hidden');
+            
+            // 返回专辑列表
+            elements.albumDetailSection.classList.add('hidden');
+            elements.albumListSection.classList.remove('hidden');
+        }
+
+        // 加载专辑音频列表
+        function loadAlbumEpisodes(albumId) {
+            // 清空容器
+            elements.episodesContainer.innerHTML = `
+                <div class="p-6 text-center text-gray-500">
+                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-primary mb-2"></div>
+                    <p>正在加载音频列表...</p>
+                </div>
+            `;
+
+            // 对于用户添加的专辑，加载实际的音频数据
+            const albumData = albumsData[albumId];
+            
+            if (albumData && albumData.episodes && albumData.episodes.length > 0) {
+                // 保存当前音频列表
+                currentEpisodes = albumData.episodes;
+                
+                // 渲染音频列表
+                renderEpisodesList();
+            } else {
+                // 如果没有音频数据，显示提示
+                elements.episodesContainer.innerHTML = `
+                    <div class="p-6 text-center">
+                        <p class="text-gray-500">暂无音频数据，请刷新页面重试</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 渲染音频列表
+        function renderEpisodesList() {
+            // 清空容器
+            elements.episodesContainer.innerHTML = '';
+
+            // 如果没有音频，显示提示信息
+            if (currentEpisodes.length === 0) {
+                elements.episodesContainer.innerHTML = `
+                    <div class="p-4 text-center text-gray-500">
+                        <p>暂无音频</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // 渲染音频列表
+            currentEpisodes.forEach((episode, index) => {
+                const episodeItem = document.createElement('div');
+                episodeItem.className = 'p-4 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-b-0';
+                episodeItem.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-sm truncate">${episode.title}</h4>
+                            <p class="text-xs text-gray-500 mt-1">时长: ${formatTime(episode.duration)}</p>
+                        </div>
+                        <button class="play-episode-btn text-primary hover:text-primary/80 transition-colors ml-2" data-episode-index="${index}">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
+                `;
+
+                // 添加点击事件
+                episodeItem.addEventListener('click', (e) => {
+                    if (e.target.closest('.play-episode-btn')) {
+                        playEpisode(index);
+                    } else {
+                        playEpisode(index);
+                    }
+                });
+
+                elements.episodesContainer.appendChild(episodeItem);
+            });
+        }
+
+        // 播放音频
+        function playEpisode(index) {
+            if (index < 0 || index >= currentEpisodes.length) {
+                return;
+            }
+
+            // 更新当前播放索引
+            currentEpisodeIndex = index;
+            const episode = currentEpisodes[index];
+
+            // 更新播放器信息
+            elements.nowPlayingTitle.textContent = episode.title;
+            elements.nowPlayingAlbum.textContent = currentAlbum.title;
+            
+            // 更新播放按钮状态
+            isPlaying = true;
+            elements.audioPlayPause.innerHTML = '<i class="fa fa-pause"></i>';
+            
+            // 显示播放器
+            elements.audioPlayerContainer.classList.remove('hidden');
+            
+            // 设置音频源
+            audioElement.src = episode.enclosure_url;
+            
+            // 播放音频
+            audioElement.play().catch(error => {
+                console.error('播放失败:', error);
+                alert('播放失败，请检查网络连接');
+            });
+            
+            // 启动进度条更新
+            startProgressInterval();
+        }
+
+        // 播放/暂停音频
+        function togglePlayPause() {
+            if (isPlaying) {
+                pauseAudio();
+            } else {
+                playAudio();
+            }
+        }
+
+        // 播放音频
+        function playAudio() {
+            if (currentEpisodeIndex >= 0) {
+                audioElement.play().catch(error => {
+                    console.error('播放失败:', error);
+                    alert('播放失败，请检查网络连接');
+                });
+                isPlaying = true;
+                elements.audioPlayPause.innerHTML = '<i class="fa fa-pause"></i>';
+                startProgressInterval();
+            }
+        }
+
+        // 暂停音频
+        function pauseAudio() {
+            audioElement.pause();
+            isPlaying = false;
+            elements.audioPlayPause.innerHTML = '<i class="fa fa-play"></i>';
+            stopProgressInterval();
+        }
+
+        // 启动进度条更新定时器
+        function startProgressInterval() {
+            stopProgressInterval();
+            
+            progressInterval = setInterval(updateProgress, 1000);
+        }
+
+        // 停止进度条更新定时器
+        function stopProgressInterval() {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+                progressInterval = null;
+            }
+        }
+
+        // 更新进度条
+        function updateProgress() {
+            if (audioElement && !isNaN(audioElement.duration)) {
+                const progress = (audioElement.currentTime / audioElement.duration) * 100;
+                elements.audioProgress.style.width = `${progress}%`;
+                elements.audioCurrentTime.textContent = formatTime(audioElement.currentTime);
+                elements.audioTotalTime.textContent = formatTime(audioElement.duration);
+            }
+        }
+
+        // 处理专辑添加
+        async function processAlbumAddition(albumId) {
+            try {
+                // 如果已有专辑，询问是否替换
+                if (localAlbums.length > 0 && localAlbums[0].id !== albumId) {
+                    const replaceConfirm = confirm('当前已有专辑"' + localAlbums[0].title + '"，是否要替换为新专辑？');
+                    if (!replaceConfirm) {
+                        // 恢复专辑列表
+                        renderAlbumList();
+                        return;
+                    }
+                }
+                
+                // 显示加载状态
+                elements.albumsContainer.innerHTML = `
+                    <div class="col-span-full p-8 text-center">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary mb-3"></div>
+                        <p class="text-gray-500">正在获取专辑数据，请稍候...</p>
+                    </div>
+                `;
+                
+                // 获取专辑数据
+                const { albumInfo, episodes } = await fetchAlbumData(albumId);
+                
+                // 清空现有专辑数据（单专辑模式）
+                localAlbums = [];
+                // 清除除了当前要添加的专辑之外的所有专辑数据
+                const newAlbumsData = {};
+                
+                // 添加新专辑
+                localAlbums.push({
+                    id: albumId,
+                    title: albumInfo.title || `专辑 ${albumId}`,
+                    added_by_user: true,
+                    add_time: new Date().toISOString()
+                });
+                
+                // 保存专辑详细数据
+                newAlbumsData[albumId] = {
+                    info: albumInfo,
+                    episodes: episodes
+                };
+                albumsData = newAlbumsData;
+                
+                // 保存到本地存储
+                const saveResult = saveToLocalStorage();
+                
+                // 重新渲染专辑列表
+                renderAlbumList();
+                
+                // 清空输入框
+                elements.albumIdInput.value = '';
+                
+                // 隐藏帮助文本
+                elements.helpText.classList.add('hidden');
+                
+                // 显示不同的提示信息，根据保存结果
+                if (saveResult === true) {
+                    alert('专辑添加成功！');
+                } else if (saveResult === 'quota_exceeded') {
+                    alert('专辑已添加到应用中，但本地存储空间不足，无法保存。\n单专辑模式已启用，通常不会出现此问题。');
+                } else {
+                    alert('专辑已添加到应用中，但保存数据时发生错误。\n刷新页面后可能需要重新添加。');
+                }
+                
+                // 自动显示专辑详情
+                viewAlbumDetails(albumId);
+            } catch (error) {
+                // 恢复专辑列表
+                renderAlbumList();
+                
+                // 显示错误提示
+                alert('添加专辑失败：' + error.message);
+            }
+        }
+
+        // 添加专辑
+        async function addAlbum() {
+            const albumId = elements.albumIdInput.value.trim();
+            
+            if (!albumId) {
+                alert('请输入专辑ID');
+                return;
+            }
+            
+            // 检查是否为数字
+            if (!/^\d+$/.test(albumId)) {
+                alert('专辑ID必须是纯数字');
+                return;
+            }
+            
+            // 检查是否已存在
+            if (localAlbums.some(album => album.id === albumId)) {
+                alert('该专辑已经添加过了');
+                return;
+            }
+            
+            // 处理专辑添加
+            await processAlbumAddition(albumId);
+        }
+
+        // 事件监听器设置
+        function setupEventListeners() {
+            // 添加专辑按钮
+            elements.addAlbumButton.addEventListener('click', addAlbum);
+            
+            // 回车键添加专辑
+            elements.albumIdInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    addAlbum();
+                }
+            });
+            
+            // 帮助按钮
+            elements.helpButton.addEventListener('click', () => {
+                elements.helpText.classList.toggle('hidden');
+                
+                // 专辑ID列表项点击事件 - 使用事件委托模式避免重复绑定
+                const albumListContainer = elements.helpText.querySelector('.grid');
+                if (albumListContainer) {
+                    // 移除现有的点击事件处理器
+                    const newContainer = albumListContainer.cloneNode(true);
+                    albumListContainer.parentNode.replaceChild(newContainer, albumListContainer);
+                    
+                    // 添加新的事件委托
+                    newContainer.addEventListener('click', async (e) => {
+                        const item = e.target.closest('.album-id-item');
+                        if (item) {
+                            const albumId = item.dataset.id;
+                            // 填入输入框
+                            elements.albumIdInput.value = albumId;
+                            
+                            // 检查是否已存在
+                            if (localAlbums.some(album => album.id === albumId)) {
+                                // 如果已存在，直接进入播放界面
+                                viewAlbumDetails(albumId);
+                                return;
+                            }
+                            
+                            // 如果不存在，直接解析专辑并进入播放界面
+                            await processAlbumAddition(albumId);
+                        }
+                    });
+                }
+            });
+            
+            // 首页按钮（通过logo容器）
+            elements.logoContainer.addEventListener('click', backToAlbumList);
+            
+            // 音频播放器控制
+            elements.audioPlayPause.addEventListener('click', () => {
+                if (isPlaying) {
+                    pauseAudio();
+                } else {
+                    playAudio();
+                }
+            });
+            
+            // 上一曲按钮
+            elements.audioPrev.addEventListener('click', () => {
+                if (currentEpisodeIndex > 0) {
+                    playEpisode(currentEpisodeIndex - 1);
+                }
+            });
+            
+            // 下一曲按钮
+            elements.audioNext.addEventListener('click', () => {
+                if (currentEpisodeIndex < currentEpisodes.length - 1) {
+                    playEpisode(currentEpisodeIndex + 1);
+                }
+            });
+            
+            // 音频播放结束事件
+            elements.audioPlayer.addEventListener('ended', () => {
+                // 播放下一曲（如果有）
+                if (currentEpisodeIndex < currentEpisodes.length - 1) {
+                    playEpisode(currentEpisodeIndex + 1);
+                } else {
+                    // 播放结束
+                    isPlaying = false;
+                    elements.audioPlayPause.innerHTML = '<i class="fa fa-play"></i>';
+                    stopProgressInterval();
+                }
+            });
+            
+            // 音频元数据加载完成事件
+            elements.audioPlayer.addEventListener('loadedmetadata', () => {
+                // 更新总时长显示
+                if (!isNaN(elements.audioPlayer.duration)) {
+                    elements.audioTotalTime.textContent = formatTime(elements.audioPlayer.duration);
+                }
+            });
+            
+            // 进度条拖动功能
+            const progressContainer = document.getElementById('audio-progress-container');
+            if (progressContainer) {
+                progressContainer.addEventListener('click', (e) => {
+                    if (audioElement && !isNaN(audioElement.duration)) {
+                        const rect = progressContainer.getBoundingClientRect();
+                        const pos = (e.clientX - rect.left) / rect.width;
+                        const seekTime = pos * audioElement.duration;
+                        
+                        // 更新音频播放位置
+                        audioElement.currentTime = seekTime;
+                        
+                        // 更新进度条显示
+                        updateProgress();
+                    }
+                });
+            }
+        }
+
+        // 清除当前专辑
+        function clearCurrentAlbum() {
+            // 确认删除
+            if (confirm('确定要清除当前专辑吗？')) {
+                // 清空专辑数据
+                localAlbums = [];
+                albumsData = {};
+                
+                // 保存到本地存储
+                saveToLocalStorage();
+                
+                // 重新渲染专辑列表
+                renderAlbumList();
+                
+                // 如果当前正在播放，停止播放并返回专辑列表
+                if (isPlaying) {
+                    pauseAudio();
+                }
+                elements.audioPlayerContainer.classList.add('hidden');
+                backToAlbumList();
+            }
+        }
+
+        // 初始化应用
+        function initApp() {
+            // 获取音频元素引用
+            audioElement = elements.audioPlayer;
+            
+            // 加载本地存储数据
+            loadFromLocalStorage();
+            
+            // 渲染专辑列表
+            renderAlbumList();
+            
+            // 设置事件监听器
+            setupEventListeners();
+            
+            // 添加清除专辑按钮
+            const clearAlbumButton = document.createElement('button');
+            clearAlbumButton.id = 'clear-album-button';
+            clearAlbumButton.className = 'w-full mt-2 bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all';
+            clearAlbumButton.innerHTML = '<i class="fa fa-trash mr-1"></i> 清除当前专辑';
+            clearAlbumButton.addEventListener('click', clearCurrentAlbum);
+            
+            // 将按钮添加到添加专辑按钮下方
+            elements.addAlbumButton.parentNode.appendChild(clearAlbumButton);
+            
+            // 更新添加专辑按钮的文本
+            elements.addAlbumButton.innerHTML = '<i class="fa fa-music mr-1"></i> 添加/替换专辑';
+        }
+
+        // 当页面加载完成后初始化应用
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
