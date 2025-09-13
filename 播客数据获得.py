@@ -4,6 +4,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 import os
+import sys
 import re
 import sqlite3
 from datetime import timedelta, datetime
@@ -25,9 +26,21 @@ class PodcastDataGetter:
         self.style.configure("TEntry", font=("SimHei", 10))
         self.style.configure("Treeview", font=("SimHei", 10))
 
-        # 确保程序文件夹存在
-        self.program_dir = os.path.dirname(os.path.abspath(__file__))
+        # 文件路径 - 适配PyInstaller打包
+        if getattr(sys, 'frozen', False):
+            # 打包为可执行文件时
+            if hasattr(sys, '_MEIPASS'):
+                # _MEIPASS是PyInstaller创建的临时文件夹
+                # 对于onefile模式，使用可执行文件所在目录
+                self.program_dir = os.path.dirname(os.path.abspath(sys.executable))
+            else:
+                self.program_dir = os.path.dirname(os.path.abspath(sys.executable))
+        else:
+            # 脚本模式
+            self.program_dir = os.path.dirname(os.path.abspath(__file__))
+        
         self.albums_dir = os.path.join(self.program_dir, "albums")
+        # 确保albums目录存在
         os.makedirs(self.albums_dir, exist_ok=True)
 
         # 日志文件路径

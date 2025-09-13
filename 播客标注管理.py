@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 import os
+import sys
 import sqlite3
 import subprocess
 import json
@@ -21,10 +22,24 @@ class PodcastAnnotationManager:
         self.style.configure("TListbox", font=("微软雅黑", 12))
         self.style.configure("TLabelframe.Label", font=("微软雅黑", 14, "bold"))
 
-        # 文件路径
-        self.program_dir = os.path.dirname(os.path.abspath(__file__))
+        # 文件路径 - 适配PyInstaller打包
+        if getattr(sys, 'frozen', False):
+            # 打包为可执行文件时
+            if hasattr(sys, '_MEIPASS'):
+                # _MEIPASS是PyInstaller创建的临时文件夹
+                # 对于onefile模式，使用可执行文件所在目录
+                self.program_dir = os.path.dirname(os.path.abspath(sys.executable))
+            else:
+                self.program_dir = os.path.dirname(os.path.abspath(sys.executable))
+        else:
+            # 脚本模式
+            self.program_dir = os.path.dirname(os.path.abspath(__file__))
+        
         self.system_db_path = os.path.join(self.program_dir, "podcast_system.db")
         self.albums_dir = os.path.join(self.program_dir, "albums")
+        
+        # 确保albums目录存在
+        os.makedirs(self.albums_dir, exist_ok=True)
         self.current_album_id = ""
         self.current_album_path = ""
         self.album_db_path = ""
@@ -91,39 +106,59 @@ class PodcastAnnotationManager:
         self.album_listbox.delete(0, tk.END)
         self.albums = []  # 存储专辑信息 [(album_id, album_name, album_path)]
 
-        # 检查albums目录是否存在
-        if not os.path.exists(self.albums_dir):
-            messagebox.showwarning("警告", f"找不到专辑目录: {self.albums_dir}")
-            return
-
-        # 获取albums目录下的所有子目录
         try:
-            for dir_name in os.listdir(self.albums_dir):
-                dir_path = os.path.join(self.albums_dir, dir_name)
-                # 检查是否是目录，并且目录名以"album_"开头
-                if os.path.isdir(dir_path) and dir_name.startswith("album_"):
-                    # 提取专辑ID
-                    album_id = dir_name[len("album_"):]
-                    # 检查专辑数据库文件是否存在
-                    album_db_path = os.path.join(dir_path, f"album_{album_id}.db")
-                    if os.path.exists(album_db_path):
-                        # 尝试从数据库中获取专辑名称
-                        album_name = f"专辑 {album_id}"
-                        try:
-                            temp_conn = sqlite3.connect(album_db_path)
-                            cursor = temp_conn.cursor()
-                            cursor.execute("SELECT title FROM album_info LIMIT 1")
-                            result = cursor.fetchone()
-                            if result and result[0]:
-                                album_name = result[0]
-                            temp_conn.close()
-                        except Exception as e:
-                            print(f"获取专辑名称失败: {str(e)}")
+            # 确保系统数据库已连接
+            if not self.system_db_conn:
+                self.init_system_database()
+                
+            # 从系统数据库加载专辑信息
+            if self.system_db_conn:
+                cursor = self.system_db_conn.cursor()
+                # 查询系统数据库中的albums表获取专辑信息
+                cursor.execute("SELECT id, title FROM albums ORDER BY update_time DESC")
+                albums = cursor.fetchall()
+                
+                for album in albums:
+                    album_id, album_name = album
+                    # 构建专辑路径（虽然从数据库加载，但仍需要路径用于后续操作）
+                    album_path = os.path.join(self.albums_dir, f"album_{album_id}")
+                    # 确保专辑目录存在
+                    os.makedirs(album_path, exist_ok=True)
+                    # 添加到列表
+                    self.albums.append((album_id, album_name, album_path))
+                    self.album_listbox.insert(tk.END, f"{album_name} (ID: {album_id})")
+                
+            # 如果系统数据库中没有专辑，尝试从albums目录扫描作为后备方案
+            if not self.albums:
+                # 检查albums目录是否存在
+                if os.path.exists(self.albums_dir):
+                    # 获取albums目录下的所有子目录
+                    for dir_name in os.listdir(self.albums_dir):
+                        dir_path = os.path.join(self.albums_dir, dir_name)
+                        # 检查是否是目录，并且目录名以"album_"开头
+                        if os.path.isdir(dir_path) and dir_name.startswith("album_"):
+                            # 提取专辑ID
+                            album_id = dir_name[len("album_"):]
+                            # 检查专辑数据库文件是否存在
+                            album_db_path = os.path.join(dir_path, f"album_{album_id}.db")
+                            if os.path.exists(album_db_path):
+                                # 尝试从数据库中获取专辑名称
+                                album_name = f"专辑 {album_id}"
+                                try:
+                                    temp_conn = sqlite3.connect(album_db_path)
+                                    cursor = temp_conn.cursor()
+                                    cursor.execute("SELECT title FROM album_info LIMIT 1")
+                                    result = cursor.fetchone()
+                                    if result and result[0]:
+                                        album_name = result[0]
+                                    temp_conn.close()
+                                except Exception as e:
+                                    print(f"获取专辑名称失败: {str(e)}")
 
-                        # 添加到列表
-                        self.albums.append((album_id, album_name, dir_path))
-                        self.album_listbox.insert(tk.END, f"{album_name} (ID: {album_id})")
-
+                                # 添加到列表
+                                self.albums.append((album_id, album_name, dir_path))
+                                self.album_listbox.insert(tk.END, f"{album_name} (ID: {album_id})")
+                        
             if not self.albums:
                 self.album_listbox.insert(tk.END, "没有找到任何专辑数据")
                 self.album_listbox.configure(state=tk.DISABLED)
