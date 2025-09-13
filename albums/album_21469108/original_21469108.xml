@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://www.ximalaya.com/album/21469108.xml" type="application/rss+xml" rel="self"></atom:link>
+        <title><![CDATA[科学星球]]></title>
+        <itunes:title><![CDATA[科学星球]]></itunes:title>
+        <link>https://www.ximalaya.com/album/21469108</link>
+        <language>zh-cn</language>
+        <copyright><![CDATA[BOX孙彬@喜马拉雅FM]]></copyright>
+        <itunes:author><![CDATA[BOX孙彬]]></itunes:author>
+        <description>
+            <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;">讲述宇宙科学、自然科学、现代科技的故事，传播科学思维，打开你的脑洞，来科学星球听我讲故事吧。</p>]]>
+        </description>
+        <itunes:type>episodic</itunes:type>
+        <itunes:owner>
+            <itunes:name><![CDATA[BOX孙彬]]></itunes:name>
+            <itunes:email>717220164@qq.com</itunes:email>
+        </itunes:owner>
+        <itunes:image href="https://fdfs.xmcdn.com/storages/82c5-audiofreehighqps/AE/CE/GKwRIDoF-Sn_AAGeqQEj3clY.jpeg"/>
+                <itunes:category text="Science">
+                <itunes:category text="Natural Sciences"/>
+                </itunes:category>
+                <itunes:category text="Technology">
+                </itunes:category>
+                <itunes:category text="Science">
+                <itunes:category text="Physics"/>
+                </itunes:category>
+        <itunes:explicit>false</itunes:explicit>
+        <itunes:block>No</itunes:block>
+        <itunes:complete>No</itunes:complete>
+
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>1</itunes:episode>
+                <title><![CDATA[刨根问底：电，到底是什么？]]></title>
+                <itunes:title><![CDATA[刨根问底：电，到底是什么？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你买了台电视回家，把电源插在插座上，电视就亮了。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你知道，电从插座里跑到了电视里，插座里的电是从哪来的呢？应该是从发电站来的。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">为什么发电站的电可以直接用？为什么不同的电器可以接同样的电源？这些恐怕你不知道。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">如果再深问一句：仔细想想，你真的知道，电到底是什么吗？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">如果你觉得自己知道，那我们换个问法，如果有一天人类文明彻底毁灭，任何工厂都没有了，当然也没有一台发电机，你可能很快都能想办法搞来火，搞来水，但你有办法重新获得电吗？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这么一想，我们对电这个东西，似乎真的是一无所知。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">我小时候就总缠着父母问，电是从哪来的？好像它跟别的东西不一样，工厂从地底下挖出煤矿，送到我们家，于是我家就有煤了；水厂把水从河里搞出来，送到我们家，于是我家就有水了。那电呢？电厂是怎么把电搞来的，总不能等着天上打闪电吧？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">后来，我总算搞明白，电这个东西，在整个人类文明史上，是非常特殊的一种自然资源，比起火、水、风，我们晚了几十万年才搞清楚它是怎么回事，又隔了很久才会利用它。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天，我想把这整个故事讲给你。不过，我们讲述的顺序，是跟人类发现电、理解电、使用电的顺序正好相反，我们先从日常生活中那些习以为常的现象，不断的追问为什么，每一层追问，我们都顺着电线往上游走一点，也顺着时间线往过去走一点，这样一层层回溯，一直追到我们的祖先那里，再最终搞明白电是怎么回事。</p>]]>
+                </description>
+                <enclosure
+                        length="76287302"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJIMYrbnAYkfagPvBYUT.m4a?channel=rss&amp;album_id=21469108&amp;track_id=894630486&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/d6d9-audiofreehighqps/23/A4/GKwRIJIMYrbnAYkfagPvBYUT.m4a"
+                />
+                <guid>xmly_track_894630486</guid>
+                <pubDate>Fri, 01 Aug 2025 17:04:02 GMT</pubDate>
+                <itunes:duration>53:02</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/894630486</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>2</itunes:episode>
+                <title><![CDATA[比二向箔更可怕的《闪光》：当数学规则被篡改，宇宙会发生什么？]]></title>
+                <itunes:title><![CDATA[比二向箔更可怕的《闪光》：当数学规则被篡改，宇宙会发生什么？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你有没有想过，如果我们的世界，乃至整个宇宙，最底层的逻辑——<strong style="color:#FC5832;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-weight: normal;">数学</strong>——突然发生了改变，一切会变成什么样？如果某种生命遵循和我们不同的数学定律，它们又会是什么样？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">我很喜欢读科幻小说，其实每一本好的科幻，都是作者的一次思想实验，如果我们篡改了某个我们熟悉的物理现实，比如让时间可以回溯，或者把某一个还只在理论中的现象搬到现实世界，比如外星人，然后看故事中的人和世界会发生怎样的变化。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天想给你讲的这个故事，来自硬科幻大师格雷格·伊根，故事的名字叫《闪光》。这个故事里，作者把我们能挑战的想象力边界推到了物理世界的极限，也就是数学的改变。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;">物理学的角度来看，我们的世界运行大概分成四个逻辑，越往下越基本，越难以改变。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">第一层逻辑是时空位置，比如我们把故事从地球搬到了火星，会有很大的变化，但火星和地球的物理规则是一样的，只是环境的参数变了。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">第二层是物理常数，比如我们让光速的上限突破每秒钟30万公里，会发生什么事？这就是弗诺文奇的《银河界区三部曲》里面关于超限界文明体系的设定，这个就已经非常挑战我们的想象力了。但要注意，这里改变的只是常数，物理学的规则，也就是我们读书学的那些公式，都没有变化。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">再往下一层，就是挑战物理学规则的改变了。比如我们熟悉的公式，速度=距离除以时间，要是这个速度它不等于距离除以时间了呢？它等于距离除以2倍的时间了呢？那别说世界会发生变化了，这宇宙还会不会是现在我们看到的这样，都不好说了。我们前面有一期节目《物理定律永恒不变吗？时间的存在与多重宇宙解释》里就谈到了这样一个大胆的假设，或许在宇宙演化的过程中，物理定律是发生过改变的。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">再往到最基础的一层，就是我在咱们现实中的物理学界，没有听人提到过的大胆假设，数学，它能不能变？要知道，物理世界的一切都要经过数学的计算，而数学它是纯逻辑的，1+1=2，管你是两个苹果、两个星系还是两个速度的叠加，只要是1+1就一定等于2.你甚至可以想象啊，哪怕这个宇宙里就是纯空的，什么东西都没有，那1+1它也肯定是等于2，对不对。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">上一层我们说改变物理规则，速度=距离除以2倍的时间，虽然物理规则被改变了，但如果给定的距离是10米，时间是1秒，那10米除以2倍的1秒，它也肯定是等于5.但数学规则的改变说的是，10除以2它不等于5了，等于比如4.998.那会怎么样呢？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这就是我最喜欢《闪光》这个故事的原因，它挑战了我们认为绝对不可能改变的、最基础的数学，还把它揉进一个非常精彩的故事。这个故事里对外星生命的想象，也完全是超出我之前读过所有故事里最天马行空的。</p><br>]]>
+                </description>
+                <enclosure
+                        length="126361804"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4MNKaBAos5FwPTpgKH.m4a?channel=rss&amp;album_id=21469108&amp;track_id=877866661&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/408a-audiofreehighqps/78/2B/GKwRIW4MNKaBAos5FwPTpgKH.m4a"
+                />
+                <guid>xmly_track_877866661</guid>
+                <pubDate>Fri, 27 Jun 2025 18:29:24 GMT</pubDate>
+                <itunes:duration>1:27:52</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/877866661</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>3</itunes:episode>
+                <title><![CDATA[从暗物质到人类文明：一场跨越亿万年的宇宙 “蝴蝶效应”]]></title>
+                <itunes:title><![CDATA[从暗物质到人类文明：一场跨越亿万年的宇宙 “蝴蝶效应”]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;hyphens:auto;text-align:justify;" data-flag="normal"><span>这期我们来聊聊暗物质。我们不仅要追问暗物质到底是什么，和你说说最新的科学发现和计算模型，还要给你聊一个疯狂而大胆的假说：</span><b>地球上存在人类文明，是一次极大的幸运，而这个幸运背后的重要推手，也是暗物质。</b></p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">在聊之前，我们先要打破你对“看得见、摸得到”这个概念的一切刻板印象。为什么要打破这个印象呢？因为如果你的脑海中认为，一个东西在那，总能被我们用某种方式探测到，最直接的就是看到它；如果它特别小，那我们总能用某种显微镜看到它；如果它特别的远，那我们总能用望远镜看到它，对吧？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">但你要注意，我们这里说的“看到”，只可能有两个原因，要么是这个东西它发光，要么是这个东西它反射光，才能让特定频率的光进入到我们的眼睛，或者进入我们的探测器。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">那一个东西它要是既不发光，也不反射光呢？有可能吗？这就得说说发光和反射光的更底层的机制。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">物质发光的本质是吸收能量、再释放能量的一个量子过程，比如电子的能级跃迁就是这么个过程，当某个原子里面的电子以某种形式吸收了外界的能量，从某一个低能量的状态变成某个高能量的状态，再返回到低能量状态时，会有一个能量差，这个能量差就会以光子的形式被释放出去，这里有个公式：</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/628b-audiofreehighqps/48/62/GKwRIRwL9emdAAATUAOsBnjd.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/628b-audiofreehighqps/48/62/GKwRIRwL9emdAAATUAOsBnjd.png?op_type=0" data-large="http://imagev2.xmcdn.com/storages/628b-audiofreehighqps/48/62/GKwRIRwL9emdAAATUAOsBnjd.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="118.68686868686869" data-preview="http://imagev2.xmcdn.com/storages/628b-audiofreehighqps/48/62/GKwRIRwL9emdAAATUAOsBnjd.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="22.154882154882156"><br></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">放公式在这儿就是帮助你理解，不是说这个原子里头已经有个光子随时蓄势待发了，而是先有能量差，再以光子的形式把能量释放出去，所以发光是一个现象，而不是物体的某种特定的属性。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">那反光呢？在你的想象里，反光不就是一个光子撞到一个物体上，再反弹到我们眼睛里吗？也不对，这也不是本质。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">物质能反射光，本质上是光子和物质里的电子发生相互作用的一个机制。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">光作为电磁波，在物体的表面会引发电子被迫跟着一起震荡，根据麦克斯韦方程组，这些震荡的电子会辐射出新的电磁波，跟原来的电磁波频率相同但是方向相反，严格来说原来光的能量是被吸收了，转化成了热能，剩余的能量是由表面的电子“发光”新给找补出来的光，所以你看虽然镜面会反射光，但它被光晒着还是会变热。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这里的重点是，反光本质上是电磁作用，是电子对震荡波的反应，并不是咱们想象中一大堆光子小球撞到物体上那个样子，所以有些物质你在原理上就没办法通过反光来观察到它。</p><p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;hyphens:auto;text-align:justify;" data-flag="normal"><span>在这儿咱们要说一句量子物理学中经典的话，意大利物理学家卡洛·罗韦利说：</span><b>世界并不是物体的集合，而是事件的集合。</b></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">说实话年轻的时候我不理解这样的话，在我的脑海里，一个原子它在那，我是不是能探测到它这是我的问题，它总是有一个特定的样子——或者说一个特定的属性，存在在那里吧？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">而过去上百年的科学发展已经让地球上最聪明的一群大脑转变了思维，我们只能描述两种东西，一种是基于数学提出的假设，一种是基于实验数据得出的观测结论，严格意义上来说，我们看到的也只是实验数据而已——当然，我们看到的是屏幕发出来的光子在我们的视网膜中呈现的数据的图像而已。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">如果你不能理解这一层含义，就没办法对暗物质祛魅。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">尽管很难，还是请你相信，主流的科学观点认为，如果咱们一层层地往下挖，最终能挖到的都是一个一个的现象，而从来不能讨论一个物质它“本来”是啥。如果你在思想上能稍微接受这个理念，就可以用科学的视角来看待暗物质了。</p>]]>
+                </description>
+                <enclosure
+                        length="84958789"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIaIL9e8-AbU6NgOsCa_I.m4a?channel=rss&amp;album_id=21469108&amp;track_id=850444899&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/f183-audiofreehighqps/40/E4/GKwRIaIL9e8-AbU6NgOsCa_I.m4a"
+                />
+                <guid>xmly_track_850444899</guid>
+                <pubDate>Sun, 11 May 2025 04:28:36 GMT</pubDate>
+                <itunes:duration>58:59</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/850444899</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>4</itunes:episode>
+                <title><![CDATA[宇宙大尺度的形状：对称性背后的时空密码]]></title>
+                <itunes:title><![CDATA[宇宙大尺度的形状：对称性背后的时空密码]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">问你个问题：在大尺度上，宇宙整体是什么形状的？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你可能从来没觉得这是个问题，你在很多视频和图片里都看到过宇宙的样子，就是一个黑黑的大球，从大爆炸的一个小球开始，逐渐变大。我先直接告诉你答案，不对，宇宙不是一个三维球体，请先把这个形状在你的脑子里删除掉。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">好，接下来请你认真想一想，它可能是什么形状？我们的地球差不多是个球型，但太阳系不是，它是个扁的圆盘，银河系也是圆盘行，但它有很多的悬臂；不是所有星系都是圆盘行，比如螺旋星系IC 2163形状像一对大眼睛，南三角座ESO 137-001星系看起来像一只巨大的水母，可以说千奇百怪，所以宇宙似乎也可以是任何的形状。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">如果你是一个有野心的宇宙学家，你一定不想盲猜，我们也没办法飞到宇宙外面给它拍一张照，所以你只能寄希望于找到一些理论，来帮你把无限多可能的选项，缩减成几个，最好是只有一个选项，对不对？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">有一个理论，就可以帮我们把宇宙形状的可能性，从无限多种，减少到3种，并且我们差不多快要找到答案了。不仅如此，它还决定着宇宙的 “生死时速”—— 时间，是否成立。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天就和你聊这个听起来挺熟悉，但在科学领域却很少听人拆开了仔细讲的概念：对称性。</p><span><br></span><br>]]>
+                </description>
+                <enclosure
+                        length="63944106"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIDoL0anNAUmCeQOWp8eI.m4a?channel=rss&amp;album_id=21469108&amp;track_id=836133382&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/e923-audiofreehighqps/BE/D6/GKwRIDoL0anNAUmCeQOWp8eI.m4a"
+                />
+                <guid>xmly_track_836133382</guid>
+                <pubDate>Sun, 13 Apr 2025 16:29:29 GMT</pubDate>
+                <itunes:duration>44:27</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/836133382</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>5</itunes:episode>
+                <title><![CDATA[物理定律是永恒不变吗？时间的存在与多重宇宙解释]]></title>
+                <itunes:title><![CDATA[物理定律是永恒不变吗？时间的存在与多重宇宙解释]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你对科学了解越深，就越是会去怀疑一些公认的东西到底是不是千真万确的。一开始人们怀疑地心学说，后来开始怀疑时间和空间是不是一成不变的，再后来甚至怀疑宇宙是不是只有一个。<br>在我所知道怀疑者中，最激进的人应该是物理学家李·斯莫林了，他怀疑的是，我们观察到的物理定律，它们是被一开始就写好的吗？会不会物理定律也在随着时间变化呢？<br>对，时间，这个东西是李·斯莫林所有学说中最重要的因素。我们在上一集中讲到，传统的牛顿范式把时间这个因素剔除到了物理学之外，一个公式在时间的正向和反向两个方向都是等价的，时间似乎只是我们的一种体验，而不是真实存在的东西。可当我们把对局部宇宙的理解推演到整个宇宙的时候，当我们要去追问宇宙为什么遵从这些定律、为什么取这些常数的时候，牛顿范式就遇到了大问题。于是，时间的真实性又被带回了物理学的舞台，自然规律也应该被视为世界随时间演化的一部分，这里面李·斯莫林就是其中的领军人物。<br>用两句话总结他的假说：第一，时间是真实的，不是人的主观体验；第二，时间不仅会影响宇宙万物，甚至会影响宇宙万物遵循的法则，也就是物理定律。<br>我并不建议你去读李·斯莫林的书，因为这种大物理学家写的书真的很难懂，而且读的过程中你必须要用尽力气，不断挑战自己的常识，一旦松懈，就会产生“你这不是在胡扯吗”的感受，然后很快就跟不上他的论述了。<br>这小节，我尝试给你讲述他的观点，在这还是要先打个预防针，如果你实在觉得他的观点太过激进、难以接受，那就当听一家之言，他只是给这个越来越难以被人类理解的物理学世界，一个暂时没有被推翻的解释。听到最后，或许你会和我一样有种感觉，似乎“物理定律在过去的一百多亿年里保持不变”，反倒是人类一个很自大的假设，谁跟咱们保证了？<br></p>]]>
+                </description>
+                <enclosure
+                        length="69755536"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4LfVXVAQ6pQANjFrm1.m4a?channel=rss&amp;album_id=21469108&amp;track_id=803678551&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/83b9-audiofreehighqps/75/2E/GKwRIW4LfVXVAQ6pQANjFrm1.m4a"
+                />
+                <guid>xmly_track_803678551</guid>
+                <pubDate>Sat, 08 Feb 2025 17:21:27 GMT</pubDate>
+                <itunes:duration>48:30</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/803678551</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>6</itunes:episode>
+                <title><![CDATA[超越牛顿范式的终极理论，让时间重回物理学的舞台中心]]></title>
+                <itunes:title><![CDATA[超越牛顿范式的终极理论，让时间重回物理学的舞台中心]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">时间这个东西，它真实的存在吗？我是说，除了人类的主观感知，它是一个客观存在的东西吗？并不是所有的名词都对应物理上客观存在的事物，比如正义、艺术、幸福，都只是人类的语言，并不代表物理实在。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">我们之前曾经讲过一期节目，标题是《时间的消失：物理学在时间内，数学在时间之外》，时间隔得比较久，忘了的话可以去听听：https://m.ximalaya.com/sound/483402033?from=pc</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这里面说到一个重要的观点，从伽利略时代到牛顿时代，时间这个因素被科学给拿掉了，在牛顿的范式里，一个公式在时间的正向和反向两个方向都是等价的，时间似乎只是我们的一种体验，而不是真实存在的东西。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">没错，人类花了几百年时间，用理性的思考，将时间驱逐到了物理学之外。这件事你如果没有听那一集，可能还真的不太好理解。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">但，故事还没有结束，当科学向着解释整个宇宙的终极理论发展的过程中，人们又重新翻找历史的垃圾堆，又不得不把时间重新捧回C位。这是一场漫长又烧脑的过程，我们这一期节目，就先从一场充满哲学意味的思想实验讲起。</p><br>]]>
+                </description>
+                <enclosure
+                        length="59402748"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJELVo2WAOZ7pQNQgCp9.m4a?channel=rss&amp;album_id=21469108&amp;track_id=792885900&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/0d72-audiofreehighqps/6A/24/GKwRIJELVo2WAOZ7pQNQgCp9.m4a"
+                />
+                <guid>xmly_track_792885900</guid>
+                <pubDate>Fri, 10 Jan 2025 07:20:47 GMT</pubDate>
+                <itunes:duration>41:18</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/792885900</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>7</itunes:episode>
+                <title><![CDATA[宇宙边缘是什么样的？被迫诞生的“暴涨理论”和多元宇宙]]></title>
+                <itunes:title><![CDATA[宇宙边缘是什么样的？被迫诞生的“暴涨理论”和多元宇宙]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">在前面的节目中，我收到了两位朋友发来的提问，问题非常好，我决定以这两个问题为起点，开始今天的思维探索之旅。</p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">范德彪西提了个问题：如果这个宇宙是大爆炸产生的，那么现有的宇宙空间应该是一个球形，我们的地球极大概率不处于这个球的圆心上。可我们用望向宇宙深处时，看到了130亿年前的影像，这是距宇宙大爆炸不太久后的样子。如果用此方法向前后左右上下各观察一次，获得每个方向上可观察宇宙边界的距离，是不是就能计算出地球所处的宇宙相对空间了？ 结合学过的内容，从地球观察宇宙各方向，星系又是似分布均匀，这不证明地球正好在宇宙的中心吗？难道真的这么巧？</p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">不要休息日搞装修提了另外一个问题：请问宇宙的有限如何描述？比如我们说一个弹珠有限是因为它有明显的边界，而宇宙的有限之外是空吗？如果我们跑到宇宙边缘，会看到什么？</p><br>]]>
+                </description>
+                <enclosure
+                        length="70330340"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIaILAf_rARDk3QMrOUlf.m4a?channel=rss&amp;album_id=21469108&amp;track_id=772385391&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/fac6-audiofreehighqps/01/37/GKwRIaILAf_rARDk3QMrOUlf.m4a"
+                />
+                <guid>xmly_track_772385391</guid>
+                <pubDate>Thu, 07 Nov 2024 04:05:46 GMT</pubDate>
+                <itunes:duration>48:54</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/772385391</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>8</itunes:episode>
+                <title><![CDATA[本特利悖论和奥尔贝斯悖论：宇宙到底是有限还是无限？]]></title>
+                <itunes:title><![CDATA[本特利悖论和奥尔贝斯悖论：宇宙到底是有限还是无限？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天的我们总会被各种各样的科学结论直接喂饱，打开各种视频网站，你会看到很多言之确凿的理论，再配上一些星球和星系的画面，仿佛我们已经站在上帝视角看穿了宇宙的一切。但实际上，你看到的那些画面，绝大多数都是计算机模拟的，我们没有、也不可能有那样的设备，在俯视角看到宇宙的全貌、再把画面传回地球。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">和这些内容相反，我更感兴趣的，是发掘这样一个过程：渺小的人类，凭借双脚站在这个像沙粒一般的小星球上，仰望星空，仅凭自己的进化了几十亿年的思维，去逐层探究宇宙留给我们的一个又一个谜题。那些伟大又精妙的思考过程，才是人类闪耀出的智慧之光。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天，让我们从一个已经知道答案的谜题开始，讲述我们是怎样通过思辨和计算，得出结论的。</p><span><br></span><br>]]>
+                </description>
+                <enclosure
+                        length="43310928"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIUEK7AbRAKgJcgMiXH-q.m4a?channel=rss&amp;album_id=21469108&amp;track_id=767275093&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/a052-audiofreehighqps/E1/73/GKwRIUEK7AbRAKgJcgMiXH-q.m4a"
+                />
+                <guid>xmly_track_767275093</guid>
+                <pubDate>Mon, 21 Oct 2024 12:05:54 GMT</pubDate>
+                <itunes:duration>30:06</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/767275093</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>9</itunes:episode>
+                <title><![CDATA[寻根究底：物理层面上看，硅基生命能不能取代碳基生命存在？]]></title>
+                <itunes:title><![CDATA[寻根究底：物理层面上看，硅基生命能不能取代碳基生命存在？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">上期节目的最后，我跟你讨论了一个看起来很简单，其实深挖下去很深刻的问题，从量子层面考虑，为什么科学家在寻找外星生命的时候，总是先考察一颗星球上到底有没有水，为什么生命就必须得有水，也就是H2O这种物质。可能你会在直觉上觉得科学家太保守了，一点想象力都没有，但当我们从微观世界原子和电子之间的关系，一路推演到形成多细胞复杂生命必要的条件，你就知道，还真就得是H2O这种看起来普通、实则非常特殊的物质，才能支持生命。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">多朋友意犹未尽，还想让我聊聊，我们地球上的生物都是碳基生命，那硅基生命可能存在吗？我们有可能在这个物理规律的宇宙中，找到硅基生命呢？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期，我们就从物理层面，聊聊这件事。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">附带一张元素周期表：</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/b1df-audiofreehighqps/DE/F7/GArMStkKe3-PAC8NeQL3cZwb.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/b1df-audiofreehighqps/DE/F7/GArMStkKe3-PAC8NeQL3cZwb.png?op_type=0" data-large="http://imagev2.xmcdn.com/storages/b1df-audiofreehighqps/DE/F7/GArMStkKe3-PAC8NeQL3cZwb.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="492.7440633245383" data-preview="http://imagev2.xmcdn.com/storages/b1df-audiofreehighqps/DE/F7/GArMStkKe3-PAC8NeQL3cZwb.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="91.97889182058049"><br></p><span><br></span>]]>
+                </description>
+                <enclosure
+                        length="58457134"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRINsKe4AiAOLSEwL3ceIt.m4a?channel=rss&amp;album_id=21469108&amp;track_id=744379125&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/82f9-audiofreehighqps/0C/6D/GKwRINsKe4AiAOLSEwL3ceIt.m4a"
+                />
+                <guid>xmly_track_744379125</guid>
+                <pubDate>Sun, 28 Jul 2024 03:36:29 GMT</pubDate>
+                <itunes:duration>40:38</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/744379125</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>10</itunes:episode>
+                <title><![CDATA[从原子到生命：从量子的角度看，“水”为什么不可替代？]]></title>
+                <itunes:title><![CDATA[从原子到生命：从量子的角度看，“水”为什么不可替代？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">上一期内容，我们用了比较大的篇幅讨论了这样一个问题：在一个混沌黑暗的宇宙中，怎么能形成超级有序的恒星？这个过程明明是反热力学第二定律的，那它又是怎样实现的？那期内容是今天这一期很重要的基础，强烈建议你听听。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天这一期往下的几期，我们要来聊聊，站在纯物理学的角度来看，在一个热力学第二定律主宰的宇宙里，为什么会出现比恒星更加精密、更加低熵的奇特现象：生命。</p><span><br></span><br>]]>
+                </description>
+                <enclosure
+                        length="58491564"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIUEKVpZ_AOL0WQLpeKw5.m4a?channel=rss&amp;album_id=21469108&amp;track_id=738127804&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/528b-audiofreehighqps/A2/26/GKwRIUEKVpZ_AOL0WQLpeKw5.m4a"
+                />
+                <guid>xmly_track_738127804</guid>
+                <pubDate>Sun, 30 Jun 2024 03:38:38 GMT</pubDate>
+                <itunes:duration>40:40</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/738127804</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>11</itunes:episode>
+                <title><![CDATA[窥视时间的尽头：宇宙毁灭前一刻，还会有生命存在吗？]]></title>
+                <itunes:title><![CDATA[窥视时间的尽头：宇宙毁灭前一刻，还会有生命存在吗？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">只要等待的时间够长，所有生命的最终命运，就早已有了定论。<br></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">生命，最终将在宇宙中消失。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">于是，作为智慧物种，在思考过宇宙起源，探索了原子、恒星和行星的形成过程，并扫视生命、意识和文化的出现之后，我们将把目光投向几千年来，持续给我们带来焦虑的那个命题：时间的尽头，有生命的位置吗？</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">也就是说，我们将从此时此地出发，去思考永恒。<br></p>]]>
+                </description>
+                <enclosure
+                        length="55305986"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIUEJ7bDAAR0A4wLE9R7f-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=722030700&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/8f59-audiofreehighqps/85/9A/GKwRIUEJ7bDAAR0A4wLE9R7f-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_722030700</guid>
+                <pubDate>Thu, 11 Apr 2024 14:02:52 GMT</pubDate>
+                <itunes:duration>38:27</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/722030700</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>12</itunes:episode>
+                <title><![CDATA[从三体到N体，科学如何走出混沌？]]></title>
+                <itunes:title><![CDATA[从三体到N体，科学如何走出混沌？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="55769353"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIRwIO0LXAR9uCAIdVcLQ-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=634419285&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/3dd0-audiofreehighqps/9E/19/GKwRIRwIO0LXAR9uCAIdVcLQ-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_634419285</guid>
+                <pubDate>Thu, 18 May 2023 03:29:00 GMT</pubDate>
+                <itunes:duration>38:46</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/634419285</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>13</itunes:episode>
+                <title><![CDATA[互联网诞生之前的黎明微光：从Memex到上都计划]]></title>
+                <itunes:title><![CDATA[互联网诞生之前的黎明微光：从Memex到上都计划]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">本期内容文章链接：</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><a style="color:#4990E2;text-decoration:none;">https://sspai.com/post/79224</a><br></p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><a style="color:#4990E2;text-decoration:none;">文末提到的个人信息和知识管理众筹链接：https://uot.xet.tech/s/18EEOp</a></p>]]>
+                </description>
+                <enclosure
+                        length="60340405"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIasIGnpEATb85QISnuuU-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=628585185&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/e639-audiofreehighqps/1F/03/GKwRIasIGnpEATb85QISnuuU-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_628585185</guid>
+                <pubDate>Sun, 23 Apr 2023 04:41:15 GMT</pubDate>
+                <itunes:duration>41:57</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/628585185</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>14</itunes:episode>
+                <title><![CDATA[早期宇宙的蓝图中，就写好了生命的剧本吗？]]></title>
+                <itunes:title><![CDATA[早期宇宙的蓝图中，就写好了生命的剧本吗？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="56094873"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRINsH1guBASEcRwH94Yao-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=615003628&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/e8f8-audiofreehighqps/00/3A/GKwRINsH1guBASEcRwH94Yao-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_615003628</guid>
+                <pubDate>Thu, 02 Mar 2023 06:55:15 GMT</pubDate>
+                <itunes:duration>39:00</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/615003628</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>15</itunes:episode>
+                <title><![CDATA[亿万年前的宏伟计划：怎样让星辰之子仰望星空？]]></title>
+                <itunes:title><![CDATA[亿万年前的宏伟计划：怎样让星辰之子仰望星空？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">给你讲一个故事，一个持续了138亿年的、奇怪、宏大又浪漫的故事，故事的终点，是此刻的你和我。</p><span><br></span>本期BGM开始小幅调整，去掉了打扰睡眠的片头，欢迎提出建议反馈。<br>]]>
+                </description>
+                <enclosure
+                        length="47784723"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIMAHta5pAPZGBQH0hKtN-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=609161094&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/530a-audiofreehighqps/5C/17/GKwRIMAHta5pAPZGBQH0hKtN-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_609161094</guid>
+                <pubDate>Sun, 05 Feb 2023 17:45:26 GMT</pubDate>
+                <itunes:duration>33:13</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/609161094</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>16</itunes:episode>
+                <title><![CDATA[春节特刊：在妥协社会中，痛苦是一场奔赴新事物的征程]]></title>
+                <itunes:title><![CDATA[春节特刊：在妥协社会中，痛苦是一场奔赴新事物的征程]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="23726049"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJEHpcizALcRVgHwGmnA-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=606546391&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/1940-audiofreehighqps/44/32/GKwRIJEHpcizALcRVgHwGmnA-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_606546391</guid>
+                <pubDate>Thu, 26 Jan 2023 05:30:00 GMT</pubDate>
+                <itunes:duration>24:41</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/606546391</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>17</itunes:episode>
+                <title><![CDATA[致被偷走的2022：生命啊，苦涩如歌]]></title>
+                <itunes:title><![CDATA[致被偷走的2022：生命啊，苦涩如歌]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">最近阳了很久，没精力更新音频，2022马上结束了，给老朋友们一段今天刚刚剪辑出来的视频《被偷走的2022》，与科普无关，不感兴趣的请跳过。</p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>每一次新年即将到来，回顾过去这三百多天，我们总能找到一些词，不平凡的一年、快乐的一年、闹心的一年、焦虑的一年......</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>而当我们回顾2022的时候，心里似乎是空的，有什么东西被彻底偷走了。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>我们甚至还没有来得及去复盘曾经立下的Flag——多少书没有读、多少东西没有学、多少钱没有挣、多少承诺没有兑现、多少人没有陪，就在一年的最后，我们干脆集体丢失了一周的时间。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>那甚至不是痛苦的一周，而是什么都没有的一周，没有劳动、没有思考、没有计划、没有热情，没有什么记忆。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>我们和亲人、朋友、客户说了句：我阳了，然后缩进被子里，</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>再回过神来，新年已经扑面而来。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span><strong style="color:#FC5832;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-weight: normal;">该用什么姿势迎接它呢？</strong></span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>从床上爬起来的那天，我打开一页空白的文档，脑袋空空的，一个字也打不出来；拿起书架上阳之前看到一半的书，发现完全读不下去；甚至还报复性的下载了几个游戏，全都打开又关闭。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>于是彻底放空，倒上了一大杯白开水，歪倒在椅子上，一首一首的听歌，然后，这几句歌词就这样穿透了我。</span></p><blockquote style="font-size:14px;margin:10px 0px;color:rgb(102, 102, 102);border-left:5px solid rgb(232, 232, 232);padding-left:15px;"><p style="color:#666666;font-size:14px;" data-flag="bk-span"><span data-flag="bk-span" style="color:#666666;font-size:14px;">你睡了 可时间它依然走着</span></p><p style="color:#666666;font-size:14px;" data-flag="bk-span"><span data-flag="bk-span" style="color:#666666;font-size:14px;">你怕了 恍然抬头梦却醒了</span></p><p style="color:#666666;font-size:14px;" data-flag="bk-span"><span data-flag="bk-span" style="color:#666666;font-size:14px;">你会静默 手握着星火等在至暗时刻</span></p><p style="color:#666666;font-size:14px;" data-flag="bk-span"><span data-flag="bk-span" style="color:#666666;font-size:14px;">你被击破 当熟悉呢喃又穿透耳朵</span></p></blockquote><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>嗯，这一年，我们多多少少，都被打败了。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>所以生命啊，它苦涩如歌。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;"><span><span>我决定用这首歌，做一段跨年视频。</span><span>对于被「偷走」的2022年，我们无从抱怨、无力吐槽，<strong style="color:#FC5832;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-weight: normal;">至少可以在至暗时刻，手捧星火，期待新年的钟声带来一点点力量。</strong></span></span></p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>最近读到一句话：</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span><strong style="color:#FC5832;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-weight: normal;">不要爱抽象的人，去爱具体的人。</strong></span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>这句话放在此刻，再应景不过。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>那些曾经被我们挂在嘴边，那些关于价值、行业、理想的话，撑不起我们需要的那股劲儿。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>或许，伙伴、爱人和家人，就是我们在这个黑暗时刻，手里捧着的最后一点星火。</span></p><span><br></span><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;"><span>愿你和在乎的人，新年安好。加油。</span></p><br>]]>
+                </description>
+                <enclosure
+                        length="311598415"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4HhL7iACpFIgHmnZh6-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=600648565&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/64f1-audiofreehighqps/43/5F/GKwRIW4HhL7iACpFIgHmnZh6-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_600648565</guid>
+                <pubDate>Fri, 30 Dec 2022 14:55:15 GMT</pubDate>
+                <itunes:duration>05:42</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/600648565</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>18</itunes:episode>
+                <title><![CDATA[特别节目：和“最强人工智能”ChatGPT讨论了40个科学问题]]></title>
+                <itunes:title><![CDATA[特别节目：和“最强人工智能”ChatGPT讨论了40个科学问题]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="49300048"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIasHa2f9AP2vPAHfNs5m-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=595765763&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/888a-audiofreehighqps/5E/5F/GKwRIasHa2f9AP2vPAHfNs5m-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_595765763</guid>
+                <pubDate>Sun, 11 Dec 2022 09:37:08 GMT</pubDate>
+                <itunes:duration>34:13</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/595765763</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>19</itunes:episode>
+                <title><![CDATA[本质问题：生命进化的底层化学动力]]></title>
+                <itunes:title><![CDATA[本质问题：生命进化的底层化学动力]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="50870811"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJEHSg-NAQXEQwHMdHwa-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=588000615&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/3ad4-audiofreehighqps/29/ED/GKwRIJEHSg-NAQXEQwHMdHwa-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_588000615</guid>
+                <pubDate>Wed, 16 Nov 2022 02:34:58 GMT</pubDate>
+                <itunes:duration>35:19</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/588000615</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>20</itunes:episode>
+                <title><![CDATA[在量子物理学家眼中，生命的本质是什么？]]></title>
+                <itunes:title><![CDATA[在量子物理学家眼中，生命的本质是什么？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="37324443"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4HKzx2AMAM5QG36y7j-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=579449174&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/fe08-audiofreehighqps/6F/A9/GKwRIW4HKzx2AMAM5QG36y7j-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_579449174</guid>
+                <pubDate>Sun, 23 Oct 2022 17:26:34 GMT</pubDate>
+                <itunes:duration>25:54</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/579449174</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>21</itunes:episode>
+                <title><![CDATA[宇宙中存在生命，这件事真的很怪异]]></title>
+                <itunes:title><![CDATA[宇宙中存在生命，这件事真的很怪异]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="38380248"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4G68MAAMV7ggGc3L1L-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=566914527&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/8feb-audiofreehighqps/A1/DC/GKwRIW4G68MAAMV7ggGc3L1L-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_566914527</guid>
+                <pubDate>Mon, 05 Sep 2022 13:55:33 GMT</pubDate>
+                <itunes:duration>26:38</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/566914527</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>22</itunes:episode>
+                <title><![CDATA[星空深处神秘的见证者：祝融星、暗物质和暗能量]]></title>
+                <itunes:title><![CDATA[星空深处神秘的见证者：祝融星、暗物质和暗能量]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">感谢大家的打赏和分享支持，我又更新啦~</p>]]>
+                </description>
+                <enclosure
+                        length="40756251"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIasGyOJaANG2NQGQdJ2Z-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=559890722&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/a574-audiofreehighqps/46/C2/GKwRIasGyOJaANG2NQGQdJ2Z-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_559890722</guid>
+                <pubDate>Wed, 10 Aug 2022 02:59:56 GMT</pubDate>
+                <itunes:duration>28:17</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/559890722</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>23</itunes:episode>
+                <title><![CDATA[认知边界：宇宙的巨幕只给人类开了一道窄缝]]></title>
+                <itunes:title><![CDATA[认知边界：宇宙的巨幕只给人类开了一道窄缝]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/a1c3-audiofreehighqps/B1/95/GKwRIW4Grce8AALm7AGDbyjo.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/a1c3-audiofreehighqps/B1/95/GKwRIW4Grce8AALm7AGDbyjo.jpg?op_type=0" data-large="http://imagev2.xmcdn.com/storages/a1c3-audiofreehighqps/B1/95/GKwRIW4Grce8AALm7AGDbyjo.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="571.8588640275387" data-preview="http://imagev2.xmcdn.com/storages/a1c3-audiofreehighqps/B1/95/GKwRIW4Grce8AALm7AGDbyjo.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="106.74698795180723"><br></p>]]>
+                </description>
+                <enclosure
+                        length="42532059"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIW4GrcggANrZawGDb6qj-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=553908719&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/ae42-audiofreehighqps/DD/39/GKwRIW4GrcggANrZawGDb6qj-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_553908719</guid>
+                <pubDate>Wed, 20 Jul 2022 13:36:47 GMT</pubDate>
+                <itunes:duration>29:31</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/553908719</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>24</itunes:episode>
+                <title><![CDATA[星际拓荒（中）：宇宙之眼、因果悖论和量子星]]></title>
+                <itunes:title><![CDATA[星际拓荒（中）：宇宙之眼、因果悖论和量子星]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="48208682"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRINsGiijiAPh29QFwmfiy-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=545839629&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/dcbf-audiofreehighqps/97/BC/GKwRINsGiijiAPh29QFwmfiy-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_545839629</guid>
+                <pubDate>Thu, 23 Jun 2022 13:08:07 GMT</pubDate>
+                <itunes:duration>33:31</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/545839629</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>25</itunes:episode>
+                <title><![CDATA[星际拓荒（上）：太阳爆炸前22分钟，我掉入了时间循环]]></title>
+                <itunes:title><![CDATA[星际拓荒（上）：太阳爆炸前22分钟，我掉入了时间循环]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="45119372"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIaIGiiiyAOiKlAFwmchB-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=545839292&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/8fff-audiofreehighqps/10/01/GKwRIaIGiiiyAOiKlAFwmchB-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_545839292</guid>
+                <pubDate>Thu, 23 Jun 2022 13:07:16 GMT</pubDate>
+                <itunes:duration>31:22</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/545839292</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>26</itunes:episode>
+                <title><![CDATA[小道别：量子力学留给人类的迷惑、恩惠与骄傲]]></title>
+                <itunes:title><![CDATA[小道别：量子力学留给人类的迷惑、恩惠与骄傲]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">节目最后跟大家做个小小的道别。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><span>后面我打算稍微停更一段时间，调整一下自己疲惫的状态，也看看还有没有什么其他的话题可以和大家聊，如果说服自己，找回状态和可以讲的内容，可能会在某个时候突然恢复更新。也谢谢那些给我留言、为我打赏、购买了几期我的付费内容的小伙伴，没有你们的支持，我不可能走到今天。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><span>作为一个创作者，我自己的日常更新还是有的哈，只是咱们这档栏目暂时停更，不过那档节目主要是面向建筑科技行业，讲一讲我读书的思考和跟行业里高手聊天的心得，不一定适合咱们这档栏目的听众，如果你比较喜欢我讲内容的风格，可以去了解一下。是个付费节目，目前的定价是1块钱，每周更新两期，现在已经更新了20多期。如果你感兴趣的话，可以到我的公众号「BIM清流BIMBOX」，回复关键词「老孙的参考」，就能看到这个专栏了。</span></p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><span>希望咱们哪天还能见面，拜拜~</span></p>]]>
+                </description>
+                <enclosure
+                        length="45123569"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRINsGXT-9AOgxAQFYeKTU-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=534750373&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/8381-audiofreehighqps/9D/AD/GKwRINsGXT-9AOgxAQFYeKTU-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_534750373</guid>
+                <pubDate>Fri, 20 May 2022 11:33:05 GMT</pubDate>
+                <itunes:duration>31:19</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/534750373</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>27</itunes:episode>
+                <title><![CDATA[穿越时空的波函数：维格纳的朋友和薛定谔的猫]]></title>
+                <itunes:title><![CDATA[穿越时空的波函数：维格纳的朋友和薛定谔的猫]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">本期说到的实验仪器示意图：</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/a8b9-audiofreehighqps/4C/FF/GKwRIUEGSxhtAAMrKAFMkqyt.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/a8b9-audiofreehighqps/4C/FF/GKwRIUEGSxhtAAMrKAFMkqyt.png?op_type=0" data-large="http://imagev2.xmcdn.com/storages/a8b9-audiofreehighqps/4C/FF/GKwRIUEGSxhtAAMrKAFMkqyt.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="644.5783132530121" data-preview="http://imagev2.xmcdn.com/storages/a8b9-audiofreehighqps/4C/FF/GKwRIUEGSxhtAAMrKAFMkqyt.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="120.32128514056225"><br></p>]]>
+                </description>
+                <enclosure
+                        length="48521068"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJIGSwo5APmrVAFMjEj2-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=529216965&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/a169-audiofreehighqps/F4/E6/GKwRIJIGSwo5APmrVAFMjEj2-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_529216965</guid>
+                <pubDate>Fri, 06 May 2022 16:04:19 GMT</pubDate>
+                <itunes:duration>33:41</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/529216965</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>28</itunes:episode>
+                <title><![CDATA[从薛定谔方程到狄拉克公式：幽灵般的电子自旋]]></title>
+                <itunes:title><![CDATA[从薛定谔方程到狄拉克公式：幽灵般的电子自旋]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="49239089"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJEGHPDNAP1edgEzjr7c-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=517227804&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/3e9c-audiofreehighqps/B1/1B/GKwRIJEGHPDNAP1edgEzjr7c-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_517227804</guid>
+                <pubDate>Fri, 01 Apr 2022 16:51:51 GMT</pubDate>
+                <itunes:duration>34:11</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/517227804</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>29</itunes:episode>
+                <title><![CDATA[回到“案发现场”，量子力学的诡异起源]]></title>
+                <itunes:title><![CDATA[回到“案发现场”，量子力学的诡异起源]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="50596145"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJEGC0POAQRbBQEsK6Bc-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=512462914&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/fcc0-audiofreehighqps/99/CC/GKwRIJEGC0POAQRbBQEsK6Bc-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_512462914</guid>
+                <pubDate>Sat, 19 Mar 2022 07:04:53 GMT</pubDate>
+                <itunes:duration>35:07</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/512462914</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>30</itunes:episode>
+                <title><![CDATA[质能方程E=mc²，为什么必须是光速的平方？]]></title>
+                <itunes:title><![CDATA[质能方程E=mc²，为什么必须是光速的平方？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/b19d-audiofreehighqps/88/45/GKwRIDoF-VyiAAM0pAEj7x6V.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/b19d-audiofreehighqps/88/45/GKwRIDoF-VyiAAM0pAEj7x6V.jpg?op_type=0" data-large="http://imagev2.xmcdn.com/storages/b19d-audiofreehighqps/88/45/GKwRIDoF-VyiAAM0pAEj7x6V.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="855.784469096672" data-preview="http://imagev2.xmcdn.com/storages/b19d-audiofreehighqps/88/45/GKwRIDoF-VyiAAM0pAEj7x6V.jpg!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="159.74643423137877"><br></p>]]>
+                </description>
+                <enclosure
+                        length="53785713"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJIF-V0gARTENQEj7ynF-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=507997260&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/4b1f-audiofreehighqps/00/AC/GKwRIJIF-V0gARTENQEj7ynF-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_507997260</guid>
+                <pubDate>Sat, 05 Mar 2022 17:12:23 GMT</pubDate>
+                <itunes:duration>37:20</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/507997260</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>31</itunes:episode>
+                <title><![CDATA[前沿物理哲学观：量子引力理论的4个基本原则]]></title>
+                <itunes:title><![CDATA[前沿物理哲学观：量子引力理论的4个基本原则]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="47258801"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJIF7T6zAPMuiAEb8dnp-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=505126246&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/d617-audiofreehighqps/14/6A/GKwRIJIF7T6zAPMuiAEb8dnp-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_505126246</guid>
+                <pubDate>Thu, 24 Feb 2022 12:35:17 GMT</pubDate>
+                <itunes:duration>32:48</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/505126246</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>32</itunes:episode>
+                <title><![CDATA[特刊：让我人生过得好一些的科学道理]]></title>
+                <itunes:title><![CDATA[特刊：让我人生过得好一些的科学道理]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="13887665"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIMAFzCKBAGmLbwESu8B7-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=497787089&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/382d-audiofreehighqps/DE/97/GKwRIMAFzCKBAGmLbwESu8B7-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_497787089</guid>
+                <pubDate>Sun, 30 Jan 2022 09:50:37 GMT</pubDate>
+                <itunes:duration>14:14</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/497787089</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>33</itunes:episode>
+                <title><![CDATA[上古宇宙的发条：藏在时间之箭中的终极谜题]]></title>
+                <itunes:title><![CDATA[上古宇宙的发条：藏在时间之箭中的终极谜题]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="48027761"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIMAFwfSKAPcjwAEQEem7-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=495276255&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/6d5e-audiofreehighqps/1D/B4/GKwRIMAFwfSKAPcjwAEQEem7-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_495276255</guid>
+                <pubDate>Sat, 22 Jan 2022 16:31:22 GMT</pubDate>
+                <itunes:duration>33:20</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/495276255</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>34</itunes:episode>
+                <title><![CDATA[从科学的角度，帮你把5G彻底理解透]]></title>
+                <itunes:title><![CDATA[从科学的角度，帮你把5G彻底理解透]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="36802422"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIMAFuHUVAL2qCQENX7lW-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=492738129&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/e7d0-audiofreehighqps/4A/07/GKwRIMAFuHUVAL2qCQENX7lW-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_492738129</guid>
+                <pubDate>Sat, 15 Jan 2022 11:37:20 GMT</pubDate>
+                <itunes:duration>25:35</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/492738129</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>35</itunes:episode>
+                <title><![CDATA[时空切片与时间消失：一个改变你宇宙观的深刻洞见]]></title>
+                <itunes:title><![CDATA[时空切片与时间消失：一个改变你宇宙观的深刻洞见]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="55238705"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRINsFqFFVARw_DwEJlWAA-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=488829142&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/db65-audiofreehighqps/29/73/GKwRINsFqFFVARw_DwEJlWAA-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_488829142</guid>
+                <pubDate>Mon, 03 Jan 2022 05:48:15 GMT</pubDate>
+                <itunes:duration>38:21</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/488829142</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>36</itunes:episode>
+                <title><![CDATA[未来某一天，人工智能会怎样“越狱”？]]></title>
+                <itunes:title><![CDATA[未来某一天，人工智能会怎样“越狱”？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="39341248"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIJEFiHTsAMp0pQEAmCZZ-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=480934099&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/656a-audiofreehighqps/77/7D/GKwRIJEFiHTsAMp0pQEAmCZZ-aacv2-48K.m4a"
+                />
+                <guid>xmly_track_480934099</guid>
+                <pubDate>Fri, 10 Dec 2021 01:47:30 GMT</pubDate>
+                <itunes:duration>27:18</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/480934099</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>37</itunes:episode>
+                <title><![CDATA[时间的死结：物理规则允许我们回到过去吗？]]></title>
+                <itunes:title><![CDATA[时间的死结：物理规则允许我们回到过去吗？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="54227911"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIRwFefy9ARcMpgD8gH7P-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=477175237&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/c328-audiofreehighqps/E3/D5/GKwRIRwFefy9ARcMpgD8gH7P-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/c328-audiofreehighqps/E3/D5/GKwRIRwFefy9ARcMpgD8gH7P-aacv2-48K.m4a</guid>
+                <pubDate>Mon, 29 Nov 2021 02:22:57 GMT</pubDate>
+                <itunes:duration>37:39</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/477175237</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>38</itunes:episode>
+                <title><![CDATA[理论物理之美：量子力学的背叛与相对论的复仇]]></title>
+                <itunes:title><![CDATA[理论物理之美：量子力学的背叛与相对论的复仇]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="48204546"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//GKwRIDoFbYtjAPgLwAD5JwWd-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=474092853&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/a59f-audiofreehighqps/23/4D/GKwRIDoFbYtjAPgLwAD5JwWd-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/a59f-audiofreehighqps/23/4D/GKwRIDoFbYtjAPgLwAD5JwWd-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 19 Nov 2021 15:52:13 GMT</pubDate>
+                <itunes:duration>33:28</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/474092853</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>39</itunes:episode>
+                <title><![CDATA[4维与5维时空：纯粹的智力游戏，还是实在的宇宙意义？]]></title>
+                <itunes:title><![CDATA[4维与5维时空：纯粹的智力游戏，还是实在的宇宙意义？]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="53963613"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIJIFYIZvARWwoAD1n9MC-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=470783940&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/ab4d-audiofreehighqps/B8/00/CKwRIJIFYIZvARWwoAD1n9MC-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/ab4d-audiofreehighqps/B8/00/CKwRIJIFYIZvARWwoAD1n9MC-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 09 Nov 2021 18:51:27 GMT</pubDate>
+                <itunes:duration>37:28</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/470783940</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>40</itunes:episode>
+                <title><![CDATA[无意识之谜：藏在意识冰山之下的巨大深海]]></title>
+                <itunes:title><![CDATA[无意识之谜：藏在意识冰山之下的巨大深海]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="46799901"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIJEFSwWKAPDTAgDv4W8J-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=465379432&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/b7c8-audiofreehighqps/BD/5E/CKwRIJEFSwWKAPDTAgDv4W8J-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/b7c8-audiofreehighqps/BD/5E/CKwRIJEFSwWKAPDTAgDv4W8J-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 24 Oct 2021 11:24:08 GMT</pubDate>
+                <itunes:duration>32:29</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/465379432</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>41</itunes:episode>
+                <title><![CDATA[脑科学的谜题：睡眠、梦境与潜意识]]></title>
+                <itunes:title><![CDATA[脑科学的谜题：睡眠、梦境与潜意识]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这期内容开始，我们聊聊大家留言很多的关于脑与意识的问题。</p>]]>
+                </description>
+                <enclosure
+                        length="56075805"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIMAFQvUvASCPUQDtzOPM.m4a?channel=rss&amp;album_id=21469108&amp;track_id=463456785&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/e07f-audiofreehighqps/88/7F/CKwRIMAFQvUvASCPUQDtzOPM.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/e07f-audiofreehighqps/88/7F/CKwRIMAFQvUvASCPUQDtzOPM.m4a</guid>
+                <pubDate>Mon, 18 Oct 2021 11:00:00 GMT</pubDate>
+                <itunes:duration>38:56</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/463456785</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>42</itunes:episode>
+                <title><![CDATA[宇宙最深处的琴弦：千疮百孔的弦理论]]></title>
+                <itunes:title><![CDATA[宇宙最深处的琴弦：千疮百孔的弦理论]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="51516189"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIasFKQ8qAQkX9ADnrM2P-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=457771327&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/0510-audiofreehighqps/E8/04/CKwRIasFKQ8qAQkX9ADnrM2P-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/0510-audiofreehighqps/E8/04/CKwRIasFKQ8qAQkX9ADnrM2P-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 28 Sep 2021 17:08:08 GMT</pubDate>
+                <itunes:duration>35:46</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/457771327</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>43</itunes:episode>
+                <title><![CDATA[外星文明探索之路：费米悖论与德雷克公式]]></title>
+                <itunes:title><![CDATA[外星文明探索之路：费米悖论与德雷克公式]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="44868083"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRINsFFqBuAObiMwDjIqNn-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=453586521&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/c095-audiofreehighqps/1E/3E/CKwRINsFFqBuAObiMwDjIqNn-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/c095-audiofreehighqps/1E/3E/CKwRINsFFqBuAObiMwDjIqNn-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 14 Sep 2021 17:35:07 GMT</pubDate>
+                <itunes:duration>31:09</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/453586521</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>44</itunes:episode>
+                <title><![CDATA[科幻故事：灵囚540天]]></title>
+                <itunes:title><![CDATA[科幻故事：灵囚540天]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="60439839"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIMAFBXvSATcHKgDeytnl-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=449628733&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/59ed-audiofreehighqps/56/6D/CKwRIMAFBXvSATcHKgDeytnl-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/59ed-audiofreehighqps/56/6D/CKwRIMAFBXvSATcHKgDeytnl-aacv2-48K.m4a</guid>
+                <pubDate>Wed, 01 Sep 2021 17:29:43 GMT</pubDate>
+                <itunes:duration>41:57</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/449628733</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>45</itunes:episode>
+                <title><![CDATA[量子之争：爱因斯坦失败和客观实在的消亡]]></title>
+                <itunes:title><![CDATA[量子之争：爱因斯坦失败和客观实在的消亡]]></itunes:title>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <enclosure
+                        length="41385183"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIaIE4y4YANT20QDTwI3l-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=440959047&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/4ced-audiofreehighqps/79/1D/CKwRIaIE4y4YANT20QDTwI3l-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/4ced-audiofreehighqps/79/1D/CKwRIaIE4y4YANT20QDTwI3l-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 06 Aug 2021 19:01:00 GMT</pubDate>
+                <itunes:duration>28:43</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/440959047</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>46</itunes:episode>
+                <title><![CDATA[关于意识、时间、因果关系的怪异故事（下集）]]></title>
+                <itunes:title><![CDATA[关于意识、时间、因果关系的怪异故事（下集）]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">今天，我们继续把小林泰三的《醉步男》讲完</p>]]>
+                </description>
+                <enclosure
+                        length="44000799"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIJIEyjPCAOJtPADJ9CAj-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=434973088&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/d1c0-audiofreehighqps/54/60/CKwRIJIEyjPCAOJtPADJ9CAj-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/d1c0-audiofreehighqps/54/60/CKwRIJIEyjPCAOJtPADJ9CAj-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 18 Jul 2021 18:19:11 GMT</pubDate>
+                <itunes:duration>30:32</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/434973088</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>47</itunes:episode>
+                <title><![CDATA[关于意识、时间、因果关系的怪异故事（上集）]]></title>
+                <itunes:title><![CDATA[关于意识、时间、因果关系的怪异故事（上集）]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一集咱们讲讲小林泰三的《醉步男》</p>]]>
+                </description>
+                <enclosure
+                        length="47001183"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIaIEtEetAPHeQgDByUac-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=429717291&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/507a-audiofreehighqps/11/F4/CKwRIaIEtEetAPHeQgDByUac-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/507a-audiofreehighqps/11/F4/CKwRIaIEtEetAPHeQgDByUac-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 02 Jul 2021 03:13:59 GMT</pubDate>
+                <itunes:duration>32:37</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/429717291</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>48</itunes:episode>
+                <title><![CDATA[关于自我的终极谜题：意识与量子效应]]></title>
+                <itunes:title><![CDATA[关于自我的终极谜题：意识与量子效应]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">关于意识之谜，我们似乎聊到了最深处。</p>]]>
+                </description>
+                <enclosure
+                        length="48816159"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIW4EhFxjAPs04ACw8cpd-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=419036596&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/51c5-audiofreehighqps/09/17/CKwRIW4EhFxjAPs04ACw8cpd-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/51c5-audiofreehighqps/09/17/CKwRIW4EhFxjAPs04ACw8cpd-aacv2-48K.m4a</guid>
+                <pubDate>Wed, 26 May 2021 18:53:35 GMT</pubDate>
+                <itunes:duration>33:53</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/a3c1-audiofreehighqps/15/10/CMCoOScEdVxOAAGBiACriJlh.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/419036596</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>49</itunes:episode>
+                <title><![CDATA[人类征服火星的旅途：从天问一号聊起]]></title>
+                <itunes:title><![CDATA[人类征服火星的旅途：从天问一号聊起]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">天问一号成功登录火星，开启了一个全新的篇章。今天我们聊聊，移民火星的哪些事。</p>]]>
+                </description>
+                <enclosure
+                        length="48897375"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIRwEdPXWAPugEACrZQf8-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=415306111&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/91a4-audiofreehighqps/60/43/CKwRIRwEdPXWAPugEACrZQf8-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/91a4-audiofreehighqps/60/43/CKwRIRwEdPXWAPugEACrZQf8-aacv2-48K.m4a</guid>
+                <pubDate>Sat, 15 May 2021 02:31:52 GMT</pubDate>
+                <itunes:duration>33:57</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/8203-audiofreehighqps/82/F8/CMCoOSYEdWGkAAKELwCriqiO.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/415306111</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>50</itunes:episode>
+                <title><![CDATA[谜一般的量子纠缠，在生命里扮演什么角色？]]></title>
+                <itunes:title><![CDATA[谜一般的量子纠缠，在生命里扮演什么角色？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期开始，我们讲一讲生命科学与量子力学</p>]]>
+                </description>
+                <enclosure
+                        length="40616885"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIDoEbyDyANEDEACpYVJ7-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=413968791&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/b7d9-audiofreehighqps/63/32/CKwRIDoEbyDyANEDEACpYVJ7-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/b7d9-audiofreehighqps/63/32/CKwRIDoEbyDyANEDEACpYVJ7-aacv2-48K.m4a</guid>
+                <pubDate>Mon, 10 May 2021 16:22:31 GMT</pubDate>
+                <itunes:duration>28:12</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/60d4-audiofreehighqps/25/23/CMCoOScEdWJwAAGBiACrivK5.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/413968791</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>51</itunes:episode>
+                <title><![CDATA[量子力学生出的怪兽：波函数与第三层平行宇宙]]></title>
+                <itunes:title><![CDATA[量子力学生出的怪兽：波函数与第三层平行宇宙]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">在继续平行宇宙的话题之前，我们要聊聊量子力学中的“怪兽”：波函数。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">另外，喜马拉雅为我开通了单集付费的功能，我想下一期尝试一下，给自己找点动力，能告诉我，你愿意为听一期半小时的《科学星球》付多少费吗？</p>]]>
+                </description>
+                <enclosure
+                        length="46685131"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIaIETkC8APA-rgCfItyt-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=406096654&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/fcb1-audiofreehighqps/C2/FA/CKwRIaIETkC8APA-rgCfItyt-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/fcb1-audiofreehighqps/C2/FA/CKwRIaIETkC8APA-rgCfItyt-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 15 Apr 2021 17:53:26 GMT</pubDate>
+                <itunes:duration>32:24</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/4237-audiofreehighqps/B5/C9/CMCoOSAEdWKsAAGBiACriwZt.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/406096654</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>52</itunes:episode>
+                <title><![CDATA[A4纸，数学怪兽，和囊括宇宙的数字]]></title>
+                <itunes:title><![CDATA[A4纸，数学怪兽，和囊括宇宙的数字]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">从A4纸讲起，我们聊聊一个诡异的数字</p>]]>
+                </description>
+                <enclosure
+                        length="46457035"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIUEENl5yAO8RqQCXzAFv-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=399996695&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/4f19-audiofreehighqps/1A/1A/CKwRIUEENl5yAO8RqQCXzAFv-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/4f19-audiofreehighqps/1A/1A/CKwRIUEENl5yAO8RqQCXzAFv-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 28 Mar 2021 15:05:38 GMT</pubDate>
+                <itunes:duration>32:15</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/aca2-audiofreehighqps/37/73/CKwRIDoEdWLyAAGBiACrix3B.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/399996695</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>53</itunes:episode>
+                <title><![CDATA[谁制造了宇宙大爆炸？暴涨理论与平行宇宙]]></title>
+                <itunes:title><![CDATA[谁制造了宇宙大爆炸？暴涨理论与平行宇宙]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">平行宇宙到底是从哪里推演出来的？其实它是一个好理论的必然推论。</p>]]>
+                </description>
+                <enclosure
+                        length="49996555"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIDoEICZeAQFJagCRWbS8-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=394223210&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/3a69-audiofreehighqps/BC/4D/CKwRIDoEICZeAQFJagCRWbS8-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/3a69-audiofreehighqps/BC/4D/CKwRIDoEICZeAQFJagCRWbS8-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 11 Mar 2021 18:36:39 GMT</pubDate>
+                <itunes:duration>34:42</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/5900-audiofreehighqps/A1/67/CMCoOSIEdWMOAAGBiACriyei.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/394223210</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>54</itunes:episode>
+                <title><![CDATA[凝视深渊：渺小的人类是怎样探寻宇宙的？]]></title>
+                <itunes:title><![CDATA[凝视深渊：渺小的人类是怎样探寻宇宙的？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">宇宙有多大，时间有多远？这些深奥的问题，渺小的人类到底是怎样理解的？</p>]]>
+                </description>
+                <enclosure
+                        length="51953227"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CKwRIW4EGDKOAQtb-gCPCZIS-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=392098206&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/98dc-audiofreehighqps/62/91/CKwRIW4EGDKOAQtb-gCPCZIS-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/98dc-audiofreehighqps/62/91/CKwRIW4EGDKOAQtb-gCPCZIS-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 05 Mar 2021 17:50:29 GMT</pubDate>
+                <itunes:duration>36:04</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/839f-audiofreehighqps/98/BF/CKwRIMAEdWMiAAGBiACriy9D.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/392098206</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>55</itunes:episode>
+                <title><![CDATA[重新认知大爆炸和黑洞：量子引力的惊人推论]]></title>
+                <itunes:title><![CDATA[重新认知大爆炸和黑洞：量子引力的惊人推论]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">消除无穷小，到底有多神奇？</p>]]>
+                </description>
+                <enclosure
+                        length="43469323"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSED8d9MAN-zuwCEIkTS-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=382822911&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/b0aa-audiofreehighqps/EF/B8/CMCoOSED8d9MAN-zuwCEIkTS-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/b0aa-audiofreehighqps/EF/B8/CMCoOSED8d9MAN-zuwCEIkTS-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 04 Feb 2021 16:09:04 GMT</pubDate>
+                <itunes:duration>30:10</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/storages/b92e-audiofreehighqps/9D/7F/CMCoOScEdWNWAAGBiACri0Kd.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/382822911</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>56</itunes:episode>
+                <title><![CDATA[空间和时间消失的世界：相对论与量子力学的融合]]></title>
+                <itunes:title><![CDATA[空间和时间消失的世界：相对论与量子力学的融合]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">如何把相矛盾的广义相对论与量子力学结合到一起？也许，我们不得不抛弃连续空间与时间的概念。</p>]]>
+                </description>
+                <enclosure
+                        length="47236449"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOScD33MRAPMXCgB-WnGL-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=377251273&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/1558-audiofreehighqps/71/AC/CMCoOScD33MRAPMXCgB-WnGL-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/1558-audiofreehighqps/71/AC/CMCoOScD33MRAPMXCgB-WnGL-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 21 Jan 2021 16:46:33 GMT</pubDate>
+                <itunes:duration>32:47</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/377251273</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>57</itunes:episode>
+                <title><![CDATA[宇宙是由什么构成的（3）：古怪的量子场]]></title>
+                <itunes:title><![CDATA[宇宙是由什么构成的（3）：古怪的量子场]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期宇宙构成，我们顺带给你讲三个量子力学的重要知识。</p>]]>
+                </description>
+                <enclosure
+                        length="40588343"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSQD15cZANDhTQB8Jlsb-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=375149917&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/55e1-audiofreehighqps/5B/DB/CMCoOSQD15cZANDhTQB8Jlsb-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/55e1-audiofreehighqps/5B/DB/CMCoOSQD15cZANDhTQB8Jlsb-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 15 Jan 2021 17:42:09 GMT</pubDate>
+                <itunes:duration>28:10</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/375149917</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>58</itunes:episode>
+                <title><![CDATA[宇宙是由什么构成的（2）：相对论场时代]]></title>
+                <itunes:title><![CDATA[宇宙是由什么构成的（2）：相对论场时代]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><span>这一期我们继续聊这个大而深刻的话题：宇宙是由什么构成的？这一期爱因斯坦登场</span><br /></p>]]>
+                </description>
+                <enclosure
+                        length="41163604"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSIDyzuzANPYeAB4yQK4-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=372118631&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/2f80-audiofreehighqps/82/7C/CMCoOSIDyzuzANPYeAB4yQK4-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/2f80-audiofreehighqps/82/7C/CMCoOSIDyzuzANPYeAB4yQK4-aacv2-48K.m4a</guid>
+                <pubDate>Wed, 06 Jan 2021 08:45:03 GMT</pubDate>
+                <itunes:duration>28:34</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/372118631</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>59</itunes:episode>
+                <title><![CDATA[宇宙是由什么构成的（1）：粒子与空间时代]]></title>
+                <itunes:title><![CDATA[宇宙是由什么构成的（1）：粒子与空间时代]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期开始，我们聊一个比较长的话题：宇宙是由什么构成的？我们不止放出结果，而是带你一起走一遍过去几百年探索的故事，那里有人类最璀璨的智慧之光。</p>]]>
+                </description>
+                <enclosure
+                        length="33302712"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSUDv8aMAKuYegB17ARf-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=369580974&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/6687-audiofreehighqps/23/D3/CMCoOSUDv8aMAKuYegB17ARf-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/6687-audiofreehighqps/23/D3/CMCoOSUDv8aMAKuYegB17ARf-aacv2-48K.m4a</guid>
+                <pubDate>Mon, 28 Dec 2020 16:10:04 GMT</pubDate>
+                <itunes:duration>23:08</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/369580974</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>60</itunes:episode>
+                <title><![CDATA[鬼魅的舞者：空间深处的黑洞]]></title>
+                <itunes:title><![CDATA[鬼魅的舞者：空间深处的黑洞]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期我们继续聊黑洞，先回答上一期留下的三个问题。</p>]]>
+                </description>
+                <enclosure
+                        length="45586079"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSQDZ42_AOrpCwBftOJb-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=348191735&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/0739-audiofreehighqps/A0/51/CMCoOSQDZ42_AOrpCwBftOJb-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/0739-audiofreehighqps/A0/51/CMCoOSQDZ42_AOrpCwBftOJb-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 22 Oct 2020 18:08:26 GMT</pubDate>
+                <itunes:duration>31:41</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/348191735</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>61</itunes:episode>
+                <title><![CDATA[牛顿的黑洞和爱因斯坦的黑洞]]></title>
+                <itunes:title><![CDATA[牛顿的黑洞和爱因斯坦的黑洞]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期开始，我们聊聊本来存在于数学中的怪兽：黑洞。</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">下面是一张你可能会想看的公式：</p><p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" src="http://imagev2.xmcdn.com/storages/0031-audiofreehighqps/85/A1/CMCoOSIDV7J3AAGxJQBb_EMK.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" alt="" data-origin="http://imagev2.xmcdn.com/storages/0031-audiofreehighqps/85/A1/CMCoOSIDV7J3AAGxJQBb_EMK.png?op_type=0" data-large="http://imagev2.xmcdn.com/storages/0031-audiofreehighqps/85/A1/CMCoOSIDV7J3AAGxJQBb_EMK.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-large-width="750" data-large-height="69.59606986899563" data-preview="http://imagev2.xmcdn.com/storages/0031-audiofreehighqps/85/A1/CMCoOSIDV7J3AAGxJQBb_EMK.png!op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-preview-width="140" data-preview-height="12.99126637554585" /><br /></p>]]>
+                </description>
+                <enclosure
+                        length="55400020"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//CMCoOSMDV7LdAR19tABb_EZ7-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=344247496&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/storages/0caa-audiofreehighqps/81/E0/CMCoOSMDV7LdAR19tABb_EZ7-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/storages/0caa-audiofreehighqps/81/E0/CMCoOSMDV7LdAR19tABb_EZ7-aacv2-48K.m4a</guid>
+                <pubDate>Sat, 10 Oct 2020 17:30:31 GMT</pubDate>
+                <itunes:duration>38:31</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/344247496</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>62</itunes:episode>
+                <title><![CDATA[《去月球》，一个催泪的故事]]></title>
+                <itunes:title><![CDATA[《去月球》，一个催泪的故事]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">史上最长的节目，一个感动过我的故事。如果你没时间一次性听完，请不要听。</p>]]>
+                </description>
+                <enclosure
+                        length="109658211"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKg5HF702wLCJRr0AjUotkoHiRg727-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=310946981&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group82/M0B/0E/9D/wKg5HF702wLCJRr0AjUotkoHiRg727-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group82/M0B/0E/9D/wKg5HF702wLCJRr0AjUotkoHiRg727-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 25 Jun 2020 17:11:03 GMT</pubDate>
+                <itunes:duration>1:16:15</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/310946981</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>63</itunes:episode>
+                <title><![CDATA[肉体与精神是硬币的两面吗？]]></title>
+                <itunes:title><![CDATA[肉体与精神是硬币的两面吗？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期咱们接着谈意识。</p>]]>
+                </description>
+                <enclosure
+                        length="35072514"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKg5H17cfKDQ5nF4ALS9J-D9zGs370-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=305072313&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group85/M0B/1C/E3/wKg5H17cfKDQ5nF4ALS9J-D9zGs370-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group85/M0B/1C/E3/wKg5H17cfKDQ5nF4ALS9J-D9zGs370-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 07 Jun 2020 05:35:01 GMT</pubDate>
+                <itunes:duration>24:23</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/305072313</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>64</itunes:episode>
+                <title><![CDATA[意识之谜：一颗彗星为什么能导致核战争？]]></title>
+                <itunes:title><![CDATA[意识之谜：一颗彗星为什么能导致核战争？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">我们看到的所有意识现象，似乎在微观上都不违背物理定律，但怎么在宏观上，就会发生自然汇率之外的事？一颗彗星撞到木星，为什么能导致地球的毁灭呢？</p>]]>
+                </description>
+                <enclosure
+                        length="44668608"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgPC16_dQTxvnMfAOYzdjnojL4097-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=297013149&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group79/M05/2A/A0/wKgPC16_dQTxvnMfAOYzdjnojL4097-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group79/M05/2A/A0/wKgPC16_dQTxvnMfAOYzdjnojL4097-aacv2-48K.m4a</guid>
+                <pubDate>Sat, 16 May 2020 05:06:46 GMT</pubDate>
+                <itunes:duration>31:03</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/297013149</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>65</itunes:episode>
+                <title><![CDATA[宇宙之死：智能生命能改变结局吗？]]></title>
+                <itunes:title><![CDATA[宇宙之死：智能生命能改变结局吗？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一节我们谈两件事：</p><p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">1.宇宙会怎样灭亡？</p><p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">2.智能生命能拯救它吗？</p>]]>
+                </description>
+                <enclosure
+                        length="40806485"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgPC16u_bngqN6nANQ2rXryCWM240-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=291812508&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group79/M01/6A/AF/wKgPC16u_bngqN6nANQ2rXryCWM240-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group79/M01/6A/AF/wKgPC16u_bngqN6nANQ2rXryCWM240-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 03 May 2020 17:21:28 GMT</pubDate>
+                <itunes:duration>28:19</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/291812508</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>66</itunes:episode>
+                <title><![CDATA[宇宙的结构和尺度]]></title>
+                <itunes:title><![CDATA[宇宙的结构和尺度]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">宇宙的谜团不仅在于它的大，而是从电子到超星系团的结构，这种结构循环到了某个层次突然终止了，为什么？</p>]]>
+                </description>
+                <enclosure
+                        length="40859538"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO0l6fHlTzhbElANTI1zsaFCQ451-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=286627703&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group74/M03/60/91/wKgO0l6fHlTzhbElANTI1zsaFCQ451-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group74/M03/60/91/wKgO0l6fHlTzhbElANTI1zsaFCQ451-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 21 Apr 2020 16:24:22 GMT</pubDate>
+                <itunes:duration>28:24</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/286627703</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>67</itunes:episode>
+                <title><![CDATA[创生：科学与神学的争论也许会终结于引力]]></title>
+                <itunes:title><![CDATA[创生：科学与神学的争论也许会终结于引力]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">每当话题来到一切的起因，语言就会变得特别苍白无力。这一期尽量尝试用比较容易的语言帮你理解，科学和神学在创生问题上分歧在哪里？为什么引力会是问题的关键？</p>]]>
+                </description>
+                <enclosure
+                        length="42751936"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO016R7cbi3pWmAN6kXCvVIgs303-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=281845356&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group75/M0B/91/63/wKgO016R7cbi3pWmAN6kXCvVIgs303-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group75/M0B/91/63/wKgO016R7cbi3pWmAN6kXCvVIgs303-aacv2-48K.m4a</guid>
+                <pubDate>Sat, 11 Apr 2020 16:17:46 GMT</pubDate>
+                <itunes:duration>29:43</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/281845356</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>68</itunes:episode>
+                <title><![CDATA[谁在向我们开炮？神秘的宇宙高能射线]]></title>
+                <itunes:title><![CDATA[谁在向我们开炮？神秘的宇宙高能射线]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">本期的内容稍短，最后给大家留点彩蛋，推荐一些科普和科幻的好书</p>]]>
+                </description>
+                <enclosure
+                        length="45039480"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO3F6HXDHyqgmoAOqPcJD7nwk303-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=278012906&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group74/M04/E0/30/wKgO3F6HXDHyqgmoAOqPcJD7nwk303-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group74/M04/E0/30/wKgO3F6HXDHyqgmoAOqPcJD7nwk303-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 03 Apr 2020 15:53:54 GMT</pubDate>
+                <itunes:duration>31:18</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/278012906</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>69</itunes:episode>
+                <title><![CDATA[终极意义：我们能用一个公式解释宇宙吗？]]></title>
+                <itunes:title><![CDATA[终极意义：我们能用一个公式解释宇宙吗？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">从科学诞生那一天——甚至是科学还归属于哲学的时代——人们就追问一个问题：宇宙的终极意义是什么？今天来聊聊，万物之理还有多远。</p>]]>
+                </description>
+                <enclosure
+                        length="55967076"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO3V583YDzgXy0ASN7bc4_pOE817-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=274156883&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group75/M0A/3A/8C/wKgO3V583YDzgXy0ASN7bc4_pOE817-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group75/M0A/3A/8C/wKgO3V583YDzgXy0ASN7bc4_pOE817-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 26 Mar 2020 16:50:35 GMT</pubDate>
+                <itunes:duration>38:55</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/274156883</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>70</itunes:episode>
+                <title><![CDATA[万物起源：关于宇宙大爆炸的科学和哲学]]></title>
+                <itunes:title><![CDATA[万物起源：关于宇宙大爆炸的科学和哲学]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">回到时间的起点，那里的物理性质很简单，但谜题却一点都不少</p>]]>
+                </description>
+                <enclosure
+                        length="42354852"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO3V5uQeqwF2AcANyUzZUHnW0941-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=268661608&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group75/M01/55/9F/wKgO3V5uQeqwF2AcANyUzZUHnW0941-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group75/M01/55/9F/wKgO3V5uQeqwF2AcANyUzZUHnW0941-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 15 Mar 2020 14:54:38 GMT</pubDate>
+                <itunes:duration>29:26</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/268661608</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>71</itunes:episode>
+                <title><![CDATA[跟爱因斯坦抬杠：光速到底为什么不变？]]></title>
+                <itunes:title><![CDATA[跟爱因斯坦抬杠：光速到底为什么不变？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">上次的正篇节目最后留了个问题，光速不变到底是怎么来的？</p>]]>
+                </description>
+                <enclosure
+                        length="56205102"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO3l5hMlvgR0WTASS4_hTtFQU000-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=263734498&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group76/M01/95/9B/wKgO3l5hMlvgR0WTASS4_hTtFQU000-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group76/M01/95/9B/wKgO3l5hMlvgR0WTASS4_hTtFQU000-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 05 Mar 2020 17:09:09 GMT</pubDate>
+                <itunes:duration>39:04</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/263734498</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>72</itunes:episode>
+                <title><![CDATA[答听友问：关于超光速、空间和虫洞]]></title>
+                <itunes:title><![CDATA[答听友问：关于超光速、空间和虫洞]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">感谢大家的留言提问，我把解答统一放到音频里吧</p>]]>
+                </description>
+                <enclosure
+                        length="28315547"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO3F5XgKLgVe33AJNzlyMljIs949-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=260066985&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group74/M02/F5/6F/wKgO3F5XgKLgVe33AJNzlyMljIs949-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group74/M02/F5/6F/wKgO3F5XgKLgVe33AJNzlyMljIs949-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 27 Feb 2020 08:40:37 GMT</pubDate>
+                <itunes:duration>19:41</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/260066985</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>73</itunes:episode>
+                <title><![CDATA[给每个深夜听节目的唱首《深夜的歌》]]></title>
+                <itunes:title><![CDATA[给每个深夜听节目的唱首《深夜的歌》]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这期荒腔走板的给大家唱首歌，拿我的雅马哈破吉他录的，本期内容是视频，有wifi的可以打开视频看看歌词。</p><p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">这首歌喜欢了很多年，我既不是专业主播，更不是专业的音乐人，深夜的时候录出来，发给每个关注我的人，谢谢你们一路的评论和支持，才让我断更一年之后又走回来继续讲故事。</p><p style="font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">祝每个人的深夜，都有一份宁静。</p>]]>
+                </description>
+                <enclosure
+                        length="52649959"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO1V5WizGBdl0dACLbZ2VageE621-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=259799327&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group77/M01/F8/B9/wKgO1V5WizGBdl0dACLbZ2VageE621-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group77/M01/F8/B9/wKgO1V5WizGBdl0dACLbZ2VageE621-aacv2-48K.m4a</guid>
+                <pubDate>Wed, 26 Feb 2020 15:13:45 GMT</pubDate>
+                <itunes:duration>04:39</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/259799327</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>74</itunes:episode>
+                <title><![CDATA[宇宙速度有上限，这事真的很奇怪]]></title>
+                <itunes:title><![CDATA[宇宙速度有上限，这事真的很奇怪]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">光速到底是怎么回事，光速不变会推出什么奇怪的结论？</p>]]>
+                </description>
+                <enclosure
+                        length="46283002"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO015V_P-g5wM_APEMGpn81zI931-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=259480458&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group75/M03/E6/5F/wKgO015V_P-g5wM_APEMGpn81zI931-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group75/M03/E6/5F/wKgO015V_P-g5wM_APEMGpn81zI931-aacv2-48K.m4a</guid>
+                <pubDate>Wed, 26 Feb 2020 05:06:34 GMT</pubDate>
+                <itunes:duration>32:10</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/259480458</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>75</itunes:episode>
+                <title><![CDATA[宇宙深处的炸弹：反物质的谜团]]></title>
+                <itunes:title><![CDATA[宇宙深处的炸弹：反物质的谜团]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期聊的反物质，和第一期聊到的暗物质，是不同的两个东西，忘了的朋友可以翻回去听听。</p>]]>
+                </description>
+                <enclosure
+                        length="43899334"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO4F5MBVaz4mYwAOI-PO-0YFI721-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=256095226&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group78/M00/4D/6D/wKgO4F5MBVaz4mYwAOI-PO-0YFI721-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group78/M00/4D/6D/wKgO4F5MBVaz4mYwAOI-PO-0YFI721-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 18 Feb 2020 15:39:58 GMT</pubDate>
+                <itunes:duration>30:31</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/256095226</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>76</itunes:episode>
+                <title><![CDATA[维度之谜：空间只有长宽高吗]]></title>
+                <itunes:title><![CDATA[维度之谜：空间只有长宽高吗]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期咱们说回科普，谈谈维度。说到第四维，我们习惯地把它和时间混为一谈，当然时间作为第四维度没有问题，但在这种解释体系下，更高的第五维就很难解释了，所以这期我们说的维度，是空间的更高维。</p>]]>
+                </description>
+                <enclosure
+                        length="42897108"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO0F5Fd2PzM05tAN9oQZbmjXw181-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=253852337&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group72/M04/75/3A/wKgO0F5Fd2PzM05tAN9oQZbmjXw181-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group72/M04/75/3A/wKgO0F5Fd2PzM05tAN9oQZbmjXw181-aacv2-48K.m4a</guid>
+                <pubDate>Thu, 13 Feb 2020 16:20:08 GMT</pubDate>
+                <itunes:duration>29:49</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/253852337</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>77</itunes:episode>
+                <title><![CDATA[爱因斯坦的100亿年]]></title>
+                <itunes:title><![CDATA[爱因斯坦的100亿年]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这一期咱们继续说故事，这个故事算是半个原创，改编自阿西莫夫的《最后的问题》，算是我个人喜欢的科幻故事的TOP10以内。听到结尾，或许你能感受到当年我读它时候的震撼。</p>]]>
+                </description>
+                <enclosure
+                        length="35539104"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgOz15BazzRX80TALkVnb1_ssY442-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=252482880&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group71/M0B/67/7C/wKgOz15BazzRX80TALkVnb1_ssY442-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group71/M0B/67/7C/wKgOz15BazzRX80TALkVnb1_ssY442-aacv2-48K.m4a</guid>
+                <pubDate>Mon, 10 Feb 2020 14:39:20 GMT</pubDate>
+                <itunes:duration>24:42</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/252482880</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>78</itunes:episode>
+                <title><![CDATA[时间旅行故事：商人和炼金术士之门（下）]]></title>
+                <itunes:title><![CDATA[时间旅行故事：商人和炼金术士之门（下）]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">上一集的故事讲到一半，这集我们接着讲</p>]]>
+                </description>
+                <enclosure
+                        length="51620558"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO0F4wec_jy3AhAQoKPKkuoGo447-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=247389142&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group72/M00/78/06/wKgO0F4wec_jy3AhAQoKPKkuoGo447-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group72/M00/78/06/wKgO0F4wec_jy3AhAQoKPKkuoGo447-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 28 Jan 2020 18:14:00 GMT</pubDate>
+                <itunes:duration>35:53</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/247389142</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>79</itunes:episode>
+                <title><![CDATA[时间旅行故事：商人和炼金术士之门（上）]]></title>
+                <itunes:title><![CDATA[时间旅行故事：商人和炼金术士之门（上）]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">这节插播一个科幻故事，与时间有关。如果你喜欢听故事，或者不喜欢听，都请留言给我，我在后边调整一下比例</p>]]>
+                </description>
+                <enclosure
+                        length="51115376"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgO0F4vnleBTDAeAQo3ernD3T8201-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=247150336&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group72/M0B/51/7C/wKgO0F4vnleBTDAeAQo3ernD3T8201-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group72/M0B/51/7C/wKgO0F4vnleBTDAeAQo3ernD3T8201-aacv2-48K.m4a</guid>
+                <pubDate>Tue, 28 Jan 2020 02:36:24 GMT</pubDate>
+                <itunes:duration>35:32</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/247150336</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>80</itunes:episode>
+                <title><![CDATA[07.宇宙的剧本：时间之谜]]></title>
+                <itunes:title><![CDATA[07.宇宙的剧本：时间之谜]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">有一样东西是宇宙中最常见、也最难解释的东西，那就是时间。时间的本质是什么？它和空间有什么区别？</p>]]>
+                </description>
+                <enclosure
+                        length="53289161"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgOz14rN53BXTamARWNaEzapt4387-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=246495230&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group71/M01/7F/A5/wKgOz14rN53BXTamARWNaEzapt4387-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group71/M01/7F/A5/wKgOz14rN53BXTamARWNaEzapt4387-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 24 Jan 2020 18:28:57 GMT</pubDate>
+                <itunes:duration>37:03</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/246495230</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>81</itunes:episode>
+                <title><![CDATA[06.宇宙的舞台：空间到底是个什么东西？]]></title>
+                <itunes:title><![CDATA[06.宇宙的舞台：空间到底是个什么东西？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">空间到底是什么？它是承装宇宙物质的容器？还是本身具有物理属性的什么东西？空间为什么会变形？空间是可以无限细分的，还是可以量子化的呢？</p><span><br /></span>]]>
+                </description>
+                <enclosure
+                        length="22364943"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLeVzYW2GjL5_pAKuYeMDdo9I807-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=183256537&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group60/M03/60/95/wKgLeVzYW2GjL5_pAKuYeMDdo9I807-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group60/M03/60/95/wKgLeVzYW2GjL5_pAKuYeMDdo9I807-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 12 May 2019 17:43:34 GMT</pubDate>
+                <itunes:duration>23:09</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3C/wKgLdVxw7KTgn7vcAAFf2rzyUUA124.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/183256537</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>82</itunes:episode>
+                <title><![CDATA[05.拒绝服从：充满谜团的引力]]></title>
+                <itunes:title><![CDATA[05.拒绝服从：充满谜团的引力]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">在人类理解宇宙的路途上，有个怪东西拒不服从大一统理论，那就是引力。</p><p style="font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">如果引力不存在——量子理论就能解释宇宙了，不过当然宇宙也不可能诞生出量子理论学家。</p>]]>
+                </description>
+                <enclosure
+                        length="20322402"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLd1x7eBaT7mPMAJywAWDpGH8442-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=164901250&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group57/M03/73/3C/wKgLd1x7eBaT7mPMAJywAWDpGH8442-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group57/M03/73/3C/wKgLd1x7eBaT7mPMAJywAWDpGH8442-aacv2-48K.m4a</guid>
+                <pubDate>Sun, 03 Mar 2019 06:45:09 GMT</pubDate>
+                <itunes:duration>21:08</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3F/wKgLdVxw7K2RNGvdAAFf2rzyUUA253.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/164901250</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>83</itunes:episode>
+                <title><![CDATA[04.质量之谜：这世上到底有没有“物质”？]]></title>
+                <itunes:title><![CDATA[04.质量之谜：这世上到底有没有“物质”？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">你也许听过：我们身体里大部分都是空的。这一期我要告诉你，不是「大部分」，追问到底，这宇宙本身就是空的。</p>]]>
+                </description>
+                <enclosure
+                        length="22107129"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLdVxxPuDgcq1IAKrjoQ0hcGc249-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=162831527&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group55/M05/9A/A5/wKgLdVxxPuDgcq1IAKrjoQ0hcGc249-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group55/M05/9A/A5/wKgLdVxxPuDgcq1IAKrjoQ0hcGc249-aacv2-48K.m4a</guid>
+                <pubDate>Sat, 23 Feb 2019 12:39:20 GMT</pubDate>
+                <itunes:duration>23:03</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M01/91/3F/wKgLdVxw7K2RNGvdAAFf2rzyUUA253.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/162831527</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>84</itunes:episode>
+                <title><![CDATA[03.物质的尽头：我们已经把宇宙切到最小了吗？]]></title>
+                <itunes:title><![CDATA[03.物质的尽头：我们已经把宇宙切到最小了吗？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal"><img data-key="0" alt="" src="http://image.xmcdn.com/group56/M0B/86/84/wKgLgFxwRSLD69WSAACCnFaxzZI559.png?op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" data-origin="http://image.xmcdn.com/group56/M0B/86/84/wKgLgFxwRSLD69WSAACCnFaxzZI559.png?op_type=0" data-preview-height="49" data-preview-width="140" data-preview="http://image.xmcdn.com/group56/M0B/86/84/wKgLgFxwRSLD69WSAACCnFaxzZI559.png?op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_small" data-large-height="266" data-large-width="750" data-large="http://image.xmcdn.com/group56/M0B/86/84/wKgLgFxwRSLD69WSAACCnFaxzZI559.png?op_type=4&amp;device_type=ios&amp;upload_type=attachment&amp;name=mobile_large" /></p><p style="font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;color:#333333;font-weight:normal;text-align:justify;" data-flag="normal">这张小小的表格里蕴含的规律，也许正在向人们传达宇宙最深处的秘密。</p>]]>
+                </description>
+                <enclosure
+                        length="16111633"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLd1xwRZSSCjHOAHwyyBMS5aE491-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=162643348&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group57/M05/86/16/wKgLd1xwRZSSCjHOAHwyyBMS5aE491-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group57/M05/86/16/wKgLd1xwRZSSCjHOAHwyyBMS5aE491-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 22 Feb 2019 18:56:15 GMT</pubDate>
+                <itunes:duration>16:45</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group57/M05/86/90/wKgLgVxwRaHRgy66AAFTMU5JtH4371.jpg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/162643348</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>85</itunes:episode>
+                <title><![CDATA[02.暗能量：比暗物质更神秘的谜团]]></title>
+                <itunes:title><![CDATA[02.暗能量：比暗物质更神秘的谜团]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">当人们竞相猜测，宇宙的结局会是大挤压、热寂还是保持平衡的时候，一股神秘的力量却向我们揭示了第四种可能：我们仍然处于大爆炸之中。这股不断撕裂宇宙的神秘力量，到底是什么东西呢？</p>]]>
+                </description>
+                <enclosure
+                        length="14154529"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLf1xwMpWQuP9-AG0YMADu2Uo038-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=162642019&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group55/M00/86/6A/wKgLf1xwMpWQuP9-AG0YMADu2Uo038-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group55/M00/86/6A/wKgLf1xwMpWQuP9-AG0YMADu2Uo038-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 22 Feb 2019 17:38:49 GMT</pubDate>
+                <itunes:duration>14:43</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group56/M0B/86/3D/wKgLgFxwMx7worluAAMbK0XlhqE71.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/162642019</link>
+                <itunes:block>No</itunes:block>
+            </item>
+            <item>
+                <itunes:episodeType>full</itunes:episodeType>
+                    <itunes:episode>86</itunes:episode>
+                <title><![CDATA[01.暗物质：为什么我们只看到宇宙的5%？]]></title>
+                <itunes:title><![CDATA[01.暗物质：为什么我们只看到宇宙的5%？]]></itunes:title>
+                <description>
+                    <![CDATA[<p style="color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;" data-flag="normal">为什么说人类只理解了宇宙不到5%？与其说我们生活在普通的物质里，倒不如说我们熟知的世界是极其特殊的。</p>]]>
+                </description>
+                <enclosure
+                        length="20565753"
+                        type="audio/x-m4a"
+                        url="https://jt.ximalaya.com//wKgLdVxv9s3QBqm0AJ7w4m9jRNI637-aacv2-48K.m4a?channel=rss&amp;album_id=21469108&amp;track_id=162581691&amp;uid=21189289&amp;jt=https://aod.cos.tx.xmcdn.com/group55/M04/80/1A/wKgLdVxv9s3QBqm0AJ7w4m9jRNI637-aacv2-48K.m4a"
+                />
+                <guid>https://aod.cos.tx.xmcdn.com/group55/M04/80/1A/wKgLdVxv9s3QBqm0AJ7w4m9jRNI637-aacv2-48K.m4a</guid>
+                <pubDate>Fri, 22 Feb 2019 13:20:23 GMT</pubDate>
+                <itunes:duration>21:26</itunes:duration>
+                <itunes:explicit>false</itunes:explicit>
+                <itunes:image href="https://fdfs.xmcdn.com/group55/M04/80/13/wKgLdVxv9sCTWhqJAAPpcKUqE9U76.jpeg"></itunes:image>
+                <link>https://www.ximalaya.com/sound/162581691</link>
+                <itunes:block>No</itunes:block>
+            </item>
+    </channel>
+</rss>

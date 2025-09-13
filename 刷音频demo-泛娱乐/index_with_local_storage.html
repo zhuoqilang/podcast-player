@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>播客播放控制台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        // Tailwind 配置
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        danger: '#EF4444',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        mono: ['Consolas', 'Monaco', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .info-area {
+                height: 60vh; /* 信息区占3/5 */
+                overflow-y: auto;
+            }
+            .touch-area {
+                height: calc(40vh - 3rem); /* 触摸区占2/5减去控制按钮区高度 */
+            }
+            .entry {
+                animation: fadeIn 0.3s ease;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .recommendation-item {
+                transition: all 0.2s ease;
+            }
+            .recommendation-item:hover {
+                background-color: rgba(59, 130, 246, 0.1);
+                transform: translateX(4px);
+            }
+            .score-tag {
+                font-size: 10px;
+                padding: 1px 4px;
+                border-radius: 3px;
+                margin-left: 4px;
+            }
+            
+            /* 隐藏文件输入区域的样式 */
+            .hidden-files {
+                display: none !important;
+            }
+            
+            /* 清除存储按钮样式 */
+            .clear-storage-btn {
+                z-index: 10 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-mono text-dark overflow-hidden">
+    <!-- 信息显示区域 (上半部分，占2/3屏幕) -->
+    <div class="info-area bg-dark p-4 relative">
+        <div class="absolute top-2 right-2 bg-primary/80 text-white text-xs px-2 py-1 rounded-md z-10">
+            <span id="mode-indicator" class="flex items-center">
+                <i class="fa fa-random mr-1"></i>
+                <span>随机模式</span>
+            </span>
+        </div>
+        
+        <div id="info-container" class="text-gray-300 text-sm space-y-2 pt-8">
+            <!-- 当前播放音频的标注 -->
+            <div id="current-annotation" class="hidden entry bg-gray-800 p-3 rounded-lg border-l-4 border-primary">
+                <div class="text-primary font-bold mb-1">当前节目标注:</div>
+                <div id="annotation-content" class="text-gray-200"></div>
+                
+                <!-- 提取的关键词信息 -->
+                <div id="keyword-info" class="mt-2 text-xs">
+                    <div class="text-blue-400 mb-1">提取的关键词:</div>
+                    <div id="valid-keywords" class="text-green-400 mb-1"></div>
+                    <div id="related-keywords" class="text-yellow-400 mb-1"></div>
+                    <div id="topic-keywords" class="text-purple-400"></div>
+                </div>
+            </div>
+            
+            <!-- 用户动作记录 -->
+            <div id="user-actions" class="space-y-1">
+                <div class="entry text-green-400">
+                    <i class="fa fa-info-circle mr-1"></i>播客播放控制台已启动
+                </div>
+                <div class="entry text-yellow-400">
+                    <i class="fa fa-exclamation-circle mr-1"></i>请选择以下三个JSON文件:
+                </div>
+                <div class="entry file-input-container">
+                    <div class="file-input-wrapper">
+                        <i class="fa fa-file-text-o text-blue-400"></i>
+                        <input type="file" id="episodes-file" accept=".json" class="text-gray-400 file:bg-gray-700 file:text-white file:px-2 file:py-1 file:rounded file:text-xs">
+                        <label for="episodes-file" class="text-xs text-gray-400">单集数据</label>
+                    </div>
+                    <div class="file-input-wrapper">
+                        <i class="fa fa-sitemap text-blue-400"></i>
+                        <input type="file" id="nodes-file" accept=".json" class="text-gray-400 file:bg-gray-700 file:text-white file:px-2 file:py-1 file:rounded file:text-xs">
+                        <label for="nodes-file" class="text-xs text-gray-400">节点文件</label>
+                    </div>
+                    <div class="file-input-wrapper">
+                        <i class="fa fa-share-alt text-blue-400"></i>
+                        <input type="file" id="edges-file" accept=".json" class="text-gray-400 file:bg-gray-700 file:text-white file:px-2 file:py-1 file:rounded file:text-xs">
+                        <label for="edges-file" class="text-xs text-gray-400">边文件</label>
+                    </div>
+                </div>
+                <div id="file-status" class="entry text-gray-400">
+                    <i class="fa fa-check-square-o mr-1"></i>已选择: 0/3 文件
+                </div>
+            </div>
+            
+            <!-- 推荐列表和得分信息 -->
+            <div id="recommendation-section" class="hidden entry mt-3">
+                <div class="text-secondary font-bold mb-2 flex items-center">
+                    <i class="fa fa-thumbs-up mr-1"></i>推荐列表:
+                    <span id="recommendation-count" class="ml-2 text-xs bg-gray-700 px-2 py-0.5 rounded"></span>
+                </div>
+                <div id="recommendation-list" class="space-y-2 ml-1"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 控制按钮区域 (信息区和触摸区之间) -->
+    <div id="control-buttons-area" class="bg-gray-200 py-2 px-4 flex justify-around items-center border-y border-gray-300">
+        <div id="prev-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-arrow-left text-gray-700"></i>
+            <span class="text-xs text-gray-700">Previous</span>
+        </div>
+        <div id="play-pause-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-play text-gray-700"></i>
+            <span class="text-xs text-gray-700">Play/Pause</span>
+        </div>
+        <div id="next-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-arrow-right text-gray-700"></i>
+            <span class="text-xs text-gray-700">Next</span>
+        </div>
+        <div id="random-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-random text-gray-700"></i>
+            <span class="text-xs text-gray-700">Random</span>
+        </div>
+        <div id="recommend-button" class="control-button p-2 rounded-md hover:bg-gray-300 transition-colors flex flex-col items-center">
+            <i class="fa fa-thumbs-up text-gray-700"></i>
+            <span class="text-xs text-gray-700">Recommend</span>
+        </div>
+    </div>
+    
+    <!-- 触摸操作区域 (下半部分) -->
+    <div id="touch-area" class="touch-area bg-gradient-to-b from-gray-100 to-gray-200 relative">
+        <!-- 操作提示 - 显著标识触摸操作区域 -->
+        <div id="touch-hint" class="absolute top-4 left-4 right-4 z-10">
+            <div class="text-left font-bold text-base text-gray-800 mb-1">触摸操作区域 | Touch Control Area</div>
+            <div class="flex flex-col space-y-0.5 text-gray-700 text-xs">
+                <div>左右滑动：上一条/下一条 | Swipe left/right: Previous/Next</div>
+                <div>上滑：随机跳转 | Swipe up: Random jump</div>
+                <div>下滑：据此推荐 | Swipe down: Generate recommendations</div>
+            </div>
+        </div>
+        
+        <!-- 保留原有的播放状态指示器和滑动轨迹指示器 -->
+        
+        <!-- 播放状态指示器 -->
+        <div id="playback-status" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-sm px-3 py-2 rounded-lg text-white text-sm hidden">
+            <div id="current-title" class="font-medium truncate max-w-xs text-center"></div>
+            <div id="progress-info" class="text-xs text-gray-300 mt-1 flex justify-between">
+                <span id="current-time">00:00</span>
+                <span id="total-time">00:00</span>
+            </div>
+        </div>
+        
+        <!-- 滑动轨迹指示器 (动态显示) -->
+        <div id="swipe-indicator" class="hidden absolute w-full h-full pointer-events-none">
+            <div id="swipe-line" class="absolute bg-gray-600/30 rounded-full"></div>
+        </div>
+    </div>
+    
+    <!-- 音频播放器 -->
+    <audio id="audio-player" preload="metadata" class="hidden"></audio>
+    
+    <script>
+        // 全局状态
+        let allEpisodes = [];               // 所有单集数据
+        let validEpisodes = [];             // 标注不为空的有效单集
+        let currentIndex = -1;              // 当前播放索引
+        let previousIndex = -1;             // 上一条播放的索引（用于随机模式左滑）
+        let isPlaying = false;              // 播放状态
+        let isRandomMode = true;            // 播放模式：true-随机模式，false-推荐模式
+        let recommendationList = [];        // 推荐列表
+        let audioElement = null;            // 音频元素
+        let progressInterval = null;        // 进度更新定时器
+        let touchStartX = 0;                // 触摸起始X坐标
+        let touchStartY = 0;                // 触摸起始Y坐标
+        let touchTimeStart = 0;             // 触摸开始时间
+        let isSwiping = false;              // 是否正在滑动
+        
+        // 数据文件
+        let nodesData = [];                 // 节点数据
+        let edgesData = [];                 // 边数据
+        let selectedFilesCount = 0;         // 已选择文件数量
+        let useLocalStorage = true;         // 是否使用本地存储功能
+        
+        // 忽略词表
+        const ignoreWords = [
+            '录音', '日记', '随口记', 'V', 'HST', 
+            '待行动', 'idea', 'to', '行动', 'v'
+        ];
+
+        // DOM 元素
+        const elements = {
+            modeIndicator: document.getElementById('mode-indicator'),
+            infoContainer: document.getElementById('info-container'),
+            currentAnnotation: document.getElementById('current-annotation'),
+            annotationContent: document.getElementById('annotation-content'),
+            validKeywords: document.getElementById('valid-keywords'),
+            relatedKeywords: document.getElementById('related-keywords'),
+            topicKeywords: document.getElementById('topic-keywords'),
+            userActions: document.getElementById('user-actions'),
+            recommendationSection: document.getElementById('recommendation-section'),
+            recommendationList: document.getElementById('recommendation-list'),
+            recommendationCount: document.getElementById('recommendation-count'),
+            episodesFileInput: document.getElementById('episodes-file'),
+            nodesFileInput: document.getElementById('nodes-file'),
+            edgesFileInput: document.getElementById('edges-file'),
+            fileStatus: document.getElementById('file-status'),
+            touchArea: document.getElementById('touch-area'),
+            swipeIndicator: document.getElementById('swipe-indicator'),
+            swipeLine: document.getElementById('swipe-line'),
+            currentTitle: document.getElementById('current-title'),
+            currentTime: document.getElementById('current-time'),
+            totalTime: document.getElementById('total-time'),
+            playbackStatus: document.getElementById('playback-status'),
+            audioPlayer: document.getElementById('audio-player')
+        };
+
+        // 从本地存储加载数据
+        function loadFromLocalStorage() {
+            if (!useLocalStorage) return false;
+            
+            try {
+                const savedEpisodes = localStorage.getItem('savedEpisodes');
+                const savedNodes = localStorage.getItem('savedNodes');
+                const savedEdges = localStorage.getItem('savedEdges');
+                
+                if (savedEpisodes && savedNodes && savedEdges) {
+                    processEpisodesData(JSON.parse(savedEpisodes));
+                    processNodesData(JSON.parse(savedNodes));
+                    processEdgesData(JSON.parse(savedEdges));
+                    
+                    selectedFilesCount = 3;
+                    updateFileStatus();
+                    
+                    // 隐藏文件选择区域
+                    const fileInputContainer = document.querySelector('.file-input-container');
+                    if (fileInputContainer) {
+                        fileInputContainer.classList.add('hidden-files');
+                    }
+                    
+                    // 隐藏提示选择文件的文本
+                    const filePrompt = document.querySelector('.entry.text-yellow-400');
+                    if (filePrompt && filePrompt.innerHTML.includes('请选择以下三个JSON文件')) {
+                        filePrompt.classList.add('hidden-files');
+                    }
+                    
+                    addUserAction('已从本地存储加载数据文件', 'success');
+                    return true;
+                }
+            } catch (error) {
+                addUserAction('从本地存储加载数据失败: ' + error.message, 'warning');
+            }
+            
+            return false;
+        }
+        
+        // 保存数据到本地存储
+        function saveToLocalStorage(dataType, data) {
+            if (!useLocalStorage) return;
+            
+            try {
+                switch(dataType) {
+                    case 'episodes':
+                        localStorage.setItem('savedEpisodes', JSON.stringify(data));
+                        break;
+                    case 'nodes':
+                        localStorage.setItem('savedNodes', JSON.stringify(data));
+                        break;
+                    case 'edges':
+                        localStorage.setItem('savedEdges', JSON.stringify(data));
+                        break;
+                }
+            } catch (error) {
+                addUserAction('保存数据到本地存储失败: ' + error.message, 'warning');
+            }
+        }
+        
+        // 清除本地存储数据
+        function clearLocalStorage() {
+            try {
+                localStorage.removeItem('savedEpisodes');
+                localStorage.removeItem('savedNodes');
+                localStorage.removeItem('savedEdges');
+                addUserAction('已清除本地存储的数据文件', 'info');
+            } catch (error) {
+                addUserAction('清除本地存储数据失败: ' + error.message, 'error');
+            }
+        }
+        
+        // 添加清除存储按钮
+        function addClearStorageButton() {
+            const clearButton = document.createElement('div');
+            clearButton.className = 'clear-storage-btn absolute top-2 left-2 bg-gray-700 text-white text-xs px-2 py-1 rounded-md cursor-pointer hover:bg-gray-600 transition-colors';
+            clearButton.innerHTML = '<i class="fa fa-trash-o mr-1"></i>清除存储';
+            
+            clearButton.addEventListener('click', () => {
+                if (confirm('确定要清除本地存储的数据吗？这将需要您重新选择文件。')) {
+                    clearLocalStorage();
+                    location.reload(); // 重新加载页面以重置状态
+                }
+            });
+            
+            elements.infoContainer.parentElement.appendChild(clearButton);
+        }
+        
+        // 尝试从同一目录自动加载指定的JSON文件
+        function tryLoadLocalFiles() {
+            if (selectedFilesCount >= 3) return; // 已经加载了文件，不再尝试
+            
+            // 检查是否有本地存储的文件数据
+            const hasEpisodesData = localStorage.getItem('episodes');
+            const hasNodesData = localStorage.getItem('nodes');
+            const hasEdgesData = localStorage.getItem('edges');
+            
+            if (hasEpisodesData && hasNodesData && hasEdgesData) {
+                addUserAction('检测到本地存储已有文件数据，正在加载...', 'info');
+                loadFromLocalStorage();
+                return;
+            }
+            
+            // 检查当前URL协议
+            const isFileProtocol = window.location.protocol === 'file:';
+            
+            if (isFileProtocol) {
+                // 在file://协议下，浏览器出于安全考虑会限制fetch访问本地文件
+                addUserAction('检测到file://协议，尝试从本地存储加载...', 'info');
+                
+                // 尝试从本地存储加载，如果本地存储也没有，再提示手动选择
+                if (!loadFromLocalStorage()) {
+                    addUserAction('本地存储也没有找到数据，请手动选择三个文件', 'warning');
+                    
+                    // 显示文件选择区域
+                    const fileInputContainer = document.querySelector('.file-input-container');
+                    if (fileInputContainer) {
+                        fileInputContainer.classList.remove('hidden-files');
+                    }
+                }
+                
+                return;
+            }
+            
+            // 要加载的文件列表
+            const filesToLoad = [
+                { type: 'episodes', fileName: 'album_46898583.json' },
+                { type: 'nodes', fileName: 'nodes.json' },
+                { type: 'edges', fileName: 'edges.json' }
+            ];
+            
+            let loadedCount = 0;
+            
+            filesToLoad.forEach(({ type, fileName }) => {
+                fetch(fileName)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`无法加载文件: ${fileName}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        addUserAction(`成功自动加载文件: ${fileName}`, 'success');
+                        
+                        // 处理加载的数据
+                        switch(type) {
+                            case 'episodes':
+                                processEpisodesData(data);
+                                saveToLocalStorage('episodes', data);
+                                break;
+                            case 'nodes':
+                                processNodesData(data);
+                                saveToLocalStorage('nodes', data);
+                                break;
+                            case 'edges':
+                                processEdgesData(data);
+                                saveToLocalStorage('edges', data);
+                                break;
+                        }
+                        
+                        loadedCount++;
+                        selectedFilesCount++;
+                        updateFileStatus();
+                        
+                        // 检查是否所有文件都已加载
+                        if (loadedCount === 3 && validEpisodes.length > 0) {
+                            addUserAction('所有文件自动加载完成，点击播放区域开始播放', 'success');
+                            
+                            // 隐藏文件选择区域
+                            const fileInputContainer = document.querySelector('.file-input-container');
+                            if (fileInputContainer) {
+                                fileInputContainer.classList.add('hidden-files');
+                            }
+                            
+                            // 隐藏提示选择文件的文本
+                            const filePrompt = document.querySelector('.entry.text-yellow-400');
+                            if (filePrompt && filePrompt.innerHTML.includes('请选择以下三个JSON文件')) {
+                                filePrompt.classList.add('hidden-files');
+                            }
+                            
+                            // 显示播放状态区域
+                            elements.playbackStatus.classList.remove('hidden');
+                            elements.currentTime.textContent = '00:00';
+                            elements.totalTime.textContent = '00:00';
+                            
+                            // 尝试进行静默播放检查
+                            trySilentPlayCheck();
+                        }
+                    })
+                    .catch(error => {
+                        addUserAction(`自动加载文件 ${fileName} 失败，请手动选择: ${error.message}`, 'warning');
+                        // 确保文件选择区域是可见的
+                        const fileInputContainer = document.querySelector('.file-input-container');
+                        if (fileInputContainer) {
+                            fileInputContainer.classList.remove('hidden-files');
+                        }
+                    });
+            });
+        }
+        
+        // 初始化应用
+        function initApp() {
+            // 初始化音频播放器
+            audioElement = elements.audioPlayer;
+            
+            // 绑定音频事件处理函数
+            audioElement.addEventListener('ended', handleAudioEnded);
+            audioElement.addEventListener('timeupdate', updateProgress);
+            audioElement.addEventListener('error', handleAudioError);
+            audioElement.addEventListener('loadedmetadata', handleMetadataLoaded);
+            
+            // 设置文件选择事件
+            setupFileInputEvents();
+            
+            // 设置触摸事件
+            setupTouchEvents();
+            
+            // 增加点击播放/暂停支持
+            setupPlayPauseSupport();
+            
+            // 设置按钮点击支持
+            setupButtonClickSupport();
+            
+            // 设置键盘事件支持
+            setupKeyboardSupport();
+            
+            // 添加清除存储按钮
+            addClearStorageButton();
+            
+            addUserAction('播客播放器已启动，支持随机播放和推荐模式', 'info');
+            
+            // 尝试从本地存储加载数据
+            const loadedFromStorage = loadFromLocalStorage();
+            
+            // 如果从本地存储加载成功
+            if (loadedFromStorage && validEpisodes.length > 0) {
+                addUserAction('数据已加载，点击播放区域开始播放', 'success');
+                
+                // 显示播放状态区域
+                elements.playbackStatus.classList.remove('hidden');
+                elements.currentTime.textContent = '00:00';
+                elements.totalTime.textContent = '00:00';
+                
+                // 尝试进行一次静默播放请求，检查浏览器是否允许自动播放
+                trySilentPlayCheck();
+            } else {
+                // 尝试从同一目录自动加载指定的JSON文件
+                addUserAction('尝试从同一目录自动加载文件...', 'info');
+                tryLoadLocalFiles();
+            }
+            
+            // 添加默认播放特定URL音频的逻辑
+            function tryPlaySpecificAudio() {
+                // 检查是否已经播放了特定音频
+                if (window.specificAudioPlayed) {
+                    return;
+                }
+                
+                addUserAction(`设置特定音频URL...`, 'info');
+                
+                // 用户提供的特定音频URL
+                const specificAudioUrl = 'https://jt.ximalaya.com//GKwRIasMkwokAEgogAQKUtWR.m4a?channel=rss&album_id=46898583&track_id=908584186&uid=43851727&jt=https://aod.cos.tx.xmcdn.com/storages/a7d1-audiofreehighqps/15/14/GKwRIasMkwokAEgogAQKUtWR.m4a';
+                
+                // 创建临时的episode对象
+                const tempEpisode = {
+                    title: '播客播放器程序介绍',
+                    annotation: 'AA 250905_0040 podcast-player 播客播放器 程序介绍 -刷音频 程序demo版',
+                    audioUrl: specificAudioUrl
+                };
+                
+                // 保存当前索引作为上一条
+                if (currentIndex !== -1) {
+                    previousIndex = currentIndex;
+                }
+                
+                // 在validEpisodes数组开头添加这个临时episode，保留其他音频
+                validEpisodes.unshift(tempEpisode);
+                currentIndex = 0; // 设置为第一个元素
+                
+                // 标记为已设置特定音频
+                window.specificAudioPlayed = true;
+                
+                addUserAction(`已设置特定音频: ${tempEpisode.title}`, 'info');
+                addUserAction(`音频URL: ${specificAudioUrl.substring(0, 50)}...`, 'debug');
+                
+                // 提前设置audioElement的src，让浏览器有时间预加载
+                if (audioElement) {
+                    audioElement.src = specificAudioUrl;
+                    addUserAction(`已设置音频源，等待用户交互...`, 'info');
+                }
+                
+                // 如果用户已经交互过，立即尝试播放
+                if (isUserInteracted) {
+                    addUserAction(`用户已交互，立即尝试播放特定音频`, 'info');
+                    setTimeout(() => {
+                        playCurrentEpisode();
+                    }, 300);
+                } else {
+                    // 显示用户交互提示
+                    addUserAction(`请点击页面任意位置开始播放特定音频`, 'info');
+                }
+            }
+            
+            // 延迟500ms后开始设置特定音频，确保DOM元素已准备好
+            setTimeout(tryPlaySpecificAudio, 500);
+            
+            // 为了确保可靠性，添加一个额外的检查定时器
+            setTimeout(() => {
+                if (!isPlaying && validEpisodes.length > 0 && currentIndex === 0) {
+                    addUserAction(`额外检查: 音频准备就绪，等待用户交互`, 'debug');
+                }
+            }, 2000);
+        }
+        
+        // 尝试静默播放检查，确认浏览器是否允许自动播放
+        function trySilentPlayCheck() {
+            // 临时将音量设为0
+            const originalVolume = audioElement.volume;
+            audioElement.volume = 0;
+
+            // 尝试播放
+            audioElement.play().then(() => {
+                // 如果允许自动播放，恢复音量并继续播放
+                audioElement.volume = originalVolume;
+                audioElement.pause(); // 暂停后再继续播放流程
+
+                // 延迟后自动播放
+                setTimeout(() => {
+                    if (window.specificAudioPlayed) {
+                        playCurrentEpisode(); // 如果已经设置了特定音频，播放当前选中的
+                    } else {
+                        playRandomEpisode();
+                    }
+                }, 1000);
+            }).catch(error => {
+                // 恢复音量
+                audioElement.volume = originalVolume;
+                
+                // 记录具体的错误信息用于调试
+                let errorType = '未知错误';
+                if (error.name) errorType = error.name;
+                if (error.message) errorType += ': ' + error.message;
+                
+                addUserAction(`自动播放检查: ${errorType}`, 'debug');
+
+                // 如果需要用户交互，显示明确提示
+                if (!isUserInteracted) {
+                    addUserAction('请点击播放区域开始收听', 'info');
+                    
+                    // 添加一个醒目的播放按钮提示
+                    const playPrompt = document.createElement('div');
+                    playPrompt.className = 'absolute inset-0 flex items-center justify-center bg-black/30 z-30 pointer-events-none';
+                    playPrompt.innerHTML = '<div class="animate-pulse text-white text-lg">点击任意位置开始播放</div>';
+                    playPrompt.id = 'play-prompt-overlay';
+                    document.body.appendChild(playPrompt);
+                }
+            });
+        }
+
+        // 标记用户是否已交互
+        let isUserInteracted = false;
+
+        // 在页面加载时添加全局交互监听
+        document.addEventListener('DOMContentLoaded', () => {
+            // 添加多种交互方式监听
+            const interactionEvents = ['click', 'touchstart', 'keydown'];
+            
+            interactionEvents.forEach(eventType => {
+                document.addEventListener(eventType, handleUserInteraction, { once: true });
+            });
+        });
+        
+        // 处理用户交互
+        function handleUserInteraction() {
+            if (!isUserInteracted) {
+                isUserInteracted = true;
+                
+                // 移除播放提示
+                const playPrompt = document.getElementById('play-prompt-overlay');
+                if (playPrompt) {
+                    playPrompt.remove();
+                }
+
+                // 用户首次交互后，如果已有加载数据但未播放，尝试自动播放
+                if (validEpisodes.length > 0 && !isPlaying) {
+                    addUserAction('用户已交互，正在启动播放', 'info');
+                    
+                    // 优先播放特定音频
+                    if (window.specificAudioPlayed && currentIndex >= 0) {
+                        playCurrentEpisode();
+                    } else {
+                        playRandomEpisode();
+                    }
+                }
+            }
+        }
+
+        // 处理元数据加载完成事件
+        function handleMetadataLoaded() {
+            addUserAction(`音频时长: ${formatTime(audioElement.duration)}`, 'info');
+            elements.totalTime.textContent = formatTime(audioElement.duration);
+        }
+
+        // 设置播放/暂停支持
+        function setupPlayPauseSupport() {
+            elements.touchArea.addEventListener('click', (e) => {
+                // 防止点击事件与滑动事件冲突
+                if (isSwiping) return;
+                
+                // 判断点击位置是否在中央播放按钮区域
+                const rect = elements.touchArea.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const clickX = e.clientX - rect.left;
+                const clickY = e.clientY - rect.top;
+                
+                // 计算与中心的距离
+                const distance = Math.sqrt(Math.pow(clickX - centerX, 2) + Math.pow(clickY - centerY, 2));
+                
+                // 如果点击位置在中心区域（100px范围内）
+                if (distance < 100) {
+                    togglePlayPause();
+                }
+            });
+        }
+        
+        // 设置按钮点击支持
+        function setupButtonClickSupport() {
+            // 上一条按钮
+            document.getElementById('prev-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    playPreviousEpisode();
+                }
+            });
+            
+            // 播放/暂停按钮
+            document.getElementById('play-pause-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    togglePlayPause();
+                }
+            });
+            
+            // 下一条按钮
+            document.getElementById('next-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    playNextEpisode();
+                }
+            });
+            
+            // 随机模式按钮
+            document.getElementById('random-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    // 切换到随机模式
+                    switchToRandomMode();
+                    playRandomEpisode();
+                    addUserAction('已切换到随机播放模式', 'info');
+                }
+            });
+            
+            // 推荐模式按钮
+            document.getElementById('recommend-button').addEventListener('click', () => {
+                if (validEpisodes.length > 0 && !isSwiping) {
+                    // 切换到推荐模式
+                    switchToRecommendationMode();
+                    // 基于当前音频生成推荐列表
+                    if (currentIndex >= 0) {
+                        generateRecommendations(currentIndex);
+                    } else {
+                        // 如果没有当前播放的音频，随机选择一个开始
+                        playRandomEpisode();
+                    }
+                    addUserAction('已切换到推荐播放模式', 'info');
+                }
+            });
+        }
+        
+        // 设置键盘事件支持
+        function setupKeyboardSupport() {
+            document.addEventListener('keydown', (e) => {
+                // 防止在输入框中按下按键时触发操作
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+                
+                if (validEpisodes.length === 0) return; // 没有数据不响应键盘
+                
+                switch(e.key) {
+                    case 'ArrowLeft': // 左箭头 - 上一条
+                        e.preventDefault();
+                        playPreviousEpisode();
+                        break;
+                    case 'ArrowRight': // 右箭头 - 下一条
+                        e.preventDefault();
+                        playNextEpisode();
+                        break;
+                    case 'ArrowUp': // 上箭头 - 随机模式
+                        e.preventDefault();
+                        switchToRandomMode();
+                        playRandomEpisode();
+                        break;
+                    case 'ArrowDown': // 下箭头 - 推荐模式
+                        e.preventDefault();
+                        switchToRecommendationMode();
+                        // 基于当前音频生成推荐列表
+                        if (currentIndex >= 0) {
+                            generateRecommendations(currentIndex);
+                        }
+                        break;
+                    case ' ': // 空格键 - 播放/暂停
+                    case 'Enter': // 回车键 - 播放/暂停
+                        e.preventDefault();
+                        togglePlayPause();
+                        break;
+                }
+            });
+        }
+        
+        // 切换播放/暂停状态
+        function togglePlayPause() {
+            if (currentIndex < 0 || currentIndex >= validEpisodes.length) {
+                // 如果没有选中的节目，尝试播放随机节目
+                playRandomEpisode();
+                return;
+            }
+            
+            if (isPlaying) {
+                audioElement.pause();
+                isPlaying = false;
+                stopProgressInterval();
+                addUserAction('已暂停播放', 'info');
+            } else {
+                audioElement.play()
+                    .then(() => {
+                        isPlaying = true;
+                        startProgressInterval();
+                        addUserAction('已继续播放', 'info');
+                    })
+                    .catch(error => {
+                        addUserAction(`播放失败: ${error.message}`, 'error');
+                        addRetryOption();
+                    });
+            }
+        }
+
+        // 设置文件输入事件
+        function setupFileInputEvents() {
+            elements.episodesFileInput.addEventListener('change', (e) => handleFileSelect(e, 'episodes'));
+            elements.nodesFileInput.addEventListener('change', (e) => handleFileSelect(e, 'nodes'));
+            elements.edgesFileInput.addEventListener('change', (e) => handleFileSelect(e, 'edges'));
+        }
+
+        // 处理文件选择
+        function handleFileSelect(event, fileType) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // 验证文件类型
+            if (!file.name.endsWith('.json')) {
+                addUserAction(`请选择JSON格式的${getFileNameByType(fileType)}`, 'error');
+                return;
+            }
+            
+            addUserAction(`正在加载${getFileNameByType(fileType)}: ${file.name}`, 'info');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    // 根据文件类型处理数据
+                    switch(fileType) {
+                        case 'episodes':
+                            processEpisodesData(data);
+                            saveToLocalStorage('episodes', data); // 保存到本地存储
+                            break;
+                        case 'nodes':
+                            processNodesData(data);
+                            saveToLocalStorage('nodes', data); // 保存到本地存储
+                            break;
+                        case 'edges':
+                            processEdgesData(data);
+                            saveToLocalStorage('edges', data); // 保存到本地存储
+                            break;
+                    }
+                    
+                    // 更新已选择文件计数
+                    selectedFilesCount++;
+                    updateFileStatus();
+                    
+                    // 检查是否所有文件都已加载
+                    if (selectedFilesCount === 3 && validEpisodes.length > 0) {
+                        addUserAction('所有文件加载完成，将播放随机节目', 'success');
+                        
+                        // 自动开始播放随机节目
+                        setTimeout(() => {
+                            playRandomEpisode();
+                        }, 1000);
+                    }
+                    
+                } catch (error) {
+                    addUserAction(`${getFileNameByType(fileType)}解析错误: ${error.message}`, 'error');
+                }
+            };
+            
+            reader.onerror = function() {
+                addUserAction(`${getFileNameByType(fileType)}读取失败，请重试`, 'error');
+            };
+            
+            reader.readAsText(file);
+        }
+
+        // 根据类型获取文件名
+        function getFileNameByType(type) {
+            const names = {
+                'episodes': '单集数据',
+                'nodes': '节点文件',
+                'edges': '边文件'
+            };
+            return names[type] || '数据文件';
+        }
+
+        // 更新文件状态显示
+        function updateFileStatus() {
+            elements.fileStatus.innerHTML = `<i class="fa fa-check-square-o mr-1"></i>已选择: ${selectedFilesCount}/3 文件`;
+            
+            if (selectedFilesCount === 3) {
+                elements.fileStatus.classList.add('text-green-400');
+                elements.fileStatus.classList.remove('text-gray-400');
+            }
+        }
+
+        // 处理单集数据
+        function processEpisodesData(data) {
+            // 转换对象形式为数组形式
+            if (typeof data === 'object' && !Array.isArray(data)) {
+                allEpisodes = Object.entries(data).map(([title, info]) => ({
+                    title,
+                    duration: info.时长 || '未知',
+                    audioUrl: info.播放链接,
+                    originalUrl: info.播放链接, // 保存原始链接
+                    annotation: info.标注 || '',
+                    topic: info.话题 || ''
+                }));
+            } else if (Array.isArray(data)) {
+                allEpisodes = data.map(episode => ({
+                    ...episode,
+                    originalUrl: episode.audioUrl // 保存原始链接
+                }));
+            } else {
+                throw new Error('单集数据格式不正确，应为对象或数组');
+            }
+            
+            // 筛选出标注不为空的有效单集
+            validEpisodes = allEpisodes.filter(episode => 
+                episode.annotation && typeof episode.annotation === 'string' && episode.annotation.trim() !== ''
+            );
+            
+            // 验证数据结构是否包含必要字段
+            validEpisodes.forEach((episode, index) => {
+                const requiredFields = ['title', 'audioUrl'];
+                requiredFields.forEach(field => {
+                    if (!episode.hasOwnProperty(field) || !episode[field]) {
+                        throw new Error(`第 ${index+1} 个节目缺少必要字段: ${field}`);
+                    }
+                });
+            });
+            
+            addUserAction(`单集数据加载成功，共发现 ${validEpisodes.length} 个包含有效标注的节目`, 'success');
+            
+            if (validEpisodes.length === 0) {
+                addUserAction('警告: 没有找到包含有效标注的节目', 'warning');
+            }
+        }
+
+        // 处理节点数据
+        function processNodesData(data) {
+            // 支持对象格式的节点数据（键值对）
+            if (typeof data === 'object' && !Array.isArray(data)) {
+                // 将对象转换为数组格式
+                nodesData = Object.entries(data).map(([name, description]) => ({
+                    name,
+                    description: description || '',
+                    id: name  // 使用关键词作为ID
+                }));
+            } 
+            // 同时兼容数组格式
+            else if (Array.isArray(data)) {
+                nodesData = data.map(node => {
+                    if (typeof node === 'string') {
+                        return { name: node, description: '', id: node };
+                    } else if (typeof node === 'object' && node.name) {
+                        return { ...node, id: node.id || node.name };
+                    }
+                    throw new Error('节点格式不正确，应为字符串或包含name属性的对象');
+                });
+            } else {
+                throw new Error('节点文件格式不正确，应为对象或数组');
+            }
+            
+            addUserAction(`节点文件加载成功，共发现 ${nodesData.length} 个节点`, 'success');
+        }
+
+        // 处理边数据
+        function processEdgesData(data) {
+            if (!Array.isArray(data)) {
+                throw new Error('边文件格式不正确，应为数组');
+            }
+            
+            // 验证边数据格式
+            edgesData = data.filter(edge => {
+                if (typeof edge === 'object' && edge.source && edge.target) {
+                    return true;
+                }
+                addUserAction(`无效的边数据: ${JSON.stringify(edge)}`, 'warning');
+                return false;
+            });
+            
+            addUserAction(`边文件加载成功，共发现 ${edgesData.length} 条有效边关系`, 'success');
+        }
+
+        // 添加用户动作记录
+        function addUserAction(message, type = 'normal') {
+            const actionEntry = document.createElement('div');
+            actionEntry.className = 'entry';
+            
+            let icon, colorClass;
+            switch(type) {
+                case 'success':
+                    icon = 'fa-check-circle';
+                    colorClass = 'text-green-400';
+                    break;
+                case 'error':
+                    icon = 'fa-times-circle';
+                    colorClass = 'text-red-400';
+                    break;
+                case 'info':
+                    icon = 'fa-info-circle';
+                    colorClass = 'text-blue-400';
+                    break;
+                case 'warning':
+                    icon = 'fa-exclamation-triangle';
+                    colorClass = 'text-yellow-400';
+                    break;
+                default:
+                    icon = 'fa-circle-o';
+                    colorClass = 'text-gray-400';
+            }
+            
+            actionEntry.innerHTML = `<i class="fa ${icon} mr-1"></i>${message}`;
+            actionEntry.classList.add(colorClass);
+            
+            elements.userActions.appendChild(actionEntry);
+            
+            // 滚动到最新记录
+            setTimeout(() => {
+                elements.infoContainer.scrollTop = elements.infoContainer.scrollHeight;
+            }, 0);
+            
+            return actionEntry;
+        }
+        
+        // 添加重试选项
+        function addRetryOption() {
+            const retryButton = document.createElement('div');
+            retryButton.className = 'action-button bg-primary text-white text-xs px-2 py-1 rounded mt-1 cursor-pointer hover:bg-primary/80 transition-colors';
+            retryButton.innerHTML = '<i class="fa fa-refresh mr-1"></i>重试播放';
+            
+            retryButton.addEventListener('click', () => {
+                if (currentIndex >= 0 && currentIndex < validEpisodes.length) {
+                    playCurrentEpisode();
+                }
+                retryButton.remove();
+            });
+            
+            elements.userActions.appendChild(retryButton);
+            
+            // 滚动到最新记录
+            setTimeout(() => {
+                elements.infoContainer.scrollTop = elements.infoContainer.scrollHeight;
+            }, 0);
+        }
+
+        // 播放随机节目
+        function playRandomEpisode() {
+            if (validEpisodes.length === 0) {
+                addUserAction('没有可播放的节目，请先加载数据', 'error');
+                return;
+            }
+            
+            // 保存当前索引作为上一条
+            if (currentIndex !== -1) {
+                previousIndex = currentIndex;
+            }
+            
+            let newIndex;
+            // 如果只有一个有效节目，直接播放它
+            if (validEpisodes.length === 1) {
+                newIndex = 0;
+            } else {
+                // 确保不重复播放同一节目
+                do {
+                    newIndex = Math.floor(Math.random() * validEpisodes.length);
+                } while (newIndex === currentIndex);
+            }
+            
+            currentIndex = newIndex;
+            playCurrentEpisode();
+        }
+
+        // 播放当前选中的节目
+        function playCurrentEpisode() {
+            if (currentIndex < 0 || currentIndex >= validEpisodes.length) return;
+            
+            const episode = validEpisodes[currentIndex];
+            addUserAction(`正在尝试播放: ${episode.title}`, 'info');
+            
+            // 显示当前节目标注
+            elements.annotationContent.textContent = episode.annotation;
+            elements.currentAnnotation.classList.remove('hidden');
+            
+            // 更新播放状态显示
+            elements.currentTitle.textContent = episode.title;
+            elements.playbackStatus.classList.remove('hidden');
+            
+            // 重置进度显示
+            elements.currentTime.textContent = "00:00";
+            elements.totalTime.textContent = "00:00";
+            
+            // 停止当前播放
+            if (audioElement) {
+                audioElement.pause();
+                stopProgressInterval();
+            }
+            
+            // 设置音频源并播放
+            audioElement.src = episode.audioUrl;
+            
+            // 自动重试播放的函数
+            function attemptPlay(retries = 0, maxRetries = 3, retryDelay = 1000) {
+                if (retries > 0) {
+                    addUserAction(`正在重试播放... (第${retries}次尝试)`, 'info');
+                }
+                
+                try {
+                    audioElement.load();
+                    
+                    // 短暂延迟后尝试播放
+                    setTimeout(() => {
+                        audioElement.play()
+                            .then(() => {
+                                isPlaying = true;
+                                addUserAction('播放开始', 'success');
+                                startProgressInterval();
+                                
+                                // 如果在推荐模式但没有推荐列表，生成推荐列表
+                                if (!isRandomMode && recommendationList.length === 0) {
+                                    generateRecommendations(currentIndex);
+                                }
+                            })
+                            .catch(error => {
+                                // 如果还没达到最大重试次数，继续尝试
+                                if (retries < maxRetries) {
+                                    setTimeout(() => {
+                                        attemptPlay(retries + 1, maxRetries, retryDelay);
+                                    }, retryDelay);
+                                } else {
+                                    addUserAction(`多次尝试播放失败，建议检查网络连接或稍后重试`, 'warning');
+                                    addRetryOption();
+                                }
+                            });
+                    }, 500);
+                } catch (error) {
+                    if (retries < maxRetries) {
+                        setTimeout(() => {
+                            attemptPlay(retries + 1, maxRetries, retryDelay);
+                        }, retryDelay);
+                    } else {
+                        addUserAction(`多次尝试播放失败，建议检查网络连接或稍后重试`, 'warning');
+                        addRetryOption();
+                    }
+                }
+            }
+            
+            // 开始尝试播放
+            attemptPlay();
+        }
+        
+        // 处理音频错误
+        function handleAudioError(event) {
+            // 不立即显示错误，让重试机制处理
+            if (isPlaying || !audioElement.paused) {
+                isPlaying = false;
+                stopProgressInterval();
+                
+                // 静默地尝试重新播放，而不是直接显示错误
+                setTimeout(() => {
+                    if (currentIndex >= 0 && currentIndex < validEpisodes.length) {
+                        addUserAction(`尝试恢复播放...`, 'info');
+                        playCurrentEpisode();
+                    }
+                }, 1000);
+            }
+            
+            // 保留原始错误处理逻辑，但降低错误提示的严重性
+            let errorMsg = "音频播放中断: ";
+            
+            switch(audioElement.error.code) {
+                case MediaError.MEDIA_ERR_ABORTED:
+                    errorMsg += "播放被中止";
+                    break;
+                case MediaError.MEDIA_ERR_NETWORK:
+                    errorMsg += "网络连接问题";
+                    break;
+                case MediaError.MEDIA_ERR_DECODE:
+                    errorMsg += "媒体解码问题";
+                    break;
+                case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                    errorMsg += "不支持的音频格式";
+                    break;
+                default:
+                    errorMsg += "未知错误";
+            }
+            
+            addUserAction(errorMsg, 'error');
+            addRetryOption();
+            isPlaying = false;
+            stopProgressInterval();
+        }
+
+        // 播放上一个节目（根据当前模式有不同行为）
+        function playPreviousEpisode() {
+            if (validEpisodes.length === 0) {
+                addUserAction('没有可播放的节目，请先加载数据', 'error');
+                return;
+            }
+            
+            addUserAction('切换到上一个节目', 'info');
+            
+            if (isRandomMode) {
+                // 随机模式：播放前一条播放的音频（若有）
+                if (previousIndex !== -1 && previousIndex !== currentIndex) {
+                    // 保存当前索引作为新的上一条
+                    const temp = currentIndex;
+                    currentIndex = previousIndex;
+                    previousIndex = temp;
+                    playCurrentEpisode();
+                } else {
+                    // 如果没有上一条，播放随机音频
+                    addUserAction('没有更早的播放记录，播放随机节目', 'info');
+                    playRandomEpisode();
+                }
+            } else {
+                // 推荐模式：播放推荐列表中的上一条
+                if (recommendationList.length === 0) {
+                    generateRecommendations(currentIndex);
+                }
+                
+                let currentPos = recommendationList.findIndex(item => item.index === currentIndex);
+                if (currentPos <= 0) {
+                    // 如果是第一个，则循环到最后一个
+                    currentPos = recommendationList.length - 1;
+                } else {
+                    currentPos--;
+                }
+                
+                currentIndex = recommendationList[currentPos].index;
+                playCurrentEpisode();
+            }
+        }
+
+        // 播放下一个节目（根据当前模式有不同行为）
+        function playNextEpisode() {
+            if (validEpisodes.length === 0) {
+                addUserAction('没有可播放的节目，请先加载数据', 'error');
+                return;
+            }
+            
+            // 添加当前模式状态日志
+            addUserAction(`当前播放模式: ${isRandomMode ? '随机' : '推荐'}，切换到下一个节目`, 'info');
+            
+            if (isRandomMode) {
+                // 随机模式：播放另一条随机音频
+                addUserAction('随机模式：播放随机音频', 'info');
+                playRandomEpisode();
+            } else {
+                // 推荐模式：播放推荐列表中的下一条
+                addUserAction('推荐模式：尝试按推荐列表顺序播放下一条', 'info');
+                
+                if (recommendationList.length === 0) {
+                    addUserAction('推荐列表为空，正在生成推荐...', 'info');
+                    generateRecommendations(currentIndex);
+                    // 等待推荐列表生成后再播放下一条
+                    setTimeout(() => {
+                        if (recommendationList.length > 0) {
+                            addUserAction(`推荐列表生成完成，共${recommendationList.length}条`, 'info');
+                            
+                            // 无论如何，都从推荐列表的第一个开始播放
+                            currentPos = 0;
+                            
+                            const nextIndex = recommendationList[currentPos].index;
+                            addUserAction(`从推荐列表第一个开始播放，索引为${nextIndex}`, 'info');
+                            
+                            // 检查索引是否有效
+                            if (nextIndex >= 0 && nextIndex < validEpisodes.length) {
+                                currentIndex = nextIndex;
+                                playCurrentEpisode();
+                            } else {
+                                addUserAction(`无效的索引: ${nextIndex}，播放随机节目`, 'warning');
+                                playRandomEpisode();
+                            }
+                        } else {
+                            addUserAction('无法生成推荐列表，播放随机节目', 'warning');
+                            playRandomEpisode();
+                        }
+                    }, 500);
+                } else {
+                    // 推荐列表已存在，正常切换到下一条
+                    let currentPos = recommendationList.findIndex(item => item.index === currentIndex);
+                    
+                    // 增强的错误处理：如果找不到当前索引，记录日志并从第一个开始
+                    if (currentPos === -1) {
+                        addUserAction(`当前索引${currentIndex}不在推荐列表中，从第一个开始`, 'warning');
+                        currentPos = 0;
+                    } else if (currentPos >= recommendationList.length - 1) {
+                        // 如果已是最后一个，则循环到第一个
+                        addUserAction(`已到达推荐列表末尾，循环到第一个`, 'info');
+                        currentPos = 0;
+                    } else {
+                        // 正常切换到下一个
+                        currentPos++;
+                    }
+                    
+                    const nextIndex = recommendationList[currentPos].index;
+                    addUserAction(`准备播放推荐列表中的第${currentPos + 1}条，索引为${nextIndex}`, 'info');
+                    
+                    // 检查索引是否有效
+                    if (nextIndex >= 0 && nextIndex < validEpisodes.length) {
+                        currentIndex = nextIndex;
+                        playCurrentEpisode();
+                    } else {
+                        addUserAction(`无效的索引: ${nextIndex}，播放随机节目`, 'warning');
+                        playRandomEpisode();
+                    }
+                }
+            }
+        }
+
+        // 处理音频播放结束
+        function handleAudioEnded() {
+            isPlaying = false;
+            addUserAction('播放结束', 'info');
+            stopProgressInterval();
+            
+            // 自动进入推荐模式并播放下一个
+            switchToRecommendationMode();
+            playNextEpisode();
+        }
+
+        // 更新进度显示
+        function updateProgress() {
+            if (isNaN(audioElement.duration)) return;
+            
+            // 更新时间显示
+            elements.currentTime.textContent = formatTime(audioElement.currentTime);
+            elements.totalTime.textContent = formatTime(audioElement.duration);
+        }
+
+        // 格式化时间（秒 -> mm:ss）
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // 开始进度更新定时器
+        function startProgressInterval() {
+            stopProgressInterval();
+            progressInterval = setInterval(updateProgress, 1000);
+        }
+
+        // 停止进度更新定时器
+        function stopProgressInterval() {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+                progressInterval = null;
+            }
+        }
+
+        // 切换到随机模式
+        function switchToRandomMode() {
+            isRandomMode = true;
+            elements.modeIndicator.innerHTML = '<i class="fa fa-random mr-1"></i><span>随机模式</span>';
+            elements.recommendationSection.classList.add('hidden');
+            addUserAction('已切换到随机模式', 'info');
+        }
+
+        // 切换到推荐模式
+        function switchToRecommendationMode() {
+            isRandomMode = false;
+            elements.modeIndicator.innerHTML = '<i class="fa fa-thumbs-up mr-1"></i><span>推荐模式</span>';
+            addUserAction('已切换到推荐模式', 'info');
+            
+            // 如果没有推荐列表，生成一个
+            if (recommendationList.length === 0) {
+                generateRecommendations(currentIndex);
+            } else {
+                // 显示已有的推荐列表
+                elements.recommendationSection.classList.remove('hidden');
+            }
+        }
+
+        // 生成推荐列表（核心推荐逻辑）
+        function generateRecommendations(baseIndex) {
+            if (baseIndex < 0 || baseIndex >= validEpisodes.length) return;
+            if (nodesData.length === 0 || edgesData.length === 0) {
+                addUserAction('节点或边数据缺失，无法生成推荐', 'error');
+                return;
+            }
+            
+            const startTime = Date.now();
+            addUserAction('正在根据当前节目生成推荐列表...', 'info');
+            
+            const baseEpisode = validEpisodes[baseIndex];
+            
+            // 1. 提取有效关键词（与节点匹配）
+            const validKeywords = extractValidKeywords(baseEpisode.annotation);
+            addUserAction(`从当前节目标注中提取了 ${validKeywords.length} 个有效关键词`, 'info');
+            
+            // 计算有效关键词权重：1/关键词总数
+            const validKeywordWeight = validKeywords.length > 0 ? 1 / validKeywords.length : 0;
+            
+            // 显示提取的有效关键词
+            elements.validKeywords.innerHTML = validKeywords.map(k => 
+                `${k.name} <span class="score-tag bg-green-500/30 text-green-300">${validKeywordWeight.toFixed(2)}分</span>`
+            ).join(' | ');
+            
+            // 2. 提取周边关键词（基于节点关系）
+            const relatedKeywords = extractRelatedKeywords(validKeywords.map(k => k.name));
+            addUserAction(`基于节点关系扩展了 ${relatedKeywords.length} 个周边关键词`, 'info');
+            
+            // 计算周边关键词权重：1/关键词总数
+            const relatedKeywordWeight = relatedKeywords.length > 0 ? 1 / relatedKeywords.length : 0;
+            
+            // 显示提取的周边关键词
+            elements.relatedKeywords.innerHTML = relatedKeywords.map(k => 
+                `${k.name} <span class="score-tag bg-yellow-500/30 text-yellow-300">${relatedKeywordWeight.toFixed(2)}分</span>`
+            ).join(' | ');
+            
+            // 3. 提取话题词
+            const topicWords = extractTopicWords(baseEpisode.topic);
+            const topicWordWeight = topicWords.length > 0 ? 2 / topicWords.length : 0;
+            addUserAction(`从当前节目中提取了 ${topicWords.length} 个话题词，每个权重为 ${topicWordWeight.toFixed(2)}`, 'info');
+            
+            // 显示提取的话题词
+            elements.topicKeywords.innerHTML = topicWords.map(topic => 
+                `${topic} <span class="score-tag bg-purple-500/30 text-purple-300">${topicWordWeight.toFixed(2)}分</span>`
+            ).join(' | ');
+            
+            // 如果没有有效关键词和话题词，无法生成推荐
+            if (validKeywords.length === 0 && topicWords.length === 0) {
+                recommendationList = [];
+                addUserAction('当前节目没有足够信息生成推荐', 'warning');
+                elements.recommendationSection.classList.add('hidden');
+                return;
+            }
+            
+            // 计算每个其他单集与当前单集的匹配得分
+            let otherEpisodes = [];
+            
+            for (let i = 0; i < validEpisodes.length; i++) {
+                // 跳过当前播放的节目
+                if (i === baseIndex) continue;
+                
+                const ep = validEpisodes[i];
+                const scores = calculateScores(ep, validKeywords, validKeywordWeight, relatedKeywords, relatedKeywordWeight, topicWords, topicWordWeight);
+                
+                if (scores.total > 0) {
+                    otherEpisodes.push({
+                        index: i,
+                        title: ep.title,
+                        totalScore: scores.total,
+                        validKeywordsScore: scores.validKeywords,
+                        relatedKeywordsScore: scores.relatedKeywords,
+                        topicScore: scores.topic
+                    });
+                }
+            }
+            
+            // 排序并生成推荐列表（取前30个）
+            recommendationList = otherEpisodes
+                .sort((a, b) => b.totalScore - a.totalScore)
+                .slice(0, 30);
+            
+            // 显示推荐列表
+            displayRecommendations();
+            
+            const endTime = Date.now();
+            addUserAction(`推荐列表生成完成，耗时 ${((endTime - startTime) / 1000).toFixed(2)} 秒，共 ${recommendationList.length} 个节目`, 'success');
+        }
+
+        // 显示推荐列表和得分计算
+        function displayRecommendations() {
+            // 清空现有列表
+            elements.recommendationList.innerHTML = '';
+            
+            if (recommendationList.length === 0) {
+                elements.recommendationSection.classList.add('hidden');
+                return;
+            }
+            
+            // 确保在显示推荐列表时已经处于推荐模式
+            if (isRandomMode) {
+                isRandomMode = false;
+                elements.modeIndicator.innerHTML = '<i class="fa fa-thumbs-up mr-1"></i><span>推荐模式</span>';
+                addUserAction('自动切换到推荐模式', 'info');
+            }
+            
+            // 更新推荐数量
+            elements.recommendationCount.textContent = `共 ${recommendationList.length} 条`;
+            
+            // 添加推荐项
+            recommendationList.forEach((item, index) => {
+                const listItem = document.createElement('div');
+                listItem.className = 'recommendation-item p-2 border-l-2 border-primary/30 rounded-r';
+                
+                // 构建得分详情HTML
+                const scoreDetails = `
+                    <div class="text-xs text-gray-400 mt-1">
+                        总得分: <span class="text-primary font-bold">${item.totalScore.toFixed(2)}</span> | 
+                        有效关键词: <span class="text-green-400">${item.validKeywordsScore.toFixed(2)}</span> | 
+                        周边关键词: <span class="text-yellow-400">${item.relatedKeywordsScore.toFixed(2)}</span> | 
+                        话题: <span class="text-purple-400">${item.topicScore.toFixed(2)}</span>
+                    </div>
+                `;
+                
+                listItem.innerHTML = `
+                    <div class="font-medium">${index + 1}. ${item.title}</div>
+                    ${scoreDetails}
+                `;
+                
+                // 点击推荐项播放
+                listItem.addEventListener('click', () => {
+                    // 保存当前索引作为上一条
+                    previousIndex = currentIndex;
+                    currentIndex = item.index;
+                    // 确保在播放推荐项时处于推荐模式
+                    if (isRandomMode) {
+                        isRandomMode = false;
+                        elements.modeIndicator.innerHTML = '<i class="fa fa-thumbs-up mr-1"></i><span>推荐模式</span>';
+                        addUserAction('自动切换到推荐模式', 'info');
+                    }
+                    playCurrentEpisode();
+                });
+                
+                elements.recommendationList.appendChild(listItem);
+            });
+            
+            // 显示推荐区域
+            elements.recommendationSection.classList.remove('hidden');
+            
+            // 滚动到推荐列表开始位置
+            setTimeout(() => {
+                elements.recommendationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        // 1. 提取有效关键词（与节点匹配）
+        function extractValidKeywords(annotation) {
+            if (!annotation || typeof annotation !== 'string') return [];
+            
+            const matchedKeywords = [];
+            const lowerAnnotation = annotation.toLowerCase();
+            
+            // 检查每个节点是否存在于标注中
+            nodesData.forEach(node => {
+                const nodeName = node.name.toLowerCase();
+                if (lowerAnnotation.includes(nodeName)) {
+                    // 判断是否在忽略词表中
+                    const isIgnored = ignoreWords.some(word => 
+                        nodeName.includes(word.toLowerCase())
+                    );
+                    
+                    matchedKeywords.push({
+                        name: node.name,
+                        originalName: node.name, // 保存原始名称
+                        length: nodeName.length, // 记录关键词长度
+                        isIgnored
+                    });
+                }
+            });
+            
+            // 处理关键词包含关系，只保留最长的关键词
+            // 先按长度降序排序
+            matchedKeywords.sort((a, b) => b.length - a.length);
+            
+            const finalKeywords = [];
+            const keywordTexts = new Set();
+            
+            matchedKeywords.forEach(keyword => {
+                const lowerKeyword = keyword.name.toLowerCase();
+                
+                // 检查当前关键词是否包含其他已选关键词
+                // 或者是否被其他已选关键词包含
+                let shouldAdd = true;
+                
+                for (const addedText of keywordTexts) {
+                    if (lowerKeyword.includes(addedText) || addedText.includes(lowerKeyword)) {
+                        // 已经包含或被包含，不添加
+                        shouldAdd = false;
+                        break;
+                    }
+                }
+                
+                if (shouldAdd) {
+                    finalKeywords.push({
+                        name: keyword.originalName,
+                        isIgnored: keyword.isIgnored
+                    });
+                    keywordTexts.add(lowerKeyword);
+                }
+            });
+            
+            return finalKeywords;
+        }
+
+        // 2. 提取周边关键词（基于节点关系）
+        function extractRelatedKeywords(baseKeywords) {
+            if (!baseKeywords || baseKeywords.length === 0) return [];
+            
+            const keywordSet = new Set(baseKeywords.map(k => k.toLowerCase()));
+            const relatedKeywordsSet = new Set();
+            
+            // 查找与基础关键词相关的节点（通过边关系）
+            baseKeywords.forEach(keyword => {
+                const lowerKeyword = keyword.toLowerCase();
+                
+                // 找到对应的节点ID
+                const node = nodesData.find(n => n.name.toLowerCase() === lowerKeyword);
+                if (!node) return;
+                
+                // 查找与该节点相关的边（上一级、下一级、同级）
+                const relatedEdges = edgesData.filter(
+                    edge => edge.source === node.id || edge.target === node.id
+                );
+                
+                // 收集相关节点
+                relatedEdges.forEach(edge => {
+                    const relatedNodeId = edge.source === node.id ? edge.target : edge.source;
+                    const relatedNode = nodesData.find(n => n.id === relatedNodeId);
+                    
+                    if (relatedNode && !keywordSet.has(relatedNode.name.toLowerCase())) {
+                        relatedKeywordsSet.add(relatedNode.name);
+                    }
+                });
+            });
+            
+            // 转换为相关关键词列表（只存储名称和是否被忽略）
+            return Array.from(relatedKeywordsSet).map(name => {
+                // 判断是否在忽略词表中
+                const isIgnored = ignoreWords.some(word => 
+                    name.toLowerCase().includes(word.toLowerCase())
+                );
+                
+                return { name, isIgnored };
+            });
+        }
+
+        // 3. 提取话题词
+        function extractTopicWords(topicText) {
+            if (!topicText || typeof topicText !== 'string' || topicText.trim() === '') return [];
+            
+            // 使用多种分隔符拆分话题
+            return topicText
+                .split(/[;；,，、\s\n\r]+/)
+                .filter(topic => topic.trim().length > 0)
+                .map(topic => topic.trim().toLowerCase());
+        }
+
+        // 计算得分
+        function calculateScores(episode, validKeywords, validKeywordWeight, relatedKeywords, relatedKeywordWeight, topicWords, topicWordWeight) {
+            let validKeywordsScore = 0;
+            let relatedKeywordsScore = 0;
+            let topicScore = 0;
+            
+            const lowerAnnotation = episode.annotation.toLowerCase();
+            
+            // 1. 有效关键词得分
+            validKeywords.forEach(keyword => {
+                if (lowerAnnotation.includes(keyword.name.toLowerCase())) {
+                    // 根据是否在忽略词表调整权重
+                    const adjustedWeight = keyword.isIgnored ? validKeywordWeight * 0.2 : validKeywordWeight;
+                    validKeywordsScore += adjustedWeight;
+                }
+            });
+            
+            // 2. 周边关键词得分
+            relatedKeywords.forEach(keyword => {
+                if (lowerAnnotation.includes(keyword.name.toLowerCase())) {
+                    // 根据是否在忽略词表调整权重
+                    const adjustedWeight = keyword.isIgnored ? relatedKeywordWeight * 0.2 : relatedKeywordWeight;
+                    relatedKeywordsScore += adjustedWeight;
+                }
+            });
+            
+            // 3. 话题词得分（保持不变）
+            if (topicWords.length > 0 && topicWordWeight > 0) {
+                const episodeTopics = extractTopicWords(episode.topic);
+                let matchCount = 0;
+                
+                topicWords.forEach(topic => {
+                    if (episodeTopics.includes(topic)) {
+                        matchCount++;
+                    }
+                });
+                
+                // 总得分 = 匹配的话题词数量 × 单个话题词权重
+                topicScore = matchCount * topicWordWeight;
+            }
+            
+            return {
+                validKeywords: validKeywordsScore,
+                relatedKeywords: relatedKeywordsScore,
+                topic: topicScore,
+                total: validKeywordsScore + relatedKeywordsScore + topicScore
+            };
+        }
+
+        // 设置触摸事件
+        function setupTouchEvents() {
+            const touchArea = elements.touchArea;
+            
+            touchArea.addEventListener('touchstart', (e) => {
+                if (validEpisodes.length === 0) return; // 没有数据不响应触摸
+                
+                if (e.touches.length !== 1) return;
+                
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                touchTimeStart = Date.now();
+                isSwiping = true;
+                
+                // 重置滑动指示器
+                elements.swipeIndicator.classList.add('hidden');
+            });
+            
+            touchArea.addEventListener('touchmove', (e) => {
+                if (!isSwiping || e.touches.length !== 1) return;
+                
+                const currentX = e.touches[0].clientX;
+                const currentY = e.touches[0].clientY;
+                const diffX = currentX - touchStartX;
+                const diffY = currentY - touchStartY;
+                
+                // 显示滑动轨迹
+                showSwipeIndicator(touchStartX, touchStartY, currentX, currentY);
+                
+                // 防止页面滚动
+                e.preventDefault();
+            }, { passive: false });
+            
+            touchArea.addEventListener('touchend', (e) => {
+                if (!isSwiping || validEpisodes.length === 0) {
+                    isSwiping = false;
+                    return;
+                }
+                
+                const touchTime = Date.now() - touchTimeStart;
+                const currentX = e.changedTouches[0].clientX;
+                const currentY = e.changedTouches[0].clientY;
+                const diffX = currentX - touchStartX;
+                const diffY = currentY - touchStartY;
+                const absDiffX = Math.abs(diffX);
+                const absDiffY = Math.abs(diffY);
+                
+                // 隐藏滑动指示器
+                elements.swipeIndicator.classList.add('hidden');
+                isSwiping = false;
+                
+                // 判断滑动方向和操作
+                if (absDiffX > absDiffY && absDiffX > 50 && touchTime < 500) {
+                    // 水平滑动 - 切换上下条
+                    if (diffX > 0) {
+                        // 右滑 - 下一条
+                        playNextEpisode();
+                    } else {
+                        // 左滑 - 上一条
+                        playPreviousEpisode();
+                    }
+                } else if (absDiffY > 50 && touchTime < 500) {
+                    // 垂直滑动 - 切换模式
+                    if (diffY < 0) {
+                        // 上滑 - 切换到随机模式并播放随机音频
+                        switchToRandomMode();
+                        playRandomEpisode();
+                    } else {
+                        // 下滑 - 基于当前音频重新生成推荐列表并切换到推荐模式
+                        switchToRecommendationMode();
+                        addUserAction('已切换到推荐模式并重新生成推荐列表', 'info');
+                        generateRecommendations(currentIndex);
+                    }
+                }
+            });
+        }
+
+        // 显示滑动轨迹指示器
+        function showSwipeIndicator(x1, y1, x2, y2) {
+            const indicator = elements.swipeIndicator;
+            const line = elements.swipeLine;
+            
+            // 计算线条长度和角度
+            const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+            
+            // 设置线条样式
+            line.style.width = `${length}px`;
+            line.style.height = '4px';
+            line.style.top = `${y1}px`;
+            line.style.left = `${x1}px`;
+            line.style.transformOrigin = '0 50%';
+            line.style.transform = `rotate(${angle}deg)`;
+            
+            // 显示指示器
+            indicator.classList.remove('hidden');
+        }
+
+        // 初始化应用
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
+    
